@@ -1,54 +1,38 @@
 # To learn more about how to use Nix to configure your environment
 # see: https://developers.google.com/idx/guides/customize-idx-env
 { pkgs, ... }: {
-  # Which nixpkgs channel to use.
-  channel = "stable-24.05"; # or "unstable"
-  # Use https://search.nixos.org/packages to find packages
+  # Canal de nixpkgs estable
+  channel = "stable-24.05"; 
+  
+  # Herramientas Core de la Infraestructura
   packages = [
-    # pkgs.go
-    # pkgs.python311
-    # pkgs.python311Packages.pip
-    # pkgs.nodejs_20
-    # pkgs.nodePackages.nodemon
+    pkgs.openssh     # Puente hacia tu VPS Hostinger
+    pkgs.nodejs_20   # Motor para GSD Framework y herramientas de automatización
   ];
-  # Sets environment variables in the workspace
+
+  # Variables de entorno del workspace
   env = {};
+
   idx = {
-    # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
+    # Extensiones esenciales para tu flujo de trabajo
     extensions = [
-      # "vscodevim.vim"
       "google.gemini-cli-vscode-ide-companion"
     ];
-    # Enable previews
+
+    # Configuración de previsualización (desactivada hasta que la necesites)
     previews = {
-      enable = true;
-      previews = {
-        # web = {
-        #   # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
-        #   # and show it in IDX's web preview panel
-        #   command = ["npm" "run" "dev"];
-        #   manager = "web";
-        #   env = {
-        #     # Environment variables to set for your server
-        #     PORT = "$PORT";
-        #   };
-        # };
-      };
+      enable = false;
+      previews = {};
     };
-    # Workspace lifecycle hooks
+
+    # Hooks de ciclo de vida del workspace
     workspace = {
-      # Runs when a workspace is first created
+      # Se ejecuta al crear el entorno por primera vez
       onCreate = {
-        # Example: install JS dependencies from NPM
-        # npm-install = "npm install";
-        # Open editors for the following files by default, if they exist:
         default.openFiles = [ ".idx/dev.nix" "README.md" ];
       };
-      # Runs when the workspace is (re)started
-      onStart = {
-        # Example: start a background task to watch and re-build backend code
-        # watch-backend = "npm run watch-backend";
-      };
+      # Se ejecuta cada vez que el workspace se reinicia
+      onStart = {};
     };
   };
 }

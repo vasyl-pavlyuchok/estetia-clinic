@@ -1,0 +1,25 @@
+# --- SEGURIDAD CRÍTICA ---
+# Ignora cualquier archivo de variables de entorno (API Keys, contraseñas)
+.env
+.env.local
+.env.*.local
+*.env
+auth.json
+
+# --- ARTEFACTOS DE N8N ---
+# Ignora archivos JSON que puedan contener credenciales si los exportas localmente
+*.json
+# Excepto los que son de configuración del sistema (como mcp.json)
+!mcp.json
+!package.json
+!package-lock.json
+
+# --- ARCHIVOS DE SISTEMA Y NODES ---
+node_modules/
+dist/
+.DS_Store
+Thumbs.db
+
+# --- CONFIGURACIÓN DE IDX ---
+# Mantenemos .idx/ porque contiene dev.nix, que es seguro compartir [cite: 282]
+.idx/backup
