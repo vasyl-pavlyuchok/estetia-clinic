@@ -2,37 +2,46 @@
 # see: https://developers.google.com/idx/guides/customize-idx-env
 { pkgs, ... }: {
   # Canal de nixpkgs estable
-  channel = "stable-24.05"; 
-  
+  channel = "stable-24.05";
+
   # Herramientas Core de la Infraestructura
   packages = [
-    pkgs.openssh     # Puente hacia tu VPS Hostinger
-    pkgs.nodejs_20   # Motor para GSD Framework y herramientas de automatización
+    pkgs.openssh
+    pkgs.nodejs_20
   ];
 
   # Variables de entorno del workspace
-  env = {};
+  env = {
+    N8N_AGENT_URL = "https://n8n.agentbooster.ai";
+    N8N_TECH_URL = "https://n8n.techbooster.io";
+  };
 
   idx = {
     # Extensiones esenciales para tu flujo de trabajo
     extensions = [
+      "dbaeumer.vscode-eslint"
+      "esbenp.prettier-vscode"
       "google.gemini-cli-vscode-ide-companion"
+      "redhat.vscode-yaml"
+      "usernamehw.errorlens"
     ];
 
-    # Configuración de previsualización (desactivada hasta que la necesites)
-    previews = {
-      enable = false;
-      previews = {};
-    };
-
-    # Hooks de ciclo de vida del workspace
     workspace = {
-      # Se ejecuta al crear el entorno por primera vez
       onCreate = {
         default.openFiles = [ ".idx/dev.nix" "README.md" ];
       };
-      # Se ejecuta cada vez que el workspace se reinicia
-      onStart = {};
+
+      onStart = { };
+    };
+
+    previews = {
+      enable = true;
+      previews = {
+        web = {
+          command = ["npm" "run" "dev" "--" "--port" "$PORT" "--hostname" "0.0.0.0"];
+          manager = "web";
+        };
+      };
     };
   };
 }
