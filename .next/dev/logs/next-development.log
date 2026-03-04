@@ -1,0 +1,4 @@
+[00:00:02.371] Server  LOG     ✓ Ready in 1760ms
+[00:00:19.080] Server  LOG     ○ Compiling / ...
+[00:00:27.295] Server  WARN    ⚠ Cross origin request detected from 9000-firebase-project-01-1771635677560.cluster-64pjnskmlbaxowh5lzq6i7v4ra.cloudworkstations.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins

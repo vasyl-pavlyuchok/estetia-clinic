@@ -1,4 +1,4 @@
-# To learn more about how to use Nix to configure your environment
+ # To learn more about how to use Nix to configure your environment
 # see: https://developers.google.com/idx/guides/customize-idx-env
 { pkgs, ... }: {
   # Canal de nixpkgs estable
@@ -28,6 +28,9 @@
 
     workspace = {
       onCreate = {
+        # Instala las dependencias de npm al crear el workspace
+        npm-install = "npm install";
+        # Abre archivos importantes al inicio
         default.openFiles = [ ".idx/dev.nix" "README.md" ];
       };
 
