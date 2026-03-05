@@ -16,6 +16,7 @@ auth.json
 
 # --- ARCHIVOS DE SISTEMA Y NODES ---
 node_modules/
+.next/
 dist/
 .DS_Store
 Thumbs.db
