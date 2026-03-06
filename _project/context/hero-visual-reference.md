@@ -43,15 +43,15 @@ Si una nueva sección compromete legibilidad o claridad, reducir efecto antes de
 
 ## Sistema de color derivado del Hero (obligatorio)
 
-- Base clara principal: `#F7FAFC`
-- Superficie clara secundaria: `#EEF3F8`
+- Base clara principal: `#FFFFFF`
+- Superficie clara secundaria: `#F6F7F8`
 - Fondo oscuro principal: `#0D1418`
 - Fondo oscuro elevado: `#111A1F`
-- Texto principal en claro: `#111418`
-- Texto en oscuro: `#F8FCFF`
-- Acento serum azul deep: `#2A566B`
-- Acento serum azul bright: `#8CC0DE`
-- Acento serum dorado deep: `#B28A4A`
-- Acento serum dorado bright: `#E3C282`
+- Texto principal en claro: `#000000`
+- Texto en oscuro: `#FFFFFF`
+- Acento serum azul deep: `#2C5F6F`
+- Acento serum azul bright: `#7FAFC2`
+- Acento serum dorado deep: `#C9A96E`
+- Acento serum dorado bright: `#D5B884`
 
 Referirse a `/_project/context/visual-system-v2.md` para reglas completas de uso.

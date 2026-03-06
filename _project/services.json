@@ -1,0 +1,1028 @@
+[
+  {
+    "id": "hydrafacial-md",
+    "slug": "hydrafacial-md",
+    "name": "Hydrafacial MD®",
+    "category": "tratamientos-faciales",
+    "categoryLabel": "Tratamientos Faciales Avanzados",
+    "tagline": "Limpieza profunda, hidratación instantánea",
+    "description": "Tratamiento facial de limpieza profunda en 3 pasos que combina exfoliación, extracción y hidratación mediante tecnología patentada de vórtice. Utiliza sueros personalizados según el tipo de piel, eliminando impurezas mientras infunde la piel con ingredientes nutritivos. Es un procedimiento no invasivo que proporciona resultados inmediatos y sin tiempo de recuperación, ideal para todo tipo de pieles.",
+    "benefits": [
+      "Limpieza profunda de poros sin irritación",
+      "Hidratación intensa y duradera",
+      "Mejora la textura y luminosidad de la piel",
+      "Reduce líneas finas y arrugas superficiales",
+      "Unifica el tono de piel y reduce manchas",
+      "Resultados visibles desde la primera sesión"
+    ],
+    "indications": [
+      "Pieles opacas sin luminosidad",
+      "Poros dilatados y congestionados",
+      "Manchas solares e hiperpigmentación leve",
+      "Líneas de expresión incipientes",
+      "Preparación pre-evento",
+      "Mantenimiento mensual para cualquier edad"
+    ],
+    "process": [
+      "Limpieza y exfoliación suave con punta de diamante",
+      "Extracción de impurezas mediante succión controlada",
+      "Hidratación con sueros personalizados",
+      "Aplicación de protección LED (opcional)"
+    ],
+    "duration": "45-60 minutos",
+    "sessions": "1 sesión/mes para mantenimiento",
+    "recovery": "Ninguno",
+    "results": "Inmediatos. Piel luminosa y fresca desde la 1ª sesión",
+    "contraindications": [
+      "Rosácea severa activa",
+      "Heridas abiertas",
+      "Quemaduras solares recientes"
+    ],
+    "price": "Desde 120€/sesión",
+    "seoTags": [
+      "hydrafacial madrid",
+      "limpieza facial profesional",
+      "tratamiento facial sin dolor"
+    ],
+    "icon": "droplet",
+    "featured": true,
+    "img_url": "https://images.unsplash.com/photo-1556228578-dd6a486812ea?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "peeling-quimico",
+    "slug": "peeling-quimico-personalizado",
+    "name": "Peeling Químico Personalizado",
+    "category": "tratamientos-faciales",
+    "categoryLabel": "Tratamientos Faciales Avanzados",
+    "tagline": "Renovación celular a medida",
+    "description": "Tratamiento dermatológico que utiliza soluciones químicas específicas (ácido glicólico, salicílico, mandélico o TCA) para exfoliar las capas superficiales de la piel. Estimula la renovación celular, mejora la textura y trata diversas afecciones cutáneas. Personalizamos la concentración y tipo de ácido según las necesidades específicas de cada paciente.",
+    "benefits": [
+      "Renovación celular acelerada",
+      "Reducción de manchas y melasma",
+      "Mejora de cicatrices de acné",
+      "Disminución de arrugas finas",
+      "Control de acné activo y puntos negros",
+      "Textura de piel más suave y uniforme"
+    ],
+    "indications": [
+      "Hiperpigmentación y manchas solares",
+      "Cicatrices superficiales de acné",
+      "Fotoenvejecimiento leve a moderado",
+      "Piel grasa con tendencia acneica",
+      "Melasma hormonal"
+    ],
+    "process": [
+      "Evaluación del tipo de piel y selección del peeling adecuado",
+      "Limpieza profunda y desengrase",
+      "Aplicación controlada del ácido",
+      "Neutralización según tipo de peeling",
+      "Sueros calmantes y protector solar"
+    ],
+    "duration": "30-45 minutos",
+    "sessions": "3-6 sesiones cada 15-30 días",
+    "recovery": "3-7 días (descamación visible)",
+    "results": "Mejora progresiva desde la 2ª sesión, máximos a las 4-6 semanas",
+    "contraindications": [
+      "Embarazo",
+      "Lactancia",
+      "Herpes activo",
+      "Retinoides recientes",
+      "Sol inmediato"
+    ],
+    "price": "Desde 80€/sesión",
+    "seoTags": [
+      "peeling químico facial",
+      "tratamiento manchas piel",
+      "peeling glicólico"
+    ],
+    "icon": "layers",
+    "featured": false,
+    "img_url": "https://images.unsplash.com/photo-1556228578-dd6a486812ea?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "radiofrecuencia-facial",
+    "slug": "radiofrecuencia-facial-fraccionada",
+    "name": "Radiofrecuencia Facial Fraccionada",
+    "category": "tratamientos-faciales",
+    "categoryLabel": "Tratamientos Faciales Avanzados",
+    "tagline": "El lifting no quirúrgico por excelencia",
+    "description": "Tecnología avanzada que utiliza ondas electromagnéticas para calentar las capas profundas de la dermis, estimulando la producción natural de colágeno y elastina. La versión fraccionada permite un tratamiento más preciso con microagujas que penetran a diferentes profundidades. Proporciona tensado cutáneo sin cirugía ni anestesia.",
+    "benefits": [
+      "Reafirmación y lifting facial sin cirugía",
+      "Estimulación natural de colágeno tipo I y III",
+      "Reducción de arrugas profundas",
+      "Mejora de flacidez en óvalo facial",
+      "Cierre de poros dilatados",
+      "Resultados naturales y progresivos"
+    ],
+    "indications": [
+      "Flacidez facial leve a moderada",
+      "Pérdida de definición del óvalo facial",
+      "Surcos nasogenianos marcados",
+      "Papada incipiente",
+      "Alternativa a cirugía"
+    ],
+    "process": [
+      "Limpieza y marcación de zonas",
+      "Aplicación de gel conductor",
+      "Tratamiento con cabezal de radiofrecuencia",
+      "Enfriamiento y mascarilla calmante",
+      "Protección solar"
+    ],
+    "duration": "45-60 minutos",
+    "sessions": "4-6 sesiones cada 15 días",
+    "recovery": "Enrojecimiento leve 2-4 horas",
+    "results": "Progresivos desde la 3ª sesión, máximos a los 3-6 meses",
+    "contraindications": [
+      "Embarazo",
+      "Marcapasos",
+      "Implantes metálicos faciales",
+      "Rosácea severa"
+    ],
+    "price": "Desde 150€/sesión",
+    "seoTags": [
+      "radiofrecuencia facial",
+      "lifting sin cirugía",
+      "tratamiento flacidez facial"
+    ],
+    "icon": "zap",
+    "featured": true,
+    "img_url": "https://images.unsplash.com/photo-1556228578-dd6a486812ea?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "microneedling",
+    "slug": "microneedling-factores-crecimiento",
+    "name": "Microneedling con Factores de Crecimiento",
+    "category": "tratamientos-faciales",
+    "categoryLabel": "Tratamientos Faciales Avanzados",
+    "tagline": "Regeneración profunda con tu propio organismo",
+    "description": "Técnica de rejuvenecimiento que utiliza microagujas estériles para crear microcanales controlados en la piel, estimulando los mecanismos naturales de reparación. Combinamos el microneedling con factores de crecimiento derivados de PRP o sueros específicos, mejorando la textura, reduciendo cicatrices y estimulando colágeno de forma natural.",
+    "benefits": [
+      "Reducción significativa de cicatrices de acné (hasta 70%)",
+      "Atenuación de estrías y marcas cutáneas",
+      "Mejora de textura y suavidad",
+      "Reducción de poros dilatados",
+      "Estimulación profunda de colágeno",
+      "Mejor absorción de activos (hasta 3000% más)"
+    ],
+    "indications": [
+      "Cicatrices atróficas de acné",
+      "Estrías rojas o blancas",
+      "Piel con textura irregular",
+      "Poros muy dilatados",
+      "Rejuvenecimiento global del rostro"
+    ],
+    "process": [
+      "Limpieza y desinfección",
+      "Anestesia tópica (30 min)",
+      "Extracción de sangre para PRP (si aplica)",
+      "Tratamiento con microneedling",
+      "Aplicación de factores de crecimiento",
+      "Mascarilla calmante y regeneradora"
+    ],
+    "duration": "60-90 minutos",
+    "sessions": "3-6 sesiones cada 4-6 semanas",
+    "recovery": "24-72 horas (enrojecimiento moderado)",
+    "results": "Mejora visible desde la 2ª sesión, óptimos a los 3-6 meses",
+    "contraindications": [
+      "Acné activo severo",
+      "Queloides",
+      "Infecciones cutáneas",
+      "Isotretinoína reciente",
+      "Embarazo"
+    ],
+    "price": "Desde 180€/sesión (250€ con PRP)",
+    "seoTags": [
+      "microneedling madrid",
+      "tratamiento cicatrices acné",
+      "microneedling con PRP"
+    ],
+    "icon": "grid",
+    "featured": true,
+    "img_url": "https://images.unsplash.com/photo-1556228578-dd6a486812ea?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "bioestimulacion",
+    "slug": "bioestimulacion-acido-hialuronico",
+    "name": "Bioestimulación con Ácido Hialurónico",
+    "category": "rejuvenecimiento-antiedad",
+    "categoryLabel": "Rejuvenecimiento y Anti-edad",
+    "tagline": "Hidratación profunda desde el interior",
+    "description": "Tratamiento inyectable que utiliza ácido hialurónico de baja densidad para estimular la producción natural de colágeno, elastina y mejorar la hidratación profunda. A diferencia de los rellenos, la bioestimulación mejora la calidad de la piel sin añadir volumen, proporcionando hidratación duradera y rejuvenecimiento natural.",
+    "benefits": [
+      "Hidratación profunda y duradera (hasta 6 meses)",
+      "Mejora de elasticidad y firmeza",
+      "Reducción de líneas finas",
+      "Luminosidad y efecto piel de porcelana",
+      "Estimulación de colágeno endógeno",
+      "Resultados naturales sin cambiar rasgos"
+    ],
+    "indications": [
+      "Pieles deshidratadas y apagadas",
+      "Primeros signos de envejecimiento",
+      "Prevención anti-edad",
+      "Cuello y escote envejecidos"
+    ],
+    "process": [
+      "Consulta médica y evaluación",
+      "Limpieza y desinfección",
+      "Anestesia tópica (opcional)",
+      "Microinyecciones en técnica nappage",
+      "Mascarilla calmante"
+    ],
+    "duration": "30-45 minutos",
+    "sessions": "2-3 sesiones cada 3-4 semanas",
+    "recovery": "Mínimo, pequeños hematomas posibles 2-3 días",
+    "results": "Mejora progresiva desde la 1ª semana, óptimos al completar protocolo",
+    "contraindications": [
+      "Embarazo",
+      "Lactancia",
+      "Alergias al AH",
+      "Enfermedades autoinmunes activas"
+    ],
+    "price": "Desde 250€/sesión",
+    "seoTags": [
+      "bioestimulación facial",
+      "ácido hialurónico piel",
+      "skinbooster madrid"
+    ],
+    "icon": "droplets",
+    "featured": false,
+    "img_url": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "botox",
+    "slug": "toxina-botulinica",
+    "name": "Toxina Botulínica (Botox®)",
+    "category": "rejuvenecimiento-antiedad",
+    "categoryLabel": "Rejuvenecimiento y Anti-edad",
+    "tagline": "Suaviza expresiones, preserva tu naturalidad",
+    "description": "Tratamiento inyectable de referencia que utiliza toxina botulínica tipo A purificada para relajar temporalmente los músculos faciales responsables de arrugas de expresión. Utilizamos técnicas avanzadas de microinyección para resultados sutiles y armoniosos, evitando el efecto 'congelado' y respetando la expresividad natural de cada paciente.",
+    "benefits": [
+      "Reducción inmediata de arrugas dinámicas",
+      "Prevención de arrugas futuras",
+      "Efecto lifting de cejas",
+      "Tratamiento de bruxismo",
+      "Reducción de hiperhidrosis",
+      "Resultados naturales y reversibles"
+    ],
+    "indications": [
+      "Arrugas de expresión (frente, entrecejo, patas de gallo)",
+      "Prevención anti-edad en pacientes jóvenes",
+      "Bruxismo y tensión mandibular",
+      "Hiperhidrosis axilar o palmar",
+      "Sonrisa gingival"
+    ],
+    "process": [
+      "Consulta y evaluación de expresión facial",
+      "Marcación de puntos de inyección",
+      "Limpieza y desinfección",
+      "Microinyecciones precisas",
+      "Revisión opcional a los 15 días"
+    ],
+    "duration": "15-30 minutos",
+    "sessions": "1 sesión cada 4-6 meses",
+    "recovery": "Ninguno",
+    "results": "Inicio 2-3 días, máximo resultado 10-15 días, duración 4-6 meses",
+    "contraindications": [
+      "Embarazo",
+      "Lactancia",
+      "Miastenia gravis",
+      "Infecciones en zona"
+    ],
+    "price": "Desde 180€/zona",
+    "seoTags": [
+      "botox madrid",
+      "toxina botulínica facial",
+      "tratamiento arrugas expresión"
+    ],
+    "icon": "smile",
+    "featured": true,
+    "img_url": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "hilos-tensores",
+    "slug": "hilos-tensores-pdo",
+    "name": "Hilos Tensores PDO",
+    "category": "rejuvenecimiento-antiedad",
+    "categoryLabel": "Rejuvenecimiento y Anti-edad",
+    "tagline": "Lifting inmediato, colágeno duradero",
+    "description": "Tratamiento mínimamente invasivo con hilos de polidioxanona reabsorbibles para lograr efecto lifting inmediato y estimular la producción de colágeno a largo plazo. Combinamos hilos espiculados para tracción y lisos para bioestimulación, personalizando según las necesidades de cada paciente.",
+    "benefits": [
+      "Efecto lifting inmediato sin cirugía",
+      "Redefinición del óvalo facial",
+      "Elevación de cejas y mirada",
+      "Estimulación de colágeno 6-12 meses",
+      "Mejora de flacidez en cuello y papada",
+      "Resultados naturales y armoniosos"
+    ],
+    "indications": [
+      "Flacidez facial leve a moderada",
+      "Pérdida de definición del óvalo",
+      "Descolgamiento de mejillas",
+      "Cejas caídas",
+      "Papada y flacidez en cuello"
+    ],
+    "process": [
+      "Consulta con planificación de vectores",
+      "Marcación de puntos de entrada",
+      "Anestesia local",
+      "Inserción de hilos con microcánulas",
+      "Tracción y fijación",
+      "Control a las 48-72 horas"
+    ],
+    "duration": "60-90 minutos",
+    "sessions": "1 sesión, retoque opcional a 12-18 meses",
+    "recovery": "3-7 días (inflamación y hematomas leves)",
+    "results": "Efecto lifting inmediato (60%), mejora progresiva hasta 6 meses, duración 12-18 meses",
+    "contraindications": [
+      "Embarazo",
+      "Infecciones activas",
+      "Trastornos de coagulación",
+      "Queloides"
+    ],
+    "price": "Desde 600€",
+    "seoTags": [
+      "hilos tensores madrid",
+      "lifting sin cirugía",
+      "hilos PDO facial"
+    ],
+    "icon": "anchor",
+    "featured": false,
+    "img_url": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "mesoterapia-facial",
+    "slug": "mesoterapia-facial-regenerativa",
+    "name": "Mesoterapia Facial Regenerativa",
+    "category": "rejuvenecimiento-antiedad",
+    "categoryLabel": "Rejuvenecimiento y Anti-edad",
+    "tagline": "Vitaminas directas donde más las necesitas",
+    "description": "Microinyecciones intradérmicas de un cóctel personalizado de vitaminas, minerales, aminoácidos y ácido hialurónico directamente en la dermis. Nutre la piel desde el interior, mejorando su calidad, luminosidad y capacidad de regeneración celular. Personalizamos cada fórmula según el tipo de piel, edad y objetivos.",
+    "benefits": [
+      "Nutrición profunda y revitalización celular",
+      "Mejora de luminosidad y tono",
+      "Hidratación intensa y duradera",
+      "Reducción de manchas",
+      "Estimulación de microcirculación",
+      "Efecto antioxidante"
+    ],
+    "indications": [
+      "Pieles fatigadas y sin vitalidad",
+      "Deshidratación crónica",
+      "Manchas solares",
+      "Recuperación post-verano",
+      "Cuello, escote y manos envejecidas"
+    ],
+    "process": [
+      "Evaluación y selección de cóctel personalizado",
+      "Limpieza y desinfección",
+      "Anestesia tópica (opcional)",
+      "Microinyecciones en patrón nappage",
+      "Mascarilla calmante y protector solar"
+    ],
+    "duration": "30-45 minutos",
+    "sessions": "4-6 sesiones semanales/quincenales",
+    "recovery": "Mínimo, puntos rojos 2-4 horas",
+    "results": "Luminosidad inmediata, mejora acumulativa con protocolo (4-6 semanas)",
+    "contraindications": [
+      "Embarazo",
+      "Lactancia",
+      "Infecciones cutáneas activas",
+      "Queloides"
+    ],
+    "price": "Desde 120€/sesión",
+    "seoTags": [
+      "mesoterapia facial madrid",
+      "revitalización facial",
+      "vitaminas inyectables piel"
+    ],
+    "icon": "sparkles",
+    "featured": false,
+    "img_url": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "criolipolis",
+    "slug": "criolipolis-coolsculpting",
+    "name": "Criolipólisis (CoolSculpting)",
+    "category": "contorno-corporal",
+    "categoryLabel": "Contorno Corporal",
+    "tagline": "Elimina grasa localizada de forma permanente",
+    "description": "Tecnología no invasiva que utiliza frío controlado (-10°C) para eliminar células grasas de forma selectiva y permanente. Las células grasas cristalizadas son eliminadas naturalmente por el organismo. Es la alternativa no quirúrgica más efectiva a la liposucción, FDA aprobada, que reduce hasta un 25% de grasa localizada por sesión.",
+    "benefits": [
+      "Reducción permanente de grasa (20-25% por zona)",
+      "No invasivo, sin agujas ni incisiones",
+      "Sin anestesia ni recuperación",
+      "Resultados naturales y progresivos",
+      "FDA y CE aprobado",
+      "Sin efecto rebote con peso estable"
+    ],
+    "indications": [
+      "Michelines y acúmulos abdominales",
+      "Cartucheras y flancos",
+      "Grasa en muslos",
+      "Papada submentoniana",
+      "Grasa en brazos",
+      "IMC normal o sobrepeso leve"
+    ],
+    "process": [
+      "Consulta con mediciones y fotografías",
+      "Evaluación del panículo adiposo",
+      "Marcación de zonas",
+      "Membrana protectora en piel",
+      "Aplicador con succión y enfriamiento (35-60 min)",
+      "Masaje vigoroso post-tratamiento"
+    ],
+    "duration": "35-60 minutos/zona",
+    "sessions": "1-2 sesiones/zona separadas 2-3 meses",
+    "recovery": "Ninguno",
+    "results": "Inicio a las 3 semanas, máximos a los 2-3 meses",
+    "contraindications": [
+      "Crioglobulinemia",
+      "Urticaria al frío",
+      "Embarazo",
+      "Obesidad IMC>30"
+    ],
+    "price": "Desde 300€/zona",
+    "seoTags": [
+      "criolipólisis madrid",
+      "coolsculpting",
+      "eliminar grasa sin cirugía"
+    ],
+    "icon": "snowflake",
+    "featured": true,
+    "img_url": "https://images.unsplash.com/photo-1516431883659-655d41c09bf9?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "radiofrecuencia-corporal",
+    "slug": "radiofrecuencia-corporal-multipolar",
+    "name": "Radiofrecuencia Corporal Multipolar",
+    "category": "contorno-corporal",
+    "categoryLabel": "Contorno Corporal",
+    "tagline": "Reafirma y combate la celulitis sin dolor",
+    "description": "Tratamiento corporal avanzado con ondas electromagnéticas de múltiples electrodos que calienta el tejido adiposo y dérmico de forma homogénea (40-43°C). Estimula colágeno, mejora la circulación linfática, reduce celulitis y reafirma la piel flácida. Combinamos con vacumterapia para potenciar resultados.",
+    "benefits": [
+      "Reafirmación de piel flácida",
+      "Reducción visible de celulitis grados I-III",
+      "Mejora de textura cutánea",
+      "Estimulación de colágeno y elastina",
+      "Mejora de drenaje linfático",
+      "Tratamiento confortable sin dolor"
+    ],
+    "indications": [
+      "Flacidez post-pérdida de peso",
+      "Celulitis en muslos y glúteos",
+      "Flacidez post-parto",
+      "Brazos con piel flácida",
+      "Complemento post-criolipólisis"
+    ],
+    "process": [
+      "Evaluación y mediciones",
+      "Aplicación de gel conductor",
+      "Tratamiento con cabezal multipolar",
+      "Drenaje linfático (opcional)",
+      "Crema reafirmante específica"
+    ],
+    "duration": "45-60 minutos/zona",
+    "sessions": "8-12 sesiones, 2 veces/semana",
+    "recovery": "Ninguno",
+    "results": "Mejora progresiva desde 4ª-5ª sesión, óptimos al completar protocolo",
+    "contraindications": [
+      "Embarazo",
+      "Marcapasos",
+      "Trombosis venosa",
+      "Cáncer activo"
+    ],
+    "price": "Desde 80€/sesión",
+    "seoTags": [
+      "radiofrecuencia corporal",
+      "tratamiento celulitis",
+      "reafirmación corporal"
+    ],
+    "icon": "activity",
+    "featured": false,
+    "img_url": "https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "presoterapia",
+    "slug": "presoterapia-drenaje-linfatico",
+    "name": "Presoterapia con Drenaje Linfático",
+    "category": "contorno-corporal",
+    "categoryLabel": "Contorno Corporal",
+    "tagline": "Elimina líquidos, activa tu circulación",
+    "description": "Tratamiento con presión neumática secuencial que reproduce el drenaje linfático manual. Favorece la eliminación de líquidos retenidos, toxinas y mejora la circulación venosa. Utilizamos equipos con 12-24 cámaras independientes que simulan el flujo natural linfático para máxima eficacia.",
+    "benefits": [
+      "Eliminación de retención de líquidos",
+      "Reducción de piernas cansadas y pesadas",
+      "Mejora de circulación venosa y linfática",
+      "Efecto detox y eliminación de toxinas",
+      "Reducción de perímetro (hasta 2-3 cm)",
+      "Sensación inmediata de ligereza"
+    ],
+    "indications": [
+      "Retención de líquidos y edemas",
+      "Insuficiencia venosa",
+      "Post-operatorio estético",
+      "Recuperación deportiva",
+      "Complemento a otros tratamientos corporales"
+    ],
+    "process": [
+      "Revisión de historial médico",
+      "Colocación de botas/manguitos",
+      "Ajuste de presión personalizado",
+      "Ciclos de compresión secuencial (30-45 min)",
+      "Recomendaciones post-sesión"
+    ],
+    "duration": "30-45 minutos",
+    "sessions": "10-15 sesiones, 2-3 veces/semana",
+    "recovery": "Ninguno",
+    "results": "Ligereza inmediata, reducción de perímetro desde 3ª-4ª sesión",
+    "contraindications": [
+      "Trombosis venosa profunda activa",
+      "Insuficiencia cardíaca severa",
+      "Flebitis"
+    ],
+    "price": "Desde 40€/sesión",
+    "seoTags": [
+      "presoterapia madrid",
+      "drenaje linfático",
+      "tratamiento retención líquidos"
+    ],
+    "icon": "wind",
+    "featured": false,
+    "img_url": "https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "cavitacion",
+    "slug": "cavitacion-ultrasonica",
+    "name": "Cavitación Ultrasónica",
+    "category": "contorno-corporal",
+    "categoryLabel": "Contorno Corporal",
+    "tagline": "Rompe la grasa con ultrasonidos",
+    "description": "Ultrasonidos de baja frecuencia (40 kHz) que generan microburbujas para romper las membranas de los adipocitos. La grasa liberada se metaboliza y elimina de forma natural. Combinamos cavitación con radiofrecuencia y drenaje linfático para optimizar la eliminación de grasa y potenciar resultados.",
+    "benefits": [
+      "Reducción de grasa localizada (2-4 cm por ciclo)",
+      "Remodelación del contorno corporal",
+      "Tratamiento indoloro y no invasivo",
+      "Resultados visibles y medibles",
+      "Sin anestesia ni agujas",
+      "Sesión rápida y cómoda"
+    ],
+    "indications": [
+      "Adiposidad localizada en abdomen",
+      "Cartucheras y caderas",
+      "Grasa en muslos",
+      "Brazos con acúmulo graso",
+      "Complemento post-criolipólisis"
+    ],
+    "process": [
+      "Evaluación y medición de perímetros",
+      "Aplicación de gel conductor",
+      "Tratamiento con cabezal de cavitación",
+      "Drenaje linfático post-tratamiento (obligatorio)",
+      "2L de agua en 24h posteriores"
+    ],
+    "duration": "40-50 minutos",
+    "sessions": "8-12 sesiones, 1 vez/semana máximo",
+    "recovery": "Ninguno",
+    "results": "Reducción progresiva desde 3ª sesión",
+    "contraindications": [
+      "Embarazo",
+      "Enfermedades hepáticas",
+      "Hiperlipidemia severa",
+      "Marcapasos"
+    ],
+    "price": "Desde 70€/sesión",
+    "seoTags": [
+      "cavitación ultrasónica madrid",
+      "reducir grasa localizada",
+      "cavitación corporal"
+    ],
+    "icon": "circle-dot",
+    "featured": false,
+    "img_url": "https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "rellenos-dermicos",
+    "slug": "rellenos-dermicos-acido-hialuronico",
+    "name": "Rellenos Dérmicos con Ácido Hialurónico",
+    "category": "medicina-estetica-inyectable",
+    "categoryLabel": "Medicina Estética Inyectable",
+    "tagline": "Volumen natural, proporciones perfectas",
+    "description": "Rellenos de ácido hialurónico reticulado de alta densidad para restaurar volúmenes, rellenar arrugas profundas y definir contornos. Trabajamos con marcas premium (Juvederm, Restylane, Teosyal) y técnicas avanzadas de armonización facial basadas en proporciones áureas. Nuestro enfoque busca resultados naturales que respeten la identidad del paciente.",
+    "benefits": [
+      "Restauración de volúmenes perdidos",
+      "Relleno de arrugas profundas",
+      "Definición y aumento de labios natural",
+      "Perfilado de mandíbula y mentón",
+      "Proyección de pómulos",
+      "Reversibles con hialuronidasa"
+    ],
+    "indications": [
+      "Pérdida de volumen facial",
+      "Surcos nasogenianos marcados",
+      "Labios finos o asimétricos",
+      "Mentón retraído",
+      "Ojeras hundidas",
+      "Armonización facial completa"
+    ],
+    "process": [
+      "Análisis facial 3D y planificación",
+      "Fotografías pre-tratamiento",
+      "Anestesia tópica (20-30 min)",
+      "Inyección con micro-cánulas o agujas ultrafinas",
+      "Revisión a los 15 días"
+    ],
+    "duration": "30-60 minutos",
+    "sessions": "1 sesión inicial, retoques según duración",
+    "recovery": "Hematomas posibles 3-7 días",
+    "results": "Inmediatos, definitivos a 7-15 días, duración 9-18 meses",
+    "contraindications": [
+      "Embarazo",
+      "Lactancia",
+      "Alergias al AH",
+      "Queloides"
+    ],
+    "price": "Desde 350€/jeringa",
+    "seoTags": [
+      "rellenos ácido hialurónico madrid",
+      "aumento labios natural",
+      "armonización facial"
+    ],
+    "icon": "circle",
+    "featured": true,
+    "img_url": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "inductores-colageno",
+    "slug": "inductores-colageno-sculptra-radiesse",
+    "name": "Inductores de Colágeno (Sculptra/Radiesse)",
+    "category": "medicina-estetica-inyectable",
+    "categoryLabel": "Medicina Estética Inyectable",
+    "tagline": "Tu propio colágeno, resultados que duran años",
+    "description": "Ácido poli-L-láctico (Sculptra) o hidroxiapatita cálcica (Radiesse) que actúan como andamiaje para que tus fibroblastos generen colágeno nuevo durante meses. Nuestra opción preferida para pacientes que buscan resultados duraderos (hasta 3 años) sin el efecto 'relleno' típico.",
+    "benefits": [
+      "Estimulación de colágeno propio (hasta 2-3 años)",
+      "Restauración de volumen natural y progresiva",
+      "Mejora de calidad y grosor de piel",
+      "Sin aspecto de relleno",
+      "Lifting líquido sin cirugía",
+      "Mayor durabilidad que rellenos tradicionales"
+    ],
+    "indications": [
+      "Pérdida de volumen facial generalizada",
+      "Envejecimiento avanzado con piel fina",
+      "Mejillas hundidas y sienes deprimidas",
+      "Manos envejecidas",
+      "Pacientes que buscan resultados duraderos"
+    ],
+    "process": [
+      "Consulta exhaustiva con planificación",
+      "Anestesia tópica o bloqueo nervioso",
+      "Inyecciones profundas en puntos estratégicos",
+      "Masaje post-inyección (regla 5-5-5)",
+      "Seguimiento fotográfico mensual"
+    ],
+    "duration": "45-60 minutos",
+    "sessions": "2-3 sesiones (Sculptra) / 1-2 sesiones (Radiesse)",
+    "recovery": "Inflamación 2-5 días",
+    "results": "Progresivos desde el mes, máximos a 3-6 meses, duración 18-36 meses",
+    "contraindications": [
+      "Embarazo",
+      "Lactancia",
+      "Infecciones activas",
+      "Queloides"
+    ],
+    "price": "Desde 450€/vial Sculptra, desde 400€/jeringa Radiesse",
+    "seoTags": [
+      "sculptra madrid",
+      "inductores colágeno",
+      "rejuvenecimiento duradero facial"
+    ],
+    "icon": "dna",
+    "featured": false,
+    "img_url": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "skinboosters",
+    "slug": "skinboosters-profhilo",
+    "name": "Skinboosters (Profhilo/Seventy Hyal)",
+    "category": "medicina-estetica-inyectable",
+    "categoryLabel": "Medicina Estética Inyectable",
+    "tagline": "El secreto del glass skin",
+    "description": "Ácido hialurónico de ultra-alta concentración con tecnología de reticulación híbrida que se difunde homogéneamente bajo la piel. Profhilo, con solo 10 puntos de inyección por hemicara (técnica BAP), estimula 4 tipos de colágeno y elastina sin añadir volumen. El resultado es el efecto 'glass skin' más buscado en estética.",
+    "benefits": [
+      "Hidratación profunda 360°",
+      "Efecto lifting y reafirmante sin volumen",
+      "Estimulación de 4 tipos de colágeno",
+      "Efecto glass skin / piel de cristal",
+      "Solo 10 puntos de inyección por hemicara",
+      "Textura más suave y tersa"
+    ],
+    "indications": [
+      "Piel envejecida con pérdida de elasticidad",
+      "Piel crepé en rostro, cuello y escote",
+      "Manos envejecidas",
+      "Prevención de calidad de piel",
+      "Post-tratamientos láser"
+    ],
+    "process": [
+      "Evaluación de calidad cutánea",
+      "Marcación de puntos BAP",
+      "Inyección lenta en técnica bolus",
+      "Difusión natural en 24-48h",
+      "Segunda sesión a las 4 semanas"
+    ],
+    "duration": "15-30 minutos",
+    "sessions": "2 sesiones con 4 semanas de separación",
+    "recovery": "Pápulas visibles 12-24h",
+    "results": "Mejora desde 1ª semana, máximos a 8-12 semanas, duración 6-9 meses",
+    "contraindications": [
+      "Embarazo",
+      "Lactancia",
+      "Alergias al AH",
+      "Queloides"
+    ],
+    "price": "Desde 320€/sesión (pack 2 sesiones desde 580€)",
+    "seoTags": [
+      "profhilo madrid",
+      "skinboosters",
+      "glass skin tratamiento",
+      "hidratación profunda facial"
+    ],
+    "icon": "gem",
+    "featured": true,
+    "img_url": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "mesoterapia-capilar",
+    "slug": "mesoterapia-capilar-regenerativa",
+    "name": "Mesoterapia Capilar Regenerativa",
+    "category": "tratamientos-capilares",
+    "categoryLabel": "Tratamientos Capilares",
+    "tagline": "Frena la caída, activa el crecimiento",
+    "description": "Microinyecciones intradérmicas en el cuero cabelludo de vitaminas, minerales, aminoácidos y factores de crecimiento que nutren directamente el folículo piloso. Estimula la circulación, revitaliza folículos debilitados y frena la caída. Personalizamos cada fórmula con minoxidil, biotina, complejo B, zinc y péptidos biomiméticos.",
+    "benefits": [
+      "Frenado efectivo de la caída (hasta 80%)",
+      "Estimulación de cabello nuevo",
+      "Fortalecimiento del folículo piloso",
+      "Mayor grosor y densidad capilar",
+      "Revascularización del cuero cabelludo",
+      "Complemento ideal a tratamientos orales"
+    ],
+    "indications": [
+      "Alopecia androgenética grados I-IV",
+      "Efluvio telógeno (caída difusa)",
+      "Alopecia areata inicial",
+      "Cabello fino y quebradizo",
+      "Pre/post-trasplante capilar"
+    ],
+    "process": [
+      "Tricoscopia digital para evaluación",
+      "Selección de cóctel personalizado",
+      "Limpieza del cuero cabelludo",
+      "Microinyecciones en nappage",
+      "Masaje y loción fortificante"
+    ],
+    "duration": "30-45 minutos",
+    "sessions": "10-12 sesiones semanales/quincenales",
+    "recovery": "Ninguno",
+    "results": "Frenado de caída desde 4ª-5ª sesión, crecimiento visible a 3-4 meses",
+    "contraindications": [
+      "Embarazo",
+      "Infecciones del cuero cabelludo",
+      "Psoriasis severa activa"
+    ],
+    "price": "Desde 90€/sesión",
+    "seoTags": [
+      "mesoterapia capilar madrid",
+      "tratamiento caída cabello",
+      "mesoterapia alopecia"
+    ],
+    "icon": "feather",
+    "featured": false,
+    "img_url": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "prp-capilar",
+    "slug": "prp-capilar",
+    "name": "Plasma Rico en Plaquetas Capilar (PRP)",
+    "category": "tratamientos-capilares",
+    "categoryLabel": "Tratamientos Capilares",
+    "tagline": "El gold standard en medicina capilar regenerativa",
+    "description": "Tratamiento regenerativo que utiliza factores de crecimiento de tus propias plaquetas para regenerar folículos pilosos. Mediante extracción y centrifugación especializada, obtenemos plasma concentrado que estimula angiogénesis, prolonga la fase de crecimiento y reactiva folículos dormidos. 100% autólogo y sin riesgo de rechazo.",
+    "benefits": [
+      "Regeneración natural del folículo",
+      "Aumento de densidad capilar (15-20% en 6 meses)",
+      "Mayor grosor del tallo capilar",
+      "Reducción drástica de la caída",
+      "Tratamiento 100% natural y seguro",
+      "Complemento perfecto a trasplante capilar"
+    ],
+    "indications": [
+      "Alopecia androgenética masculina y femenina",
+      "Alopecia areata resistente",
+      "Efluvio telógeno crónico",
+      "Pre/post-trasplante capilar",
+      "Pacientes que prefieren tratamientos naturales"
+    ],
+    "process": [
+      "Evaluación con tricoscopia",
+      "Extracción de sangre venosa (10-20ml)",
+      "Centrifugación certificada",
+      "Activación del PRP",
+      "Anestesia tópica",
+      "Infiltración por microinyecciones"
+    ],
+    "duration": "60-90 minutos",
+    "sessions": "3-4 sesiones cada 4-6 semanas",
+    "recovery": "Enrojecimiento leve 24-48h",
+    "results": "Frenado desde 2ª sesión, cabello nuevo visible a 3-4 meses, densidad máxima 6-9 meses",
+    "contraindications": [
+      "Trastornos hematológicos",
+      "Plaquetopenia",
+      "Cáncer activo",
+      "Anticoagulantes"
+    ],
+    "price": "Desde 250€/sesión",
+    "seoTags": [
+      "PRP capilar madrid",
+      "plasma rico plaquetas cabello",
+      "tratamiento natural alopecia"
+    ],
+    "icon": "droplet",
+    "featured": true,
+    "img_url": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "laser-capilar",
+    "slug": "laser-baja-intensidad-capilar",
+    "name": "Láser de Baja Intensidad (LLLT) Capilar",
+    "category": "tratamientos-capilares",
+    "categoryLabel": "Tratamientos Capilares",
+    "tagline": "Fotobiomodulación para activar tus folículos",
+    "description": "Fotobiomodulación con luz láser de baja intensidad (650-900nm) que activa la mitocondria del folículo piloso, aumenta la producción de ATP, mejora la circulación y reduce la inflamación folicular. FDA aprobado, completamente indoloro. Utilizamos cascos de última generación con 272 diodos láser para cobertura total del cuero cabelludo.",
+    "benefits": [
+      "Estimulación de crecimiento por fotobiomodulación",
+      "Aumento de grosor del cabello (hasta 30%)",
+      "Mejora de densidad capilar",
+      "Reducción de la caída activa",
+      "FDA cleared, sin efectos secundarios",
+      "Sesión cómoda y relajante"
+    ],
+    "indications": [
+      "Alopecia androgenética grados I-IV",
+      "Debilitamiento capilar difuso",
+      "Mantenimiento post-trasplante",
+      "Complemento a minoxidil/finasteride",
+      "Recuperación post-quimioterapia (con autorización)"
+    ],
+    "process": [
+      "Evaluación tricológica con fotografías",
+      "Limpieza del cuero cabelludo",
+      "Colocación del casco láser",
+      "Sesión de 20-30 minutos automática",
+      "Sin cuidados post-tratamiento"
+    ],
+    "duration": "20-30 minutos",
+    "sessions": "2-3 sesiones/semana durante 4-6 meses",
+    "recovery": "Ninguno",
+    "results": "Reducción de caída desde el mes, crecimiento nuevo visible 4-6 meses",
+    "contraindications": [
+      "Fotosensibilidad",
+      "Cáncer de piel activo",
+      "Medicación fotosensibilizante"
+    ],
+    "price": "Desde 40€/sesión",
+    "seoTags": [
+      "láser capilar madrid",
+      "LLLT alopecia",
+      "tratamiento láser cabello"
+    ],
+    "icon": "sun",
+    "featured": false,
+    "img_url": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "laser-co2",
+    "slug": "laser-fraccionado-co2",
+    "name": "Láser Fraccionado CO2",
+    "category": "dermatologia-estetica",
+    "categoryLabel": "Dermatología Estética",
+    "tagline": "El gold standard en rejuvenecimiento profundo",
+    "description": "Láser ablativo fraccionado de CO2 (10.600nm), el gold standard en rejuvenecimiento cutáneo profundo. Crea microcolumnas de tratamiento que vaporizan tejido envejecido estimulando una renovación dérmica profunda con producción masiva de colágeno nuevo. El tratamiento más efectivo para cicatrices, arrugas profundas y fotoenvejecimiento severo.",
+    "benefits": [
+      "Rejuvenecimiento profundo y duradero (hasta 5 años)",
+      "Eliminación de arrugas profundas",
+      "Reducción de cicatrices de acné (70-90%)",
+      "Eliminación de manchas solares",
+      "Tensado cutáneo por retracción dérmica",
+      "Renovación completa de la piel"
+    ],
+    "indications": [
+      "Fotoenvejecimiento severo",
+      "Cicatrices atróficas de acné resistentes",
+      "Cicatrices quirúrgicas",
+      "Estrías atróficas blancas",
+      "Arrugas periorbitales profundas"
+    ],
+    "process": [
+      "Consulta exhaustiva y consentimiento",
+      "Preparación de piel 2-4 semanas",
+      "Profilaxis antiviral (si historial herpes)",
+      "Anestesia tópica (45-60 min)",
+      "Tratamiento láser por zonas",
+      "Curas post-láser 7-10 días"
+    ],
+    "duration": "60-90 minutos",
+    "sessions": "1-3 sesiones espaciadas 4-6 semanas",
+    "recovery": "7-14 días (descamación, eritema intenso)",
+    "results": "Mejora visible desde 2ª semana, progresivos hasta 6 meses, duración varios años",
+    "contraindications": [
+      "Embarazo",
+      "Fototipos V-VI",
+      "Bronceado reciente",
+      "Isotretinoína últimos 6 meses",
+      "Queloides"
+    ],
+    "price": "Desde 600€/sesión rostro completo",
+    "seoTags": [
+      "láser CO2 fraccionado madrid",
+      "tratamiento cicatrices acné láser",
+      "rejuvenecimiento láser"
+    ],
+    "icon": "target",
+    "featured": false,
+    "img_url": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  },
+  {
+    "id": "ipl-fotorejuvenecimiento",
+    "slug": "ipl-fotorejuvenecimiento",
+    "name": "IPL Fotorrejuvenecimiento",
+    "category": "dermatologia-estetica",
+    "categoryLabel": "Dermatología Estética",
+    "tagline": "Tono uniforme, rojeces eliminadas",
+    "description": "Luz pulsada intensa de amplio espectro (500-1200nm) que trata múltiples problemas simultáneamente mediante fototermólisis selectiva. Eliminamos manchas, rojeces vasculares y estimulamos colágeno. Con filtros personalizables para cada tipo de lesión y sistema de enfriamiento integrado para máxima seguridad y confort.",
+    "benefits": [
+      "Eliminación de manchas solares (hasta 80%)",
+      "Reducción de rojeces y rosácea",
+      "Tratamiento de vasos superficiales",
+      "Estimulación de colágeno",
+      "Luminosidad y rejuvenecimiento global",
+      "Tratamiento multi-problema en una sesión"
+    ],
+    "indications": [
+      "Manchas solares e hiperpigmentación",
+      "Rojeces faciales y rosácea",
+      "Cuperosis y telangiectasias",
+      "Fotoenvejecimiento",
+      "Rejuvenecimiento de cuello, escote y manos"
+    ],
+    "process": [
+      "Consulta dermatológica y evaluación de fototipo",
+      "Aplicación de gel conductor frío",
+      "Configuración de parámetros según lesión",
+      "Disparos de luz con enfriamiento",
+      "Mascarilla calmante y protector solar SPF50+"
+    ],
+    "duration": "20-40 minutos",
+    "sessions": "3-6 sesiones cada 3-4 semanas",
+    "recovery": "Mínimo, manchas más oscuras 5-10 días antes de descamar",
+    "results": "Mejora visible desde 1ª sesión, acumulativos con protocolo",
+    "contraindications": [
+      "Embarazo",
+      "Fototipos V-VI",
+      "Bronceado reciente",
+      "Fotosensibilidad"
+    ],
+    "price": "Desde 150€/sesión rostro completo",
+    "seoTags": [
+      "IPL fotorrejuvenecimiento madrid",
+      "tratamiento manchas luz pulsada",
+      "eliminar rojeces faciales"
+    ],
+    "icon": "sun",
+    "featured": false,
+    "img_url": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1800&q=80",
+    "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
+  }
+]

@@ -30,7 +30,7 @@ This document is now the operational visual baseline for new UI work.
 ## Composition Rules
 
 1. Contrast first:
-- Sections must be either clearly light (`#F7FAFC` family) or clearly dark (`#0D1418` family).
+- Sections must be either clearly light (`#FFFFFF` family) or clearly dark (`#0D1418` family).
 - Avoid muddy middle-contrast backgrounds.
 
 2. One focal point per section:

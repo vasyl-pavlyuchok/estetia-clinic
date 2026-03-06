@@ -45,6 +45,29 @@ Si hay conflicto entre documentos, priorizar la fuente superior y mantener el ni
 5. Implementar.
 6. Verificar consistencia con marca, datos y rendimiento.
 
+## Estetia Critic Loop (obligatorio antes de entregar)
+
+Antes de confirmar cualquier cambio de diseno/codigo, ejecutar autocrítica interna con 3 filtros:
+
+1. Filtro Apple (minimalismo radical):
+- validar whitespace suficiente,
+- validar jerarquia visual obvia,
+- eliminar cualquier patron que parezca generico/plantilla.
+
+2. Filtro Ramachandran (neuroestetica):
+- validar ley de aislamiento (un foco principal por bloque),
+- validar simetria balanceada o intencional,
+- validar Peak Shift (exageracion sutil de limpieza/precision tecnologica).
+
+3. Filtro de rendimiento visual:
+- animaciones Framer Motion <= 0.5s cuando aplique,
+- transiciones sutiles y no distractoras.
+
+Secuencia obligatoria de entrega:
+1. Implementar cambios.
+2. Incluir bloque corto titulado `AUDITORIA ESTETICA` explicando que se ajusto para subir nivel.
+3. Presentar resultado final.
+
 ## Criterios visuales obligatorios (Estetia)
 
 - Estetica premium minimal, no plantilla medica generica.

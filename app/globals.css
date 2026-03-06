@@ -280,6 +280,15 @@
     max-width: 104px;
     object-fit: contain;
     opacity: 0.95;
+    filter: grayscale(100%) brightness(0.8);
+    transition:
+      filter 0.4s ease,
+      opacity 0.4s ease;
+  }
+
+  .trust-brand-chip:hover .trust-logo-img {
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
   }
 
   .trust-brand-fallback {

@@ -7,7 +7,7 @@
 - `services.json` is the canonical source for services rendering.
 - `BRIEF.md` is a living doc and can be refined when needed.
 - ElevenLabs integration will be a lateral floating voice button (no dedicated IA section for now).
-- Visual direction updated: move away from beige-led aesthetic to Hero-aligned high-contrast system (clean whites + deep darks + controlled serum blue/gold accents).
+- Visual direction updated: monochrome luxury baseline (white/black architecture + controlled serum blue/gold accents; beige-led aesthetic invalidated).
 
 ## Experience Goal
 
@@ -15,6 +15,17 @@
 - High trust + aspirational tone.
 - Strong IA positioning (chat/voice showcase) as a core differentiator.
 - Neuroesthetics (Ramachandran) is a required design framework for visual and interaction decisions.
+
+## Locked Information Architecture (Ecosystem, not single landing)
+
+- Global navigation includes: `Metodo`, `Doctora`, `Resultados`, `Servicios` (with mega menu by service categories).
+- Services ecosystem is multi-page:
+  - `app/servicios/page.tsx`: full index grid using Living Cards.
+  - `app/servicios/[slug]/page.tsx`: treatment detail with Hero Quirurgico, technical data, science section, and treatment-specific FAQ.
+- Authority page:
+  - `app/doctora/page.tsx`: "The Aesthetic Dream Team" in editorial two-column format.
+- Philosophy page:
+  - `app/metodo/page.tsx`: neuroaesthetic framework and symmetry/perfection method narrative.
 
 ## Known Strategic Assets
 
@@ -36,3 +47,4 @@ If a proposed approach is lower quality/scope than current implementation or est
 - Implement only one section or tightly scoped subtask per iteration.
 - Stop for user review/approval before moving to the next section.
 - Do not batch multiple major sections in one pass unless explicitly requested.
+- Mandatory pre-delivery quality gate: run "Estetia Critic Loop" (Apple minimalism + Ramachandran neuroesthetics + motion/performance check) and include a short `AUDITORIA ESTETICA` note in delivery responses.
