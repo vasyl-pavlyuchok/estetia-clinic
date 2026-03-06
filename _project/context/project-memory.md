@@ -6,6 +6,7 @@
 - Treatments/content model is considered stable and should not be redefined.
 - `services.json` is the canonical source for services rendering.
 - `BRIEF.md` is a living doc and can be refined when needed.
+- ElevenLabs integration will be a lateral floating voice button (no dedicated IA section for now).
 
 ## Experience Goal
 
@@ -18,6 +19,7 @@
 
 - Neuroesthetics reference: `/_project/neuroestetica-ramachandran.md`.
 - Internal operating guide: `/_project/codex-design-operating-manual.md`.
+- Hero-approved visual baseline: `/_project/context/hero-visual-reference.md`.
 - Local Estetia skills: `./.codex/skills/estetia-build-flow`, `./.codex/skills/estetia-design-qa`.
 - Global reusable skills: `~/.codex/skills/premium-landing-build-flow`, `~/.codex/skills/premium-ui-qa`.
 

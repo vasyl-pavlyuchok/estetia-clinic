@@ -33,7 +33,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
           {categories.map((category) => (
             <span
               key={category}
-              className="rounded-full border border-accent/25 bg-accent/5 px-4 py-2 text-xs font-medium text-accent"
+              className="glass-chip rounded-full px-4 py-2 text-xs font-medium text-accent"
             >
               {category}
             </span>
@@ -44,7 +44,11 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
           {services.map((service) => (
             <article
               key={service.id}
-              className="rounded-3xl border border-[#dfd4c8] bg-[#fbf8f4] p-6 transition-transform duration-300 hover:-translate-y-1"
+              className={`rounded-3xl p-6 transition-transform duration-300 hover:-translate-y-1 ${
+                service.featured
+                  ? 'glass-strong'
+                  : 'border border-[#dfd4c8] bg-[#fbf8f4]'
+              }`}
             >
               <p className="text-xs uppercase tracking-[0.2em] text-accent/85">
                 {service.categoryLabel}
@@ -65,10 +69,10 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
               <div className="mt-5 flex items-center justify-between">
                 <p className="text-sm font-semibold text-foreground">{service.price}</p>
                 <a
-                  href="#ia-assistant"
+                  href="#contacto"
                   className="text-sm font-semibold text-accent underline-offset-4 hover:underline"
                 >
-                  Consultar IA
+                  Solicitar valoración
                 </a>
               </div>
             </article>
@@ -78,4 +82,3 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
     </section>
   );
 }
-

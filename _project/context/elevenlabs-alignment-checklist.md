@@ -1,10 +1,10 @@
 # ElevenLabs Alignment Checklist (Design-Level)
 
-This project is being designed to later host a voice IA experience built with ElevenLabs.
+This project is being designed to host a voice IA experience built with ElevenLabs via a lateral floating button.
 
 ## UX/IA Readiness Targets
 
-1. Reserve clear UI real estate for voice interaction states:
+1. Reserve clear UI real estate for voice interaction states in the lateral voice entrypoint:
 - idle
 - listening
 - processing
@@ -15,7 +15,7 @@ This project is being designed to later host a voice IA experience built with El
 - fallback CTA and text path always visible.
 - user should complete core journeys with or without voice.
 
-3. Add trust scaffolding near IA sections:
+3. Add trust scaffolding near the floating voice entrypoint:
 - what the assistant can do,
 - what it cannot do,
 - privacy/safety note (concise).
@@ -31,12 +31,11 @@ This project is being designed to later host a voice IA experience built with El
 
 ## Design Implications
 
-- Voice container should feel first-class, not an afterthought widget.
+- Lateral voice button should feel premium, visible, and coherent with brand.
 - Motion/feedback should communicate IA status clearly and calmly.
 - Use high-contrast status indicators and accessible control states.
 
 ## Out of Scope For Now
 
 - No ElevenLabs implementation code required at this stage.
-- Focus only on layout, states, and interaction-ready design hooks.
-
+- Focus on placement, visual affordance, trust cues, and interaction-ready design hooks for a lateral floating button.

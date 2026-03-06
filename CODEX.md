@@ -18,6 +18,7 @@ Use this file as the first-stop index, then load only the referenced files neede
 - `/_project/neuroestetica-ramachandran.md` for advanced visual/motion decisions.
 - `/_project/context/gem-collaboration-protocol.md` when external collaborator input may help.
 - `/_project/context/elevenlabs-alignment-checklist.md` when designing IA-oriented sections/flows.
+- `/_project/context/hero-visual-reference.md` for approved serum palette/tone/animation decisions from Hero.
 
 ## Core Rules
 

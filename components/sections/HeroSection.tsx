@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 
-const HERO_VIDEO_URL = '';
+const HERO_VIDEO_URL =
+  'https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm';
 const HERO_POSTER_URL = '';
 
 /* ─── Animation variants ─────────────────────────────────────────────────── */
@@ -16,25 +17,6 @@ const transition = (delay: number) => ({
   delay,
   ease: [0.25, 0.46, 0.45, 0.94] as const, // easeOutQuart
 });
-
-/* ─── Scroll indicator SVG ───────────────────────────────────────────────── */
-function ChevronDown() {
-  return (
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="m6 9 6 6 6-6" />
-    </svg>
-  );
-}
 
 /* ─── Component ──────────────────────────────────────────────────────────── */
 export default function HeroSection() {
@@ -67,18 +49,23 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/75" aria-hidden="true" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:48px_48px]" aria-hidden="true" />
 
-      <div className="relative mx-auto grid w-full max-w-7xl gap-12 px-6 pb-14 pt-28 md:grid-cols-2 md:items-end md:gap-16 md:px-10 md:pb-20 md:pt-36">
+      <div className="relative mx-auto w-full max-w-7xl px-6 pb-14 pt-28 md:px-10 md:pb-20 md:pt-36">
         <motion.span
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           transition={transition(0.15)}
-          className="col-span-full text-[0.7rem] font-semibold uppercase tracking-[0.34em] text-[#b6d2e0] sm:text-xs"
+          className="text-[0.76rem] font-semibold uppercase tracking-[0.34em] text-white sm:text-[0.8rem]"
+          style={{ textShadow: '0 1px 6px rgba(0,0,0,0.45)' }}
         >
-          Estetia Clinic · Precisión Biomédica y Belleza Inteligente
+          <span className="text-white/96">Estetia Clinic</span>
+          <span className="mx-2 text-white/65">·</span>
+          <span className="bg-gradient-to-r from-[#b8dcf1] via-[#f8fcff] to-[#e3c282] bg-clip-text text-transparent">
+            Precisión Biomédica y Belleza Inteligente
+          </span>
         </motion.span>
 
-        <div>
+        <div className="mt-8 max-w-3xl">
           <motion.h1
             variants={fadeUp}
             initial="hidden"
@@ -94,7 +81,8 @@ export default function HeroSection() {
             initial="hidden"
             animate="visible"
             transition={transition(0.5)}
-            className="mt-6 max-w-[47ch] text-[1.02rem] leading-relaxed text-white/82"
+            className="mt-6 max-w-[47ch] text-[1.06rem] leading-relaxed text-white/95"
+            style={{ textShadow: '0 1px 10px rgba(0,0,0,0.42)' }}
           >
             Protocolos clínicos personalizados, equipamiento de última generación y
             asistencia IA para una experiencia serena, precisa y profundamente humana.
@@ -108,44 +96,29 @@ export default function HeroSection() {
             className="mt-10 flex flex-col gap-3 sm:flex-row"
           >
             <a
-              href="#ia-assistant"
-              className="rounded-full bg-[#c9a96e] px-7 py-3.5 text-sm font-semibold text-[#1c2124] transition-all duration-300 hover:bg-[#d8b882] hover:shadow-[0_0_30px_rgba(201,169,110,0.33)]"
+              href="#contacto"
+              className="premium-cta-dark rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:brightness-110"
             >
-              Iniciar evaluación IA
+              <span
+                className="relative z-10"
+                style={{ textShadow: '0 1px 8px rgba(0,0,0,0.42)' }}
+              >
+                Iniciar evaluación IA
+              </span>
             </a>
             <a
               href="#servicios"
-              className="rounded-full border border-white/35 px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:border-white/70 hover:bg-white/10"
+              className="premium-cta-light rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:brightness-110"
             >
-              Explorar tratamientos
+              <span
+                className="relative z-10"
+                style={{ textShadow: '0 1px 8px rgba(0,0,0,0.45)' }}
+              >
+                Explorar tratamientos
+              </span>
             </a>
           </motion.div>
         </div>
-
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={transition(0.5)}
-          className="rounded-[30px] border border-white/20 bg-white/6 p-4 backdrop-blur-[3px]"
-        >
-          <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-[#111b20] p-5 text-white">
-            <div className="mb-3 text-xs uppercase tracking-[0.25em] text-[#cfe5f1]/75">
-              Secuencia Editorial
-            </div>
-            <div className="aspect-[4/5] w-full rounded-xl border border-white/15 bg-gradient-to-b from-[#1a2d36] to-[#0d1317] p-5">
-              <div className="h-full rounded-lg border border-dashed border-white/30 p-4">
-                <p className="max-w-[24ch] text-sm leading-relaxed text-white/82">
-                  Aquí irá el loop del laboratorio (pipeta + fluido + burbuja).
-                  Mantener encuadre frontal y luz premium.
-                </p>
-                <p className="mt-4 text-xs uppercase tracking-[0.22em] text-[#9fc6da]/75">
-                  Fuente: Gem + Cloudinary
-                </p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
 
       <motion.div
@@ -156,12 +129,11 @@ export default function HeroSection() {
         aria-hidden="true"
       >
         <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
-          className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/60"
+          animate={{ y: [0, 7, 0] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+          className="inline-flex rotate-90 items-center"
         >
-          Scroll
-          <ChevronDown />
+          <span className="serum-scroll-wheel" />
         </motion.div>
       </motion.div>
     </section>
