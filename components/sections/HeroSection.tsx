@@ -2,6 +2,9 @@
 
 import { motion } from 'framer-motion';
 
+const HERO_VIDEO_URL = '';
+const HERO_POSTER_URL = '';
+
 /* ─── Animation variants ─────────────────────────────────────────────────── */
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -35,122 +38,129 @@ function ChevronDown() {
 
 /* ─── Component ──────────────────────────────────────────────────────────── */
 export default function HeroSection() {
+  const hasVideo = Boolean(HERO_VIDEO_URL);
+
   return (
     <section
-      className="relative flex h-screen min-h-[600px] flex-col items-center justify-center overflow-hidden bg-[#1a1a1a]"
+      className="relative isolate min-h-[94svh] overflow-hidden bg-[#0D1418]"
       aria-label="Inicio"
     >
-      {/* ── Video background ──────────────────────────────────────────────── */}
-      {/*
-       * Sustituye src por tu URL de Cloudinary cuando tengas el vídeo.
-       * El fondo #1a1a1a actúa de fallback mientras no haya vídeo.
-       */}
-      <video
-        className="absolute inset-0 h-full w-full object-cover opacity-60"
-        autoPlay
-        muted
-        loop
-        playsInline
-        // poster="/images/hero-poster.jpg"  ← añade poster cuando tengas imagen
-        // src="https://res.cloudinary.com/tu-cuenta/video/upload/hero.mp4"
-      />
+      {hasVideo ? (
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          src={HERO_VIDEO_URL}
+          poster={HERO_POSTER_URL || undefined}
+          aria-hidden="true"
+        />
+      ) : (
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_30%,rgba(106,160,185,0.34),transparent_45%),radial-gradient(circle_at_78%_68%,rgba(42,86,107,0.35),transparent_45%),linear-gradient(165deg,#111A1F_0%,#0A1014_100%)]" />
+          <div className="absolute left-[14%] top-[16%] h-44 w-44 rounded-full border border-white/15 bg-white/5 blur-[1px]" />
+          <div className="absolute bottom-[22%] right-[18%] h-24 w-24 rounded-full border border-[#9fc6da]/45 bg-[#8cc0de]/20 blur-[1px]" />
+        </div>
+      )}
 
-      {/* ── Gradient overlay ──────────────────────────────────────────────── */}
-      {/* top más oscuro para legibilidad del nav, bottom para scroll indicator */}
-      <div
-        className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/55"
-        aria-hidden="true"
-      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/75" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:48px_48px]" aria-hidden="true" />
 
-      {/* ── Main content ──────────────────────────────────────────────────── */}
-      <div className="relative z-10 flex flex-col items-center px-6 text-center">
-
-        {/* Eyebrow */}
+      <div className="relative mx-auto grid w-full max-w-7xl gap-12 px-6 pb-14 pt-28 md:grid-cols-2 md:items-end md:gap-16 md:px-10 md:pb-20 md:pt-36">
         <motion.span
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           transition={transition(0.15)}
-          className="mb-5 block text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-[#C9A96E] sm:text-xs"
+          className="col-span-full text-[0.7rem] font-semibold uppercase tracking-[0.34em] text-[#b6d2e0] sm:text-xs"
         >
-          Clínica Estética de Vanguardia
+          Estetia Clinic · Precisión Biomédica y Belleza Inteligente
         </motion.span>
 
-        {/* Headline */}
-        <motion.h1
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={transition(0.35)}
-          className="font-heading mb-6 max-w-[14ch] text-[clamp(2.8rem,7vw,5.5rem)] font-bold leading-[1.08] text-white"
-        >
-          Realza tu belleza natural
-        </motion.h1>
+        <div>
+          <motion.h1
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={transition(0.3)}
+            className="font-heading max-w-[12ch] text-[clamp(2.65rem,7vw,5.4rem)] font-bold leading-[1.03] text-white"
+          >
+            Ciencia estética de lujo, diseñada para parecer inevitable.
+          </motion.h1>
 
-        {/* Subheadline */}
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={transition(0.55)}
-          className="mb-11 max-w-[38ch] text-[clamp(0.95rem,2vw,1.125rem)] font-light leading-relaxed text-white/65"
-        >
-          Tecnología avanzada&nbsp;&nbsp;·&nbsp;&nbsp;Expertise médico&nbsp;&nbsp;·&nbsp;&nbsp;Resultados naturales
-        </motion.p>
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={transition(0.5)}
+            className="mt-6 max-w-[47ch] text-[1.02rem] leading-relaxed text-white/82"
+          >
+            Protocolos clínicos personalizados, equipamiento de última generación y
+            asistencia IA para una experiencia serena, precisa y profundamente humana.
+          </motion.p>
 
-        {/* CTA buttons */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={transition(0.7)}
+            className="mt-10 flex flex-col gap-3 sm:flex-row"
+          >
+            <a
+              href="#ia-assistant"
+              className="rounded-full bg-[#c9a96e] px-7 py-3.5 text-sm font-semibold text-[#1c2124] transition-all duration-300 hover:bg-[#d8b882] hover:shadow-[0_0_30px_rgba(201,169,110,0.33)]"
+            >
+              Iniciar evaluación IA
+            </a>
+            <a
+              href="#servicios"
+              className="rounded-full border border-white/35 px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:border-white/70 hover:bg-white/10"
+            >
+              Explorar tratamientos
+            </a>
+          </motion.div>
+        </div>
+
         <motion.div
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          transition={transition(0.75)}
-          className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4"
+          transition={transition(0.5)}
+          className="rounded-[30px] border border-white/20 bg-white/6 p-4 backdrop-blur-[3px]"
         >
-          {/* Primary — gold */}
-          <a
-            href="#contacto"
-            className="
-              rounded-full bg-[#C9A96E] px-8 py-3.5
-              text-sm font-semibold text-[#1a1a1a]
-              transition-all duration-200
-              hover:bg-[#d4b47a] hover:shadow-[0_0_28px_rgba(201,169,110,0.35)]
-              focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C9A96E]
-            "
-          >
-            Agenda tu consulta gratuita
-          </a>
-
-          {/* Secondary — ghost white */}
-          <a
-            href="#servicios"
-            className="
-              rounded-full border border-white/50 px-8 py-3.5
-              text-sm font-semibold text-white
-              backdrop-blur-[2px]
-              transition-all duration-200
-              hover:border-white/80 hover:bg-white/10
-              focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white
-            "
-          >
-            Descubre los tratamientos
-          </a>
+          <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-[#111b20] p-5 text-white">
+            <div className="mb-3 text-xs uppercase tracking-[0.25em] text-[#cfe5f1]/75">
+              Secuencia Editorial
+            </div>
+            <div className="aspect-[4/5] w-full rounded-xl border border-white/15 bg-gradient-to-b from-[#1a2d36] to-[#0d1317] p-5">
+              <div className="h-full rounded-lg border border-dashed border-white/30 p-4">
+                <p className="max-w-[24ch] text-sm leading-relaxed text-white/82">
+                  Aquí irá el loop del laboratorio (pipeta + fluido + burbuja).
+                  Mantener encuadre frontal y luz premium.
+                </p>
+                <p className="mt-4 text-xs uppercase tracking-[0.22em] text-[#9fc6da]/75">
+                  Fuente: Gem + Cloudinary
+                </p>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
 
-      {/* ── Scroll indicator ──────────────────────────────────────────────── */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        transition={{ delay: 1.1, duration: 0.6 }}
+        className="relative mx-auto mb-10 flex w-full max-w-7xl justify-center"
         aria-hidden="true"
       >
         <motion.div
-          animate={{ y: [0, 7, 0] }}
+          animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
-          className="flex flex-col items-center gap-1.5 text-white/50"
+          className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/60"
         >
-          <span className="text-[0.6rem] uppercase tracking-[0.2em]">Scroll</span>
+          Scroll
           <ChevronDown />
         </motion.div>
       </motion.div>
