@@ -5,11 +5,11 @@
 /* ─── CSS Custom Properties — Estetia Brand ─────────────────────────────── */
 :root {
   /* Colors */
-  --color-nude: #f5f0eb;
-  --color-beige: #e8ddd3;
+  --color-nude: #ffffff;
+  --color-beige: #f6f7f8;
   --color-petrol: #2c5f6f;
   --color-gold: #c9a96e;
-  --color-carbon: #2d2d2d;
+  --color-carbon: #000000;
   --color-white: #ffffff;
 
   /* Typography */

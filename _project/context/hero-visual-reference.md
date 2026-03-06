@@ -41,3 +41,17 @@ Aplicar este lenguaje como base en nuevas secciones:
 
 Si una nueva sección compromete legibilidad o claridad, reducir efecto antes de añadir más detalle visual.
 
+## Sistema de color derivado del Hero (obligatorio)
+
+- Base clara principal: `#F7FAFC`
+- Superficie clara secundaria: `#EEF3F8`
+- Fondo oscuro principal: `#0D1418`
+- Fondo oscuro elevado: `#111A1F`
+- Texto principal en claro: `#111418`
+- Texto en oscuro: `#F8FCFF`
+- Acento serum azul deep: `#2A566B`
+- Acento serum azul bright: `#8CC0DE`
+- Acento serum dorado deep: `#B28A4A`
+- Acento serum dorado bright: `#E3C282`
+
+Referirse a `/_project/context/visual-system-v2.md` para reglas completas de uso.

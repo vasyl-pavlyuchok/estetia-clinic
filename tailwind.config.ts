@@ -9,18 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Estetia brand palette
-        nude: '#F5F0EB',
-        beige: '#E8DDD3',
+        // Estetia V2 monochrome luxury palette
+        nude: '#FFFFFF',
+        beige: '#F6F7F8',
         petrol: '#2C5F6F',
         gold: '#C9A96E',
-        carbon: '#2D2D2D',
+        carbon: '#000000',
+        whitecold: '#FFFFFF',
+        inksoft: '#121212',
+        darkstage: '#0D1418',
+        darkelev: '#111A1F',
+        serumBlueBright: '#7FAFC2',
+        serumGoldBright: '#D5B884',
         // Semantic aliases
-        background: '#F5F0EB',
-        'background-secondary': '#E8DDD3',
+        background: '#FFFFFF',
+        'background-secondary': '#F6F7F8',
         accent: '#2C5F6F',
         cta: '#C9A96E',
-        foreground: '#2D2D2D',
+        foreground: '#000000',
       },
       fontFamily: {
         heading: ['var(--font-playfair)', 'Georgia', 'serif'],

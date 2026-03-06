@@ -7,6 +7,7 @@
 - `services.json` is the canonical source for services rendering.
 - `BRIEF.md` is a living doc and can be refined when needed.
 - ElevenLabs integration will be a lateral floating voice button (no dedicated IA section for now).
+- Visual direction updated: move away from beige-led aesthetic to Hero-aligned high-contrast system (clean whites + deep darks + controlled serum blue/gold accents).
 
 ## Experience Goal
 
@@ -20,6 +21,8 @@
 - Neuroesthetics reference: `/_project/neuroestetica-ramachandran.md`.
 - Internal operating guide: `/_project/codex-design-operating-manual.md`.
 - Hero-approved visual baseline: `/_project/context/hero-visual-reference.md`.
+- Official visual system for new sections: `/_project/context/visual-system-v2.md`.
+- Official home architecture + neuro criteria: `/_project/context/section-architecture-neuro.md`.
 - Local Estetia skills: `./.codex/skills/estetia-build-flow`, `./.codex/skills/estetia-design-qa`.
 - Global reusable skills: `~/.codex/skills/premium-landing-build-flow`, `~/.codex/skills/premium-ui-qa`.
 

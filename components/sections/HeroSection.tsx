@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const HERO_VIDEO_URL =
   'https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm';
@@ -96,7 +97,7 @@ export default function HeroSection() {
             className="mt-10 flex flex-col gap-3 sm:flex-row"
           >
             <a
-              href="#contacto"
+              href="#ia-assistant"
               className="premium-cta-dark rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:brightness-110"
             >
               <span
@@ -106,8 +107,8 @@ export default function HeroSection() {
                 Iniciar evaluación IA
               </span>
             </a>
-            <a
-              href="#servicios"
+            <Link
+              href="/servicios"
               className="premium-cta-light rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:brightness-110"
             >
               <span
@@ -116,7 +117,7 @@ export default function HeroSection() {
               >
                 Explorar tratamientos
               </span>
-            </a>
+            </Link>
           </motion.div>
         </div>
       </div>

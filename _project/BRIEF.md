@@ -24,15 +24,19 @@ secciones con mucho aire, vídeos breves en loop como fondo, microinteracciones 
 
 ---
 
-## Paleta de colores
+## Paleta de colores (Actualizada - Monocromo de Lujo)
 | Rol | Color | Hex |
 |---|---|---|
-| Fondo principal | Nude claro | `#F5F0EB` |
-| Fondo secundario | Beige | `#E8DDD3` |
-| Acento principal | Azul petróleo | `#2C5F6F` |
-| CTA / destacados | Dorado sutil | `#C9A96E` |
-| Texto principal | Gris carbón | `#2D2D2D` |
-| Texto sobre oscuro | Blanco puro | `#FFFFFF` |
+| Fondo principal | Blanco inmaculado | `#FFFFFF` |
+| Fondo secundario | Gris técnico suave | `#F6F7F8` |
+| Fondo oscuro principal | Negro azulado premium | `#0D1418` |
+| Fondo oscuro elevado | Carbón técnico | `#111A1F` |
+| Acento serum azul (deep) | Azul petróleo clínico | `#2C5F6F` |
+| Acento serum azul (bright) | Azul serum activo | `#7FAFC2` |
+| Acento serum dorado (deep) | Dorado premium | `#C9A96E` |
+| Acento serum dorado (bright) | Dorado suave | `#D5B884` |
+| Texto principal en claro | Negro absoluto | `#000000` |
+| Texto en oscuro | Blanco puro | `#FFFFFF` |
 
 ---
 
@@ -104,3 +108,5 @@ Para especificaciones detalladas consultar:
 - `/_project/system-prompt.md` — arquitectura, accesibilidad, SEO, performance
 - `/_project/services-detail.md` — descripción completa de cada tratamiento
 - `/_project/services.json` — datos estructurados listos para consumir en código
+- `/_project/context/hero-visual-reference.md` — baseline visual aprobado del Hero
+- `/_project/context/visual-system-v2.md` — sistema visual oficial para el resto del sitio

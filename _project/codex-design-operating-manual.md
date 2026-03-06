@@ -52,6 +52,8 @@ Si hay conflicto entre documentos, priorizar la fuente superior y mantener el ni
 - Motion suave (sin agresividad): apariciones y transiciones controladas.
 - Contraste legible y foco visual unico por bloque principal.
 - Consistencia de palette y tipografias definidas en Tailwind/layout.
+- Baseline de color obligatorio: `/_project/context/visual-system-v2.md` (Hero-aligned).
+- Evitar direccion beige-dominante; priorizar arquitectura blanco/negro con acentos serum azul/dorado.
 
 ## Criterios de contenido obligatorios
 
