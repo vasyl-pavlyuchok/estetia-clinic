@@ -58,8 +58,14 @@ export default function SiteHeaderClient({ categories }: SiteHeaderClientProps) 
           <Link href="/doctora" className="text-sm font-medium text-black/80 hover:text-black">
             Doctora
           </Link>
+          <Link href="/#tecnologia" className="text-sm font-medium text-black/80 hover:text-black">
+            Tecnología
+          </Link>
           <Link href="/#social-proof" className="text-sm font-medium text-black/80 hover:text-black">
             Resultados
+          </Link>
+          <Link href="/#faq" className="text-sm font-medium text-black/80 hover:text-black">
+            FAQ
           </Link>
 
           <div
@@ -114,7 +120,7 @@ export default function SiteHeaderClient({ categories }: SiteHeaderClientProps) 
         </nav>
 
         <Link
-          href="/servicios"
+          href="/#contacto"
           className="rounded-full border border-[#C9A96E]/45 bg-[#C9A96E]/14 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-[#5E4720]"
         >
           Reservar
