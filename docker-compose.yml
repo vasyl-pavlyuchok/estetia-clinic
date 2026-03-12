@@ -1,0 +1,21 @@
+services:
+  estetia:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_ELEVENLABS_AGENT_ID=${NEXT_PUBLIC_ELEVENLABS_AGENT_ID:-}
+    networks:
+      - web_manual
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.estetia.rule=Host(`estetia.vasylpavlyuchok.com`)"
+      - "traefik.http.routers.estetia.entrypoints=websecure"
+      - "traefik.http.routers.estetia.tls.certresolver=letsencrypt"
+      - "traefik.http.services.estetia.loadbalancer.server.port=3000"
+
+networks:
+  web_manual:
+    external: true

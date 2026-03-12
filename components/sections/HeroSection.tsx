@@ -25,7 +25,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative isolate min-h-[94svh] overflow-hidden bg-[#0D1418]"
+      className="relative min-h-[94svh] overflow-hidden bg-[#0D1418]"
       aria-label="Inicio"
     >
       {hasVideo ? (

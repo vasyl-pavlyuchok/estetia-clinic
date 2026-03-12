@@ -157,35 +157,41 @@
   }
 
   .premium-cta-dark {
+    position: relative;
+    transform: translateZ(0);
+    will-change: transform;
     color: rgba(250, 252, 255, 0.96);
-    border: 1px solid rgba(241, 246, 250, 0.34);
+    border: 1px solid rgba(241, 246, 250, 0.28);
     background: linear-gradient(
       140deg,
-      rgba(16, 20, 24, 0.72) 0%,
-      rgba(25, 30, 36, 0.68) 55%,
-      rgba(41, 47, 54, 0.62) 100%
+      rgba(16, 20, 24, 0.62) 0%,
+      rgba(25, 30, 36, 0.58) 55%,
+      rgba(41, 47, 54, 0.52) 100%
     );
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(14px) saturate(1.4);
+    -webkit-backdrop-filter: blur(14px) saturate(1.4);
     box-shadow:
       0 16px 34px -24px rgba(0, 0, 0, 0.65),
       0 0 0 1px rgba(255, 255, 255, 0.08) inset;
   }
 
   .premium-cta-light {
+    position: relative;
+    transform: translateZ(0);
+    will-change: transform;
     color: rgba(246, 250, 255, 0.95);
-    border: 1px solid rgba(225, 233, 240, 0.4);
+    border: 1px solid rgba(225, 233, 240, 0.38);
     background: linear-gradient(
       140deg,
-      rgba(236, 241, 246, 0.25) 0%,
-      rgba(218, 226, 233, 0.21) 55%,
-      rgba(200, 209, 218, 0.18) 100%
+      rgba(236, 241, 246, 0.32) 0%,
+      rgba(218, 226, 233, 0.26) 55%,
+      rgba(200, 209, 218, 0.22) 100%
     );
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(16px) saturate(1.6);
+    -webkit-backdrop-filter: blur(16px) saturate(1.6);
     box-shadow:
       0 16px 34px -24px rgba(0, 0, 0, 0.58),
-      0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+      0 0 0 1px rgba(255, 255, 255, 0.12) inset;
   }
 
   .serum-scroll-pill {
