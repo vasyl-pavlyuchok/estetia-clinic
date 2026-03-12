@@ -98,12 +98,12 @@ export default function AIShowcaseSection() {
       <div className="relative z-[1] mx-auto w-full max-w-7xl px-6 md:px-10">
         <header className="relative isolate overflow-hidden rounded-[2rem] border border-white/14 bg-[linear-gradient(148deg,rgba(20,32,39,0.9)_0%,rgba(15,24,30,0.94)_46%,rgba(12,19,24,0.97)_100%)] p-7 shadow-[0_24px_58px_-40px_rgba(0,0,0,0.8)] md:p-10">
           <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-            <div className="absolute -left-20 -top-20 h-56 w-56 rounded-full bg-[#7FAFC2]/14 blur-[90px]" />
+            <div className="absolute -left-20 -top-20 h-56 w-56 rounded-full bg-[#00C9B1]/14 blur-[90px]" />
             <div className="absolute -bottom-24 right-[-4.5rem] h-56 w-56 rounded-full bg-[#C9A96E]/12 blur-[100px]" />
           </div>
 
           <div className="relative max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#9EC9D8]">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#00C9B1]">
               Inteligencia clínica
             </p>
             <h2 className="font-heading mt-4 max-w-[18ch] text-4xl leading-tight text-white md:text-5xl">
@@ -124,7 +124,7 @@ export default function AIShowcaseSection() {
               Habla con nuestro asistente
             </a>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/22 bg-white/10 px-3.5 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.09em] text-white/84">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#7FAFC2]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#00C9B1]" />
               Desarrollado con tecnología ElevenLabs — líder mundial en agentes de voz con IA
             </span>
           </div>
@@ -136,7 +136,7 @@ export default function AIShowcaseSection() {
               key={pillar.title}
               className="rounded-2xl border border-white/13 bg-[linear-gradient(155deg,rgba(21,33,40,0.82)_0%,rgba(16,25,31,0.88)_100%)] p-5 shadow-[0_16px_34px_-30px_rgba(0,0,0,0.78)]"
             >
-              <span className="inline-flex rounded-full border border-[#9EC9D8]/36 bg-[#7FAFC2]/12 px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.1em] text-[#D6EDF7]">
+              <span className="inline-flex rounded-full border border-[#00C9B1]/36 bg-[#00C9B1]/12 px-2.5 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.1em] text-[#A8F0E8]">
                 Pilar {index + 1}
               </span>
               <h3 className="font-heading mt-3 text-[1.6rem] leading-tight text-white">{pillar.title}</h3>
@@ -146,7 +146,7 @@ export default function AIShowcaseSection() {
         </div>
 
         <div className="relative mt-12">
-          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#9EC9D8]">
+          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#00C9B1]">
             ¿Qué puede hacer por ti?
           </p>
           <h3 className="font-heading mt-3 text-3xl leading-tight text-white md:text-4xl">
@@ -157,9 +157,9 @@ export default function AIShowcaseSection() {
             {capabilityGrid.map((capability, index) => (
               <article
                 key={capability.title}
-                className="group rounded-2xl border border-white/13 bg-[linear-gradient(155deg,rgba(21,33,41,0.8)_0%,rgba(17,26,33,0.84)_100%)] p-5 transition-colors duration-300 hover:border-[#9EC9D8]/38"
+                className="group rounded-2xl border border-white/13 bg-[linear-gradient(155deg,rgba(21,33,41,0.8)_0%,rgba(17,26,33,0.84)_100%)] p-5 transition-colors duration-300 hover:border-[#00C9B1]/38"
               >
-                <span className="inline-flex h-8 min-w-8 items-center justify-center rounded-full border border-[#9EC9D8]/35 bg-[#7FAFC2]/12 px-2 text-[0.65rem] font-semibold text-[#D8EEF6]">
+                <span className="inline-flex h-8 min-w-8 items-center justify-center rounded-full border border-[#00C9B1]/35 bg-[#00C9B1]/12 px-2 text-[0.65rem] font-semibold text-[#A8F0E8]">
                   C{index + 1}
                 </span>
                 <h4 className="mt-3 font-heading text-[1.55rem] leading-tight text-white">{capability.title}</h4>
@@ -195,7 +195,7 @@ export default function AIShowcaseSection() {
                 <p className="text-sm font-semibold text-white">
                   <span
                     aria-hidden="true"
-                    className="mr-2 inline-flex h-5 min-w-5 items-center justify-center rounded-full border border-[#9EC9D8]/45 bg-[#7FAFC2]/12 px-1 text-[0.62rem] font-semibold text-[#CFE6F1]"
+                    className="mr-2 inline-flex h-5 min-w-5 items-center justify-center rounded-full border border-[#00C9B1]/45 bg-[#00C9B1]/12 px-1 text-[0.62rem] font-semibold text-[#A8F0E8]"
                   >
                     {index + 1}
                   </span>
@@ -221,7 +221,7 @@ export default function AIShowcaseSection() {
         <div className="relative mt-12">
           <Link
             href="/servicios"
-            className="inline-flex rounded-full border border-white/24 bg-white/10 px-5 py-2.5 text-sm font-semibold text-[#D6EDF7] transition-colors duration-300 hover:bg-white/16"
+            className="inline-flex rounded-full border border-white/24 bg-white/10 px-5 py-2.5 text-sm font-semibold text-[#A8F0E8] transition-colors duration-300 hover:bg-white/16"
           >
             Continuar por navegación clásica
           </Link>
