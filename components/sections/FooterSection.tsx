@@ -17,7 +17,6 @@ export default function FooterSection({ categories }: FooterSectionProps) {
     <footer className="relative overflow-hidden bg-[#0D1418] text-white" aria-label="Pie de página">
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_16%,rgba(127,175,194,0.16),transparent_42%),radial-gradient(circle_at_82%_84%,rgba(201,169,110,0.12),transparent_44%),linear-gradient(180deg,rgba(9,14,18,0.98)_0%,rgba(13,20,24,1)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:58px_58px]" />
       </div>
 
       <div className="relative z-[1] mx-auto w-full max-w-7xl px-6 pb-8 pt-16 md:px-10">

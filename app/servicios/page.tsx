@@ -29,6 +29,8 @@ export default function ServicesPage({ searchParams }: ServicesPageProps) {
         services={filteredServices}
         mode="full"
         activeCategory={category && categories.includes(category) ? category : undefined}
+        allCategories={categories}
+        basePath="/servicios"
       />
     </main>
   );

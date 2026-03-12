@@ -48,7 +48,6 @@ export default function HeroSection() {
       )}
 
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,10,13,0.58)_0%,rgba(8,16,21,0.48)_48%,rgba(10,17,22,0.76)_100%)]" aria-hidden="true" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:52px_52px]" aria-hidden="true" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 pb-14 pt-28 md:px-10 md:pb-20 md:pt-36">
         <motion.span
