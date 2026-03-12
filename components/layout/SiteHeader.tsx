@@ -1,8 +1,8 @@
 import SiteHeaderClient from '@/components/layout/SiteHeaderClient';
-import { getServiceCategories } from '@/lib/services';
+import { getHeaderTreatmentZones } from '@/lib/services';
 
 export default function SiteHeader() {
-  const categories = getServiceCategories();
+  const zones = getHeaderTreatmentZones();
 
-  return <SiteHeaderClient categories={categories} />;
+  return <SiteHeaderClient zones={zones} />;
 }

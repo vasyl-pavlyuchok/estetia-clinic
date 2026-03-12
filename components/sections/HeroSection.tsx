@@ -47,8 +47,8 @@ export default function HeroSection() {
         </div>
       )}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/75" aria-hidden="true" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:48px_48px]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,10,13,0.58)_0%,rgba(8,16,21,0.48)_48%,rgba(10,17,22,0.76)_100%)]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:52px_52px]" aria-hidden="true" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 pb-14 pt-28 md:px-10 md:pb-20 md:pt-36">
         <motion.span
@@ -57,7 +57,6 @@ export default function HeroSection() {
           animate="visible"
           transition={transition(0.15)}
           className="text-[0.76rem] font-semibold uppercase tracking-[0.34em] text-white sm:text-[0.8rem]"
-          style={{ textShadow: '0 1px 6px rgba(0,0,0,0.45)' }}
         >
           <span className="text-white/96">Estetia Clinic</span>
           <span className="mx-2 text-white/65">·</span>
@@ -83,7 +82,6 @@ export default function HeroSection() {
             animate="visible"
             transition={transition(0.5)}
             className="mt-6 max-w-[47ch] text-[1.06rem] leading-relaxed text-white/95"
-            style={{ textShadow: '0 1px 10px rgba(0,0,0,0.42)' }}
           >
             Protocolos clínicos personalizados, equipamiento de última generación y
             asistencia IA para una experiencia serena, precisa y profundamente humana.
@@ -100,23 +98,13 @@ export default function HeroSection() {
               href="#ia-assistant"
               className="premium-cta-dark rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:brightness-110"
             >
-              <span
-                className="relative z-10"
-                style={{ textShadow: '0 1px 8px rgba(0,0,0,0.42)' }}
-              >
-                Iniciar evaluación IA
-              </span>
+              <span className="relative z-10">Habla con nuestro asistente</span>
             </a>
             <Link
               href="/servicios"
               className="premium-cta-light rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:brightness-110"
             >
-              <span
-                className="relative z-10"
-                style={{ textShadow: '0 1px 8px rgba(0,0,0,0.45)' }}
-              >
-                Explorar tratamientos
-              </span>
+              <span className="relative z-10">Explorar tratamientos</span>
             </Link>
           </motion.div>
         </div>
