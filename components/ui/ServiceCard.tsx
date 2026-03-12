@@ -57,10 +57,10 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           {service.categoryLabel}
         </span>
 
-        <h3 className="font-heading mt-3 text-[1.75rem] leading-tight text-white">
+        <h3 className="font-heading mt-3 line-clamp-1 text-[1.75rem] leading-tight text-white">
           {service.name}
         </h3>
-        <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-white/88">
+        <p className="mt-1.5 line-clamp-1 text-sm leading-relaxed text-white/88">
           {service.tagline}
         </p>
 
