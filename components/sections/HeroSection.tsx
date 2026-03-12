@@ -25,12 +25,12 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative min-h-[94svh] overflow-hidden bg-[#0D1418]"
+      className="relative min-h-[94svh] overflow-clip bg-[#0D1418]"
       aria-label="Inicio"
     >
       {hasVideo ? (
         <video
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover [transform:translateZ(0)]"
           autoPlay
           loop
           muted
@@ -87,23 +87,22 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={transition(0.7)}
             className="mt-10 flex flex-col gap-3 sm:flex-row"
           >
             <a
               href="#ia-assistant"
-              className="premium-cta-dark rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:brightness-110"
+              className="rounded-full border border-white/20 bg-[linear-gradient(145deg,rgba(8,13,16,0.58)_0%,rgba(11,18,23,0.46)_58%,rgba(20,34,43,0.32)_100%)] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:bg-[linear-gradient(145deg,rgba(8,13,16,0.72)_0%,rgba(11,18,23,0.60)_58%,rgba(20,34,43,0.46)_100%)]"
             >
-              <span className="relative z-10">Habla con nuestro asistente</span>
+              Habla con nuestro asistente
             </a>
             <Link
               href="/servicios"
-              className="premium-cta-light rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:brightness-110"
+              className="rounded-full border border-white/[0.22] bg-[linear-gradient(150deg,rgba(255,255,255,0.18)_0%,rgba(250,253,255,0.12)_56%,rgba(246,249,252,0.08)_100%)] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-[34px] backdrop-saturate-[1.4] backdrop-brightness-[0.98] transition-all duration-300 hover:bg-[linear-gradient(150deg,rgba(255,255,255,0.26)_0%,rgba(250,253,255,0.18)_56%,rgba(246,249,252,0.13)_100%)]"
             >
-              <span className="relative z-10">Explorar tratamientos</span>
+              Explorar tratamientos
             </Link>
           </motion.div>
         </div>

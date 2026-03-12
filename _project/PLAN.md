@@ -64,6 +64,13 @@ Tipografía: **Playfair Display** (headings) + **Inter** (body)
 ### FASE 1 — Auditoría de secciones ✅ COMPLETADA
 - [x] Todas las secciones revisadas — ver tabla de auditoría arriba
 
+### PENDIENTE URGENTE — Frosted glass botones Hero
+**Problema**: `backdrop-filter: blur()` en los botones no difumina el video detrás.
+**Lo intentado**: aumentar blur, will-change, translateZ(0), quitar `isolate` de section — ninguno funcionó.
+**Referencia**: el header SÍ tiene el efecto correcto. Ver `SiteHeaderClient.tsx` línea 320 — usa `backdrop-blur-xl` de Tailwind sobre un fondo con bg gradient rgba.
+**Hipótesis siguiente sesión**: el problema puede ser que el video (`<video absolute inset-0>`) no es un elemento del DOM que backdrop-filter pueda ver. Necesita un elemento intermedio con color real. O estudiar exactamente cómo lo hace el header y replicarlo en los botones.
+**Acción**: leer cómo está implementado el header en detalle y replicar la misma técnica exacta.
+
 ### FASE 2 — ElevenLabs integration
 - [ ] Obtener Agent ID de ElevenLabs
 - [ ] Decidir posición: sidebar sticky o sección embebida
@@ -127,9 +134,23 @@ Documento: `_project/neuroestetica-ramachandran.md` — LEER antes de tocar cual
 
 ---
 
-## Paleta — decisión pendiente para sesión nueva
-- Opción A (actual): `#0D1418` + petroleum blue `#2C5F6F` + gold `#C9A96E`
-- Opción B (híbrida): `#0A0A0F` dark + crema `#F5F0E8` textos + rose gold `#C9896A` + teal IA `#00C9B1`
+## Paleta — DECIDIDA ✅
+**Opción A bloqueada**: `#0D1418` dark + petrol `#2C5F6F` + gold `#C9A96E`
+**Excepción**: teal `#00C9B1` SOLO en sección IA (AIShowcaseSection) como acento diferenciador. No usar en resto del sitio.
+Justificación neuroestética: "fondos neutros muted con UN solo acento jewel-tone" (Ramachandran Principio 4 — Contraste).
+
+## Rediseño pendiente — próxima sesión
+### ServicesSection (🔴 prioridad 1)
+- Problema: fondo blanco + cards pequeñas → viola Isolation + Contrast (Ramachandran)
+- Fix: sección oscura (`#0D1418` o `#111A1F`), cards grandes con imagen protagonista, copy nuevo
+- Copy actual: "Seis tratamientos para entender qué ofrecemos" → "Nuestra selección de tratamientos más recomendados" (o mejor)
+- Aplicar: Peak Shift (exagerar promesa de transformación) + Isolation (un focal point por card)
+
+### AIShowcaseSection (🔴 prioridad 2)
+- Cambiar acento de colores actuales → teal `#00C9B1` para toda la sección IA
+- Estructura y copy ya están bien
+
+### Social Proof + Dream Team — POSPONER hasta tener fotos reales
 - Teal SOLO para sección IA — diferenciador de inteligencia artificial
 - Liquid glass mejorado: más backdrop-blur, efecto mate/frosted
 

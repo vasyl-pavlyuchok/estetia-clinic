@@ -158,40 +158,66 @@
 
   .premium-cta-dark {
     position: relative;
-    transform: translateZ(0);
-    will-change: transform;
-    color: rgba(250, 252, 255, 0.96);
-    border: 1px solid rgba(241, 246, 250, 0.28);
+    overflow: hidden;
+    color: rgba(250, 252, 255, 0.97);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     background: linear-gradient(
-      140deg,
-      rgba(16, 20, 24, 0.62) 0%,
-      rgba(25, 30, 36, 0.58) 55%,
-      rgba(41, 47, 54, 0.52) 100%
+      145deg,
+      rgba(20, 26, 32, 0.72) 0%,
+      rgba(14, 20, 26, 0.64) 52%,
+      rgba(30, 40, 50, 0.56) 100%
     );
-    backdrop-filter: blur(14px) saturate(1.4);
-    -webkit-backdrop-filter: blur(14px) saturate(1.4);
+    backdrop-filter: blur(22px) saturate(1.5) brightness(1.08);
+    -webkit-backdrop-filter: blur(22px) saturate(1.5) brightness(1.08);
     box-shadow:
-      0 16px 34px -24px rgba(0, 0, 0, 0.65),
-      0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+      0 18px 40px -22px rgba(0, 0, 0, 0.72),
+      0 1px 0 rgba(255, 255, 255, 0.16) inset,
+      0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+  }
+
+  .premium-cta-dark::before {
+    content: '';
+    position: absolute;
+    inset: -60% -30%;
+    background: radial-gradient(
+      ellipse at 38% 28%,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0) 55%
+    );
+    pointer-events: none;
+    animation: serum-flow 9s ease-in-out infinite;
   }
 
   .premium-cta-light {
     position: relative;
-    transform: translateZ(0);
-    will-change: transform;
-    color: rgba(246, 250, 255, 0.95);
-    border: 1px solid rgba(225, 233, 240, 0.38);
+    overflow: hidden;
+    color: rgba(246, 250, 255, 0.96);
+    border: 1px solid rgba(180, 220, 245, 0.34);
     background: linear-gradient(
-      140deg,
-      rgba(236, 241, 246, 0.32) 0%,
-      rgba(218, 226, 233, 0.26) 55%,
-      rgba(200, 209, 218, 0.22) 100%
+      145deg,
+      rgba(100, 165, 200, 0.36) 0%,
+      rgba(60, 120, 160, 0.28) 52%,
+      rgba(40, 95, 135, 0.22) 100%
     );
-    backdrop-filter: blur(16px) saturate(1.6);
-    -webkit-backdrop-filter: blur(16px) saturate(1.6);
+    backdrop-filter: blur(24px) saturate(1.7) brightness(1.12);
+    -webkit-backdrop-filter: blur(24px) saturate(1.7) brightness(1.12);
     box-shadow:
-      0 16px 34px -24px rgba(0, 0, 0, 0.58),
-      0 0 0 1px rgba(255, 255, 255, 0.12) inset;
+      0 18px 40px -22px rgba(0, 0, 0, 0.58),
+      0 1px 0 rgba(200, 235, 255, 0.28) inset,
+      0 0 0 1px rgba(150, 210, 248, 0.1) inset;
+  }
+
+  .premium-cta-light::before {
+    content: '';
+    position: absolute;
+    inset: -60% -30%;
+    background: radial-gradient(
+      ellipse at 60% 25%,
+      rgba(180, 225, 255, 0.24) 0%,
+      rgba(255, 255, 255, 0) 58%
+    );
+    pointer-events: none;
+    animation: serum-flow 11s ease-in-out infinite reverse;
   }
 
   .serum-scroll-pill {
@@ -404,6 +430,8 @@
 @media (prefers-reduced-motion: reduce) {
   .glass-soft::before,
   .glass-strong::before,
+  .premium-cta-dark::before,
+  .premium-cta-light::before,
   .serum-scroll-wheel::after,
   .trust-marquee-track {
     animation: none;
