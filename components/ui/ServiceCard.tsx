@@ -39,36 +39,36 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
       />
 
-      {/* Gradient overlay — depth and readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
+      {/* Gradient overlay — warm-tinted depth */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#1A0E06]/92 via-black/38 to-black/8" />
 
-      {/* Top-left icon badge */}
+      {/* Top-left icon badge — warm gold */}
       <div className="absolute left-5 top-5">
-        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white/80">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-4.5 w-4.5">
+        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#C9A96E]/40 bg-[#C9A96E]/15 backdrop-blur-md text-[#D5B884]">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-[18px] w-[18px]">
             <path d={iconPath} strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </span>
       </div>
 
       {/* Frosted glass content panel — NO transform/translate animations here */}
-      <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-white/5 px-5 pb-5 pt-5 backdrop-blur-md">
-        <span className="inline-flex rounded-full border border-[#7FAFC2]/40 bg-[#7FAFC2]/12 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-[#BFE0EE]">
+      <div className="absolute bottom-0 left-0 right-0 border-t border-[#C9A96E]/18 bg-black/20 px-5 pb-5 pt-5 backdrop-blur-md">
+        <span className="inline-flex rounded-full border border-[#C9A96E]/45 bg-[#C9A96E]/15 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-[#D5B884]">
           {service.categoryLabel}
         </span>
 
         <h3 className="font-heading mt-3 text-[1.75rem] leading-tight text-white">
           {service.name}
         </h3>
-        <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-white/68">
+        <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-white/82">
           {service.tagline}
         </p>
 
-        <div className="mt-4 flex items-center justify-between border-t border-white/12 pt-3.5">
-          <span className="text-[0.72rem] font-medium text-white/52">{service.duration}</span>
+        <div className="mt-4 flex items-center justify-between border-t border-white/14 pt-3.5">
+          <span className="text-[0.72rem] font-medium text-white/68">{service.duration}</span>
           <Link
             href={`/servicios/${service.slug}`}
-            className="inline-flex items-center gap-1.5 text-[0.66rem] font-bold uppercase tracking-[0.14em] text-white/85 transition-opacity duration-300 group-hover:text-white"
+            className="inline-flex items-center gap-1.5 text-[0.66rem] font-bold uppercase tracking-[0.14em] text-[#D5B884] transition-opacity duration-300 group-hover:text-[#C9A96E]"
           >
             Explorar
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-3.5 w-3.5">

@@ -48,18 +48,18 @@ export default function ServicesSection({
 
         {/* Header editorial */}
         <div className="max-w-3xl">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#2C5F6F]">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#C9A96E]">
             {isPreview ? 'Tratamientos destacados' : 'Catálogo completo'}
           </p>
           <h2 className="font-heading mt-5 text-[clamp(2.4rem,5.5vw,4rem)] leading-[1.05] text-[#0D1418]">
             {isPreview
-              ? 'Tratamientos de referencia, seleccionados por resultados.'
-              : 'Explora todos los tratamientos con su información clínica y proceso.'}
+              ? 'No es un menú. Es una selección de lo que funciona.'
+              : 'Todos los tratamientos, con información clínica real.'}
           </h2>
-          <p className="mt-5 max-w-[52ch] text-[1rem] leading-relaxed text-black/58">
+          <p className="mt-5 max-w-[52ch] text-[1rem] leading-relaxed text-black/62">
             {isPreview
-              ? 'Cada protocolo ha sido elegido por su eficacia clínica demostrada y su capacidad de transformación real.'
-              : 'Filtra por categoría y accede a cada página de servicio.'}
+              ? 'Cada protocolo responde a un objetivo concreto — y se adapta a tu evolución, no a un estándar genérico. Sin sobreventas, sin promesas vacías.'
+              : 'Filtra por categoría y accede a la ficha clínica de cada tratamiento.'}
           </p>
         </div>
 
