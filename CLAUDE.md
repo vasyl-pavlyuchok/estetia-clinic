@@ -61,6 +61,7 @@ Sin esto, elementos sin color explícito heredan `color: black` del body y son i
 | `/doctora` | `app/doctora/page.tsx` | Activo |
 | `/metodo` | `app/metodo/page.tsx` | Activo |
 | `/ia` | `app/ia/page.tsx` | Activo — página dedicada IA (creada 2026-03-12) |
+| `/metodo` | `app/metodo/page.tsx` | Activo — Metodología clínica (reescrita 2026-03-12) |
 
 ---
 
@@ -107,7 +108,7 @@ Proponer consulta cuando haya incertidumbre sobre dirección de marca, assets vi
 |---|---|---|
 | Hero | `HeroSection.tsx` | ✅ Aprobado |
 | Servicios (preview) | `ServicesSection.tsx` | ✅ Copy actualizado 2026-03-12 |
-| IA Showcase | `AIShowcaseSection.tsx` | ✅ Rediseñado 2026-03-12 |
+| IA Showcase | `AIShowcaseSection.tsx` | ✅ Rediseñado + SVG icons + DM Sans + badge gold 2026-03-12 |
 | Tecnología | `TechnologySection.tsx` | — |
 | Doctora (preview) | `DreamTeamSection.tsx` | — |
 | Social Proof | `SocialProofSection.tsx` | — |
