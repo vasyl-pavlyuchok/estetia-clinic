@@ -17,11 +17,11 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
       />
 
-      {/* Gradient overlay — strong warm base */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#120800] via-[#120800]/55 to-transparent" />
+      {/* Gradient overlay — light vignette only, image stays visible */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#120800]/80 via-[#120800]/15 to-transparent" />
 
-      {/* Frosted glass content panel — NO transform/translate animations here */}
-      <div className="absolute bottom-0 left-0 right-0 border-t border-[#C9A96E]/25 bg-[#120800]/55 px-5 pb-5 pt-5 backdrop-blur-md">
+      {/* Frosted glass content panel — darker here, not on the image */}
+      <div className="absolute bottom-0 left-0 right-0 border-t border-[#C9A96E]/25 bg-[#120800]/72 px-5 pb-5 pt-5 shadow-[0_-20px_40px_-8px_rgba(18,8,0,0.7)] backdrop-blur-md">
         <span className="inline-flex rounded-full border border-[#C9A96E]/60 bg-[#C9A96E]/22 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-[#E8CC8A]">
           {service.categoryLabel}
         </span>
