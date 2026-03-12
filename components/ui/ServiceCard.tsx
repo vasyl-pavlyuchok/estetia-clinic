@@ -3,7 +3,6 @@ import type { Service } from '@/lib/services';
 
 type ServiceCardProps = {
   service: Service;
-  imageOverrideUrl?: string;
 };
 
 const ICON_PATHS: Record<string, string> = {
@@ -27,59 +26,57 @@ const ICON_PATHS: Record<string, string> = {
   anchor: 'M12 3v6m0 0a2 2 0 100-4 2 2 0 000 4zm-6 4h12m-6 0v9m-6-6c1.2 3 3.3 4.5 6 4.5s4.8-1.5 6-4.5',
 };
 
-function ServiceIcon({ icon }: { icon: string }) {
-  const path = ICON_PATHS[icon] ?? ICON_PATHS.sparkles;
+export default function ServiceCard({ service }: ServiceCardProps) {
+  const iconPath = ICON_PATHS[service.icon] ?? ICON_PATHS.sparkles;
 
   return (
-    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#C9A96E]/35 bg-[linear-gradient(145deg,rgba(201,169,110,0.18)_0%,rgba(255,255,255,0.58)_100%)] text-[#9A743D] backdrop-blur-[6px]">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-5 w-5">
-        <path d={path} strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    </span>
-  );
-}
+    <article className="group relative h-[480px] overflow-hidden rounded-3xl">
+      {/* Full-bleed image — video-ready: swap <img> for <video autoPlay muted loop playsInline> */}
+      <img
+        src={service.img_url}
+        alt={service.name}
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+      />
 
-export default function ServiceCard({ service, imageOverrideUrl }: ServiceCardProps) {
-  const cardImageUrl = imageOverrideUrl ?? service.img_url;
+      {/* Gradient overlay — depth and readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
 
-  return (
-    <article className="group relative overflow-hidden rounded-3xl border border-[#E7DBCD] bg-[linear-gradient(170deg,#FFFDFB_0%,#FAF6F1_100%)] shadow-[0_26px_54px_-40px_rgba(88,57,24,0.28)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_58px_-38px_rgba(88,57,24,0.34)]">
-      <Link href={`/servicios/${service.slug}`} className="block">
-        <div className="relative aspect-[16/11] overflow-hidden border-b border-[#DCCFBE] bg-[#EFE9E1]">
-          <img
-            src={cardImageUrl}
-            alt={service.name}
-            loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/34 via-black/6 to-transparent" />
+      {/* Top-left icon badge */}
+      <div className="absolute left-5 top-5">
+        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white/80">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-4.5 w-4.5">
+            <path d={iconPath} strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
+      </div>
+
+      {/* Frosted glass content panel — NO transform/translate animations here */}
+      <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-white/5 px-5 pb-5 pt-5 backdrop-blur-md">
+        <span className="inline-flex rounded-full border border-[#7FAFC2]/40 bg-[#7FAFC2]/12 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-[#BFE0EE]">
+          {service.categoryLabel}
+        </span>
+
+        <h3 className="font-heading mt-3 text-[1.75rem] leading-tight text-white">
+          {service.name}
+        </h3>
+        <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-white/68">
+          {service.tagline}
+        </p>
+
+        <div className="mt-4 flex items-center justify-between border-t border-white/12 pt-3.5">
+          <span className="text-[0.72rem] font-medium text-white/52">{service.duration}</span>
+          <Link
+            href={`/servicios/${service.slug}`}
+            className="inline-flex items-center gap-1.5 text-[0.66rem] font-bold uppercase tracking-[0.14em] text-white/85 transition-opacity duration-300 group-hover:text-white"
+          >
+            Explorar
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-3.5 w-3.5">
+              <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Link>
         </div>
-
-        <div className="p-5">
-          <div className="flex items-center justify-between gap-3">
-            <ServiceIcon icon={service.icon} />
-            <span className="rounded-full border border-[#DED1C2] bg-white/72 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.1em] text-[#2C5F6F] backdrop-blur-[6px]">
-              {service.categoryLabel}
-            </span>
-          </div>
-
-          <h3 className="font-heading mt-4 text-[1.8rem] leading-tight text-[#191919]">{service.name}</h3>
-          <p className="mt-1.5 text-sm font-medium text-black/74">{service.tagline}</p>
-          <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-black/64">{service.description}</p>
-
-          <div className="mt-5 flex items-center justify-between gap-3 border-t border-[#DFD2C3] pt-4">
-            <span className="rounded-full border border-[#DED1C2] bg-white/74 px-3 py-1 text-[0.64rem] font-semibold uppercase tracking-[0.08em] text-black/72 backdrop-blur-[6px]">
-              {service.duration}
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-[0.66rem] font-bold uppercase tracking-[0.12em] text-[#1D1D1D]">
-              Explorar
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-3.5 w-3.5">
-                <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </span>
-          </div>
-        </div>
-      </Link>
+      </div>
     </article>
   );
 }

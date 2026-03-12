@@ -28,9 +28,6 @@ export default function ServicesSection({
 }: ServicesSectionProps) {
   const isPreview = mode === 'preview';
   const categories = allCategories ?? Array.from(new Set(services.map((s) => s.categoryLabel)));
-  const sharedPreviewImage =
-    services.find((s) => s.slug === 'bioestimulacion-acido-hialuronico')?.img_url ??
-    services[0]?.img_url;
   const displayedServices = isPreview
     ? services.filter((s) => s.featured).slice(0, 6)
     : services;
@@ -107,7 +104,6 @@ export default function ServicesSection({
             <ServiceCard
               key={service.id}
               service={service}
-              imageOverrideUrl={isPreview ? sharedPreviewImage : undefined}
             />
           ))}
         </div>
