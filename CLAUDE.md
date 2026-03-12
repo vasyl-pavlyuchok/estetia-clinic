@@ -25,9 +25,11 @@ Leer este archivo al inicio de cada sesión antes de ejecutar nada.
 | Rol | Familia | Variable CSS | Clase Tailwind |
 |---|---|---|---|
 | Headings (h1–h6) | **Playfair Display** (400/600/700) | `--font-playfair` | `font-heading` |
-| Body / UI | **Plus Jakarta Sans** (400/500/600/700) | `--font-inter` | `font-body` |
+| Body / copy | **Plus Jakarta Sans** (400/500/600/700) | `--font-inter` | `font-body` |
+| UI / etiquetas | **DM Sans** (400/500/600) | `--font-dm-sans` | `font-ui` |
 
-> ⚠️ La variable CSS se llama `--font-inter` pero la fuente cargada en `layout.tsx` es **Plus Jakarta Sans**, no Inter.
+> ⚠️ La variable CSS `--font-inter` carga **Plus Jakarta Sans**, no Inter.
+> `font-ui` (DM Sans) se usa para títulos de componentes UI pequeños donde la legibilidad es crítica (ej: capability rows en AIShowcaseSection).
 
 ### Paleta de color
 

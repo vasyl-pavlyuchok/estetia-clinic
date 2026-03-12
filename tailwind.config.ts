@@ -31,6 +31,7 @@ const config: Config = {
       fontFamily: {
         heading: ['var(--font-playfair)', 'Georgia', 'serif'],
         body: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        ui: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
       },
       // CSS custom properties are exposed via globals.css
     },

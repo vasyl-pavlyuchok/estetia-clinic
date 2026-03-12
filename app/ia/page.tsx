@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const capabilities = [
-  { num: '01', emoji: '📅', title: 'Reservar cita', description: 'Disponibilidad en tiempo real. Agenda tu visita en segundos, sin formularios ni horario de oficina.', tag: '24 / 7' },
-  { num: '02', emoji: '💬', title: 'Resolver dudas', description: 'Precios, recuperación, resultados — entrenado con los protocolos reales de Estetia, no información genérica.', tag: null },
-  { num: '03', emoji: '⚖️', title: 'Comparar tratamientos', description: '¿No sabes qué elegir? Diferencias, indicaciones y resultados esperados para orientar tu decisión.', tag: null },
-  { num: '04', emoji: '🎙️', title: 'Conversación natural', description: 'Interrumpe, cambia de tema, reformula. Entiende el contexto y responde con fluidez real.', tag: 'Voz nativa' },
-  { num: '05', emoji: '👨‍⚕️', title: 'Derivar al especialista', description: 'Cuando una consulta requiere criterio médico, lo detecta y te conecta con el profesional adecuado.', tag: null },
-  { num: '06', emoji: '🔒', title: 'Con límites claros', description: 'No emite diagnósticos ni recomendaciones clínicas. Toda decisión médica es exclusiva del equipo de Estetia.', tag: 'AI Act compliant' },
+  { num: '01', icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>, title: 'Reservar cita', description: 'Disponibilidad en tiempo real. Agenda tu visita en segundos, sin formularios ni horario de oficina.', tag: '24 / 7' },
+  { num: '02', icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>, title: 'Resolver dudas', description: 'Precios, recuperación, resultados — entrenado con los protocolos reales de Estetia, no información genérica.', tag: null },
+  { num: '03', icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><path d="M3 6l9-3 9 3"/><path d="M3 18l9 3 9-3"/><line x1="3" y1="12" x2="21" y2="12"/></svg>, title: 'Comparar tratamientos', description: '¿No sabes qué elegir? Diferencias, indicaciones y resultados esperados para orientar tu decisión.', tag: null },
+  { num: '04', icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>, title: 'Conversación natural', description: 'Interrumpe, cambia de tema, reformula. Entiende el contexto y responde con fluidez real.', tag: 'Voz nativa' },
+  { num: '05', icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>, title: 'Derivar al especialista', description: 'Cuando una consulta requiere criterio médico, lo detecta y te conecta con el profesional adecuado.', tag: null },
+  { num: '06', icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>, title: 'Con límites claros', description: 'No emite diagnósticos ni recomendaciones clínicas. Toda decisión médica es exclusiva del equipo de Estetia.', tag: 'AI Act compliant' },
 ];
 
 const pillars = [
@@ -144,12 +144,12 @@ export default function IAPage() {
                 className="group relative overflow-hidden transition-all duration-300"
                 style={{ background: 'linear-gradient(160deg, rgba(17,26,31,0.82) 0%, rgba(13,20,24,0.64) 100%)', backdropFilter: 'blur(34px) saturate(1.4) brightness(0.98)', padding: '36px 30px', boxShadow: 'inset 0 1px 0 rgba(127,175,194,0.08)' }}
               >
-                <p className="mb-3.5 text-[0.56rem] font-bold uppercase tracking-[0.4em] text-[#7FAFC2]/50">{cap.num}</p>
-                <span className="mb-3.5 block text-[1.6rem]" aria-hidden="true">{cap.emoji}</span>
-                <h3 className="mb-2.5 text-[0.94rem] font-bold text-white">{cap.title}</h3>
+                <p className="mb-3.5 text-[0.68rem] font-bold uppercase tracking-[0.4em] text-[#7FAFC2]/50">{cap.num}</p>
+                <span className="mb-3.5 flex items-center text-[#7FAFC2]" aria-hidden="true">{cap.icon}</span>
+                <h3 className="font-ui mb-2.5 text-[0.94rem] font-semibold text-white">{cap.title}</h3>
                 <p className="text-[0.82rem] leading-[1.65]" style={{ color: whiteDim }}>{cap.description}</p>
                 {cap.tag && (
-                  <span className="mt-3.5 inline-block px-2.5 py-1 text-[0.5rem] font-bold uppercase tracking-[0.25em] text-[#7FAFC2]" style={{ background: blueDim, border: `1px solid ${blueBorder}` }}>
+                  <span className="mt-3.5 inline-block px-2.5 py-1 text-[0.62rem] font-bold uppercase tracking-[0.2em] text-[#7FAFC2]" style={{ background: blueDim, border: `1px solid ${blueBorder}` }}>
                     {cap.tag}
                   </span>
                 )}
@@ -199,12 +199,12 @@ export default function IAPage() {
                 style={{ display: 'grid', gridTemplateColumns: '260px 1fr', background: 'linear-gradient(135deg, rgba(17,26,31,0.75) 0%, rgba(13,20,24,0.55) 100%)', backdropFilter: 'blur(24px) saturate(1.3)' }}
               >
                 <div style={{ padding: '24px 28px', borderRight: `1px solid ${blueBorder}`, display: 'flex', flexDirection: 'column', gap: '5px', justifyContent: 'center' }}>
-                  <span className="text-[0.75rem] font-bold uppercase tracking-[0.1em] text-[#7FAFC2]">{item.name}</span>
-                  <span className="text-[0.62rem]" style={{ color: whiteDim }}>{item.sub}</span>
+                  <span className="text-[0.88rem] font-bold uppercase tracking-[0.1em] text-[#7FAFC2]">{item.name}</span>
+                  <span className="text-[0.75rem]" style={{ color: whiteDim }}>{item.sub}</span>
                 </div>
                 <div style={{ padding: '24px 28px' }}>
-                  <p className="text-[0.82rem] leading-[1.65]" style={{ color: whiteMid }}>{item.content}</p>
-                  <span className="mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 text-[0.5rem] font-bold uppercase tracking-[0.2em] text-[#7FAFC2]" style={{ background: blueDim, border: `1px solid ${blueBorder}` }}>
+                  <p className="text-[0.88rem] leading-[1.7]" style={{ color: whiteMid }}>{item.content}</p>
+                  <span className="mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 text-[0.62rem] font-bold uppercase tracking-[0.15em] text-[#7FAFC2]" style={{ background: blueDim, border: `1px solid ${blueBorder}` }}>
                     ✓ {item.badge}
                   </span>
                 </div>
@@ -222,18 +222,16 @@ export default function IAPage() {
           Habla primero con el asistente.<br />
           Luego con <em className="font-normal not-italic" style={{ color: '#D5B884' }}>nuestro equipo</em>.
         </h2>
-        <div className="flex items-center justify-center gap-3.5">
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href="#contacto"
-            className="inline-block px-9 py-4 text-[0.62rem] font-bold uppercase tracking-[0.25em] text-[#0D1418] transition-colors duration-300 hover:bg-[#D5B884]"
-            style={{ background: '#C9A96E' }}
+            className="rounded-full border border-white/20 bg-[linear-gradient(145deg,rgba(8,13,16,0.58)_0%,rgba(11,18,23,0.46)_58%,rgba(20,34,43,0.32)_100%)] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:bg-[linear-gradient(145deg,rgba(8,13,16,0.72)_0%,rgba(11,18,23,0.60)_58%,rgba(20,34,43,0.46)_100%)]"
           >
             Iniciar conversación
           </a>
           <Link
             href="/servicios"
-            className="inline-block px-9 py-4 text-[0.62rem] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 hover:border-[#7FAFC2] hover:text-[#7FAFC2]"
-            style={{ border: `1px solid ${blueBorder}`, color: whiteMid }}
+            className="rounded-full border border-white/[0.22] bg-[linear-gradient(150deg,rgba(255,255,255,0.18)_0%,rgba(250,253,255,0.12)_56%,rgba(246,249,252,0.08)_100%)] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-[34px] backdrop-saturate-[1.4] backdrop-brightness-[0.98] transition-all duration-300 hover:bg-[linear-gradient(150deg,rgba(255,255,255,0.26)_0%,rgba(250,253,255,0.18)_56%,rgba(246,249,252,0.13)_100%)]"
           >
             Ver tratamientos
           </Link>

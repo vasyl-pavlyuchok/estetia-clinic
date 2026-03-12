@@ -2,31 +2,51 @@ import Link from 'next/link';
 
 const capabilities = [
   {
-    emoji: '📅',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+    ),
     title: 'Reservar cita',
     description: 'Disponibilidad en tiempo real, sin formularios ni esperas.',
     pill: '24 / 7',
   },
   {
-    emoji: '💬',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+    ),
     title: 'Resolver dudas',
     description: 'Precios, recuperación, resultados — entrenado con los protocolos reales de Estetia.',
     pill: null,
   },
   {
-    emoji: '⚖️',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="12" y1="3" x2="12" y2="21"/><path d="M3 6l9-3 9 3"/><path d="M3 18l9 3 9-3"/><line x1="3" y1="12" x2="21" y2="12"/>
+      </svg>
+    ),
     title: 'Comparar tratamientos',
     description: 'Diferencias, indicaciones y resultados esperados con precisión clínica.',
     pill: null,
   },
   {
-    emoji: '🎙️',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
+      </svg>
+    ),
     title: 'Conversación natural',
     description: 'Interrumpe, cambia de tema, reformula. Entiende el contexto y responde con fluidez.',
     pill: 'Voz',
   },
   {
-    emoji: '👨‍⚕️',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/>
+      </svg>
+    ),
     title: 'Derivar al especialista',
     description: 'Cuando la consulta requiere criterio médico, te conecta con el profesional correcto.',
     pill: null,
@@ -134,35 +154,17 @@ export default function AIShowcaseSection() {
               </p>
             </blockquote>
 
-            {/* Tech badge */}
-            <div
-              className="mt-8 inline-flex items-center gap-3 px-4 py-3"
-              style={{
-                background: 'linear-gradient(135deg, rgba(44,95,111,0.14) 0%, rgba(13,20,24,0.4) 100%)',
-                border: '1px solid rgba(127,175,194,0.18)',
-              }}
-            >
-              <span
-                className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#7FAFC2]"
-                style={{ animation: 'blink 2s ease-in-out infinite' }}
-                aria-hidden="true"
-              />
-              <span className="text-[0.62rem] font-medium uppercase tracking-[0.16em] text-white/55">
-                Desarrollado sobre ElevenLabs — líder mundial en agentes de voz con IA
-              </span>
-            </div>
-
             {/* CTA */}
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/ia"
-                className="inline-flex items-center gap-3 border-b pb-2 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-[#7FAFC2] transition-colors duration-300 hover:border-[#7FAFC2] hover:text-white"
-                style={{ borderColor: 'rgba(127,175,194,0.35)' }}
+                className="rounded-full px-7 py-3.5 text-sm font-semibold text-[#0D1418] transition-all duration-300 hover:brightness-110"
+                style={{ background: '#C9A96E' }}
               >
                 Conoce nuestro enfoque completo
-                <span className="text-sm transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
             </div>
+
           </div>
 
           {/* ── RIGHT: capability rows ── */}
@@ -179,11 +181,11 @@ export default function AIShowcaseSection() {
                   aria-hidden="true"
                 />
 
-                <span className="shrink-0 pl-2 text-xl" aria-hidden="true">{cap.emoji}</span>
+                <span className="flex shrink-0 items-center justify-center pl-2 text-[#7FAFC2]" aria-hidden="true">{cap.icon}</span>
 
                 <div className="flex-1">
-                  <h4 className="text-[0.88rem] font-semibold text-white">{cap.title}</h4>
-                  <p className="mt-0.5 text-[0.78rem] leading-relaxed text-white/55">{cap.description}</p>
+                  <h4 className="font-ui text-[0.95rem] font-semibold text-white">{cap.title}</h4>
+                  <p className="mt-0.5 text-[0.83rem] leading-relaxed text-white/60">{cap.description}</p>
                 </div>
 
                 {cap.pill ? (
@@ -199,6 +201,18 @@ export default function AIShowcaseSection() {
                 ) : null}
               </div>
             ))}
+
+            {/* Tech badge */}
+            <div className="mt-1.5 inline-flex items-center gap-2.5 px-3.5 py-2.5" style={{ border: '1px solid rgba(201,169,110,0.3)', background: 'rgba(201,169,110,0.06)' }}>
+              <span
+                className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#C9A96E]"
+                style={{ animation: 'blink 2s ease-in-out infinite' }}
+                aria-hidden="true"
+              />
+              <span className="text-[0.6rem] font-semibold uppercase tracking-[0.18em]" style={{ color: '#C9A96E' }}>
+                Desarrollado con Eleven Labs — voz IA de referencia mundial
+              </span>
+            </div>
 
             {/* Disclaimer */}
             <div

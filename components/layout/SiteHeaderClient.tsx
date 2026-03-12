@@ -64,7 +64,7 @@ type PrimaryLink = {
 };
 
 const primaryLinks: PrimaryLink[] = [
-  { href: '/metodo', label: 'Método' },
+  { href: '/metodo', label: 'Metodología' },
   { href: '/doctora', label: 'Doctora' },
   { href: '/#tecnologia', label: 'Tecnología', sectionId: 'tecnologia' },
   { href: '/#social-proof', label: 'Resultados', sectionId: 'social-proof' },
