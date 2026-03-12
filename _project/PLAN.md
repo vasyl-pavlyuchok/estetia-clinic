@@ -139,6 +139,22 @@ Documento: `_project/neuroestetica-ramachandran.md` — LEER antes de tocar cual
 **Excepción**: teal `#00C9B1` SOLO en sección IA (AIShowcaseSection) como acento diferenciador. No usar en resto del sitio.
 Justificación neuroestética: "fondos neutros muted con UN solo acento jewel-tone" (Ramachandran Principio 4 — Contraste).
 
+## Mapa de tonos de secciones — BLOQUEADO ✅
+Base clara (6 claras / 4 oscuras). Oscuro como acento de impacto, no como base.
+| Sección | Tono |
+|---|---|
+| Hero | 🌑 Oscuro |
+| Trust (logos marquee) | ⬜ Claro |
+| Services | ⬜ Claro |
+| AI Showcase | 🌑 Oscuro |
+| Social Proof | ⬜ Claro |
+| Clinical Process | ⬜ Claro |
+| Technology | 🌑 Oscuro |
+| Dream Team | ⬜ Claro |
+| FAQ | ⬜ Claro |
+| Contact | 🌑 Oscuro |
+Regla: los oscuros se agrupan estratégicamente (AI+Tech juntos), no se alternan uno a uno.
+
 ## Rediseño pendiente — próxima sesión
 ### ServicesSection (🔴 prioridad 1)
 - Problema: fondo blanco + cards pequeñas → viola Isolation + Contrast (Ramachandran)

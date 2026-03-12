@@ -38,28 +38,28 @@ export default function ServicesSection({
   return (
     <section
       id="servicios"
-      className="relative overflow-clip bg-[#0D1418] py-24 md:py-32"
+      className="relative overflow-clip bg-[#F6F7F8] py-24 md:py-32"
       aria-label="Servicios"
     >
       {/* Ambience */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute -left-32 top-0 h-[28rem] w-[28rem] rounded-full bg-[#2C5F6F]/18 blur-[120px]" />
-        <div className="absolute bottom-0 right-[-6rem] h-[22rem] w-[22rem] rounded-full bg-[#C9A96E]/10 blur-[100px]" />
+        <div className="absolute -left-32 top-0 h-[28rem] w-[28rem] rounded-full bg-[#2C5F6F]/8 blur-[120px]" />
+        <div className="absolute bottom-0 right-[-6rem] h-[22rem] w-[22rem] rounded-full bg-[#C9A96E]/8 blur-[100px]" />
       </div>
 
       <div className="relative mx-auto w-full max-w-7xl px-6 md:px-10">
 
         {/* Header editorial */}
         <div className="max-w-3xl">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#7FAFC2]">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#2C5F6F]">
             {isPreview ? 'Tratamientos destacados' : 'Catálogo completo'}
           </p>
-          <h2 className="font-heading mt-5 text-[clamp(2.4rem,5.5vw,4rem)] leading-[1.05] text-white">
+          <h2 className="font-heading mt-5 text-[clamp(2.4rem,5.5vw,4rem)] leading-[1.05] text-[#0D1418]">
             {isPreview
               ? 'Tratamientos de referencia, seleccionados por resultados.'
               : 'Explora todos los tratamientos con su información clínica y proceso.'}
           </h2>
-          <p className="mt-5 max-w-[52ch] text-[1rem] leading-relaxed text-white/62">
+          <p className="mt-5 max-w-[52ch] text-[1rem] leading-relaxed text-black/58">
             {isPreview
               ? 'Cada protocolo ha sido elegido por su eficacia clínica demostrada y su capacidad de transformación real.'
               : 'Filtra por categoría y accede a cada página de servicio.'}
@@ -73,8 +73,8 @@ export default function ServicesSection({
               href={basePath}
               className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.08em] transition-colors duration-300 ${
                 !activeCategory
-                  ? 'border-[#C9A96E]/45 bg-[#C9A96E]/14 text-[#E8C98A]'
-                  : 'border-white/14 bg-white/[0.06] text-white/62 hover:border-[#7FAFC2]/30 hover:text-[#7FAFC2]'
+                  ? 'border-[#C9A96E]/45 bg-[#C9A96E]/14 text-[#5E4720]'
+                  : 'border-black/12 bg-white text-black/62 hover:border-[#2C5F6F]/30 hover:text-[#2C5F6F]'
               }`}
             >
               <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-current/20 bg-current/10 text-[0.63rem]">
@@ -88,8 +88,8 @@ export default function ServicesSection({
                 href={`${basePath}?categoria=${encodeURIComponent(category)}`}
                 className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.08em] transition-colors duration-300 ${
                   activeCategory === category
-                    ? 'border-[#C9A96E]/45 bg-[#C9A96E]/14 text-[#E8C98A]'
-                    : 'border-white/14 bg-white/[0.06] text-white/62 hover:border-[#7FAFC2]/30 hover:text-[#7FAFC2]'
+                    ? 'border-[#C9A96E]/45 bg-[#C9A96E]/14 text-[#5E4720]'
+                    : 'border-black/12 bg-white text-black/62 hover:border-[#2C5F6F]/30 hover:text-[#2C5F6F]'
                 }`}
               >
                 <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-current/20 bg-current/10 text-[0.63rem]">
@@ -117,11 +117,11 @@ export default function ServicesSection({
           <div className="mt-14 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <Link
               href="/servicios"
-              className="rounded-full border border-white/20 bg-white/[0.08] px-6 py-3 text-sm font-semibold text-white backdrop-blur-xl transition-colors duration-300 hover:bg-white/14"
+              className="rounded-full border border-[#2C5F6F]/30 bg-[#2C5F6F]/8 px-6 py-3 text-sm font-semibold text-[#1F4B5A] transition-colors duration-300 hover:bg-white/14"
             >
               Ver catálogo completo
             </Link>
-            <p className="text-sm text-white/42">
+            <p className="text-sm text-black/42">
               {services.length}+ tratamientos con ficha clínica detallada
             </p>
           </div>
