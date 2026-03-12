@@ -33,7 +33,7 @@ Tipografía: **Playfair Display** (headings) + **Inter** (body)
 |---|---|---|
 | Hero | 🌑 Oscuro | ✅ OK — video + frosted glass buttons |
 | Trust Indicators | ⬜ Claro | ✅ OK — marquee flush sin padding |
-| Services | ⬜ Claro | ✅ OK — rediseñada, editorial |
+| Services | ⬜ Claro | ✅ OK — cards tall frosted glass (480px), gold warm, uniform panel height |
 | AI Showcase | 🌑 Oscuro | ✅ OK — teal `#00C9B1` |
 | Social Proof | ⬜ Claro | ⏸ Pospuesto — placeholder hasta tener fotos |
 | Clinical Process | ⬜ Claro | ✅ OK |
