@@ -156,6 +156,14 @@ Base clara (6 claras / 4 oscuras). Oscuro como acento de impacto, no como base.
 Regla: los oscuros se agrupan estratégicamente (AI+Tech juntos), no se alternan uno a uno.
 
 ## Rediseño pendiente — próxima sesión
+### Estado sesión 2026-03-12 — todo commiteado en git ✅
+- Hero: frosted glass buttons funcionando (opacity-only animation fix)
+- ServicesSection: rediseñado → fondo claro #F6F7F8, editorial dark heading
+- AIShowcaseSection: acento serum blue → teal #00C9B1
+- TrustIndicatorsSection: sin padding vertical (marquee flush)
+- ClinicalProcessSection: pendiente → claro (sesión en curso)
+- Mapa de tonos guardado en este PLAN.md
+
 ### ServicesSection (🔴 prioridad 1)
 - Problema: fondo blanco + cards pequeñas → viola Isolation + Contrast (Ramachandran)
 - Fix: sección oscura (`#0D1418` o `#111A1F`), cards grandes con imagen protagonista, copy nuevo
