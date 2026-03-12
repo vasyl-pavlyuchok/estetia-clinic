@@ -13,7 +13,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.estetia.rule=Host(`estetia.vasylpavlyuchok.com`)"
       - "traefik.http.routers.estetia.entrypoints=websecure"
-      - "traefik.http.routers.estetia.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.estetia.tls.certresolver=myresolver"
       - "traefik.http.services.estetia.loadbalancer.server.port=3000"
 
 networks:
