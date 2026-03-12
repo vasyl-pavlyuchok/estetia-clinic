@@ -3,6 +3,7 @@ import type { Service } from '@/lib/services';
 
 type ServiceCardProps = {
   service: Service;
+  imageUrl?: string;
 };
 
 export default function ServiceCard({ service }: ServiceCardProps) {

@@ -9,7 +9,8 @@ Use this file as the first-stop index, then load only the referenced files neede
 
 1. `/_project/BRIEF.md`
 2. `/_project/codex-design-operating-manual.md`
-3. `/_project/context/project-memory.md`
+3. `/_project/context/project-memory.md` ← **incluye brand reference: fuentes + paleta de color**
+4. `/_project/context/visual-system-v2.md` ← reglas de composición, paleta completa, normas neuroestéticas
 
 ## Load On Demand
 

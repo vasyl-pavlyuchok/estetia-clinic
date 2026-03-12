@@ -53,12 +53,12 @@ export default function ServicesSection({
           </p>
           <h2 className="font-heading mt-5 text-[clamp(2.4rem,5.5vw,4rem)] leading-[1.05] text-[#0D1418]">
             {isPreview
-              ? 'No es un menú. Es una selección de lo que funciona.'
+              ? 'Nuestra selección de tratamientos más avanzados.'
               : 'Todos los tratamientos, con información clínica real.'}
           </h2>
           <p className="mt-5 max-w-[52ch] text-[1rem] leading-relaxed text-black/62">
             {isPreview
-              ? 'Cada protocolo responde a un objetivo concreto — y se adapta a tu evolución, no a un estándar genérico. Sin sobreventas, sin promesas vacías.'
+              ? 'Los tratamientos que más eligen nuestros pacientes. Cada uno, avalado por la Dra. Morales y aplicado con criterio clínico propio.'
               : 'Filtra por categoría y accede a la ficha clínica de cada tratamiento.'}
           </p>
         </div>
