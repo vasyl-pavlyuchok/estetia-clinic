@@ -69,7 +69,7 @@
 .image-badge {
   position: absolute;
   bottom: 40px;
-  left: 36px;
+  right: 36px;
   z-index: 2;
   background: rgba(255,255,255,0.88);
   backdrop-filter: blur(16px) saturate(1.4);
