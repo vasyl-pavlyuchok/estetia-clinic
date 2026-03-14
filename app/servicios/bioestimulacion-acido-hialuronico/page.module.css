@@ -28,30 +28,29 @@
 
 /* Badge — duración del efecto */
 .duration-badge {
-  position: absolute; bottom: 40px; right: 36px; z-index: 2;
+  position: absolute; bottom: 40px; right: 20px; z-index: 2;
   background: rgba(255,255,255,0.92);
   backdrop-filter: blur(16px) saturate(1.4);
   -webkit-backdrop-filter: blur(16px) saturate(1.4);
   border: 1px solid var(--border);
-  padding: 18px 22px;
+  padding: 20px 14px;
   box-shadow: 0 8px 32px rgba(13,20,24,0.1);
-  min-width: 220px;
+  width: 148px;
 }
 
-.badge-title { font-size: 8px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+.badge-title { font-size: 8px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; line-height: 1.4; }
 
-.badge-stat { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
-.badge-stat-num { font-family: var(--font-playfair); font-size: 40px; font-weight: 600; color: var(--blue-deep); line-height: 1; }
-.badge-stat-unit { font-size: 13px; font-weight: 600; color: var(--blue-deep); }
-.badge-stat-label { font-size: 11px; font-weight: 400; color: var(--text-muted); }
+.badge-stat { display: flex; flex-direction: column; gap: 2px; margin-bottom: 4px; }
+.badge-stat-num { font-family: var(--font-playfair); font-size: 48px; font-weight: 600; color: var(--blue-deep); line-height: 1; }
+.badge-stat-unit { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue-deep); }
+.badge-stat-label { font-size: 10px; font-weight: 400; color: var(--text-muted); line-height: 1.45; margin-bottom: 12px; }
 
 .key-diff {
-  display: flex; align-items: flex-start; gap: 10px;
-  padding: 12px 14px;
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 10px;
   background: var(--blue-dim);
   border: 1px solid var(--blue-border);
-  margin-top: 10px;
-  font-size: 10px; font-weight: 500; color: var(--blue-deep); line-height: 1.5;
+  font-size: 9px; font-weight: 500; color: var(--blue-deep); line-height: 1.5;
 }
 .key-diff svg { flex-shrink: 0; margin-top: 1px; }
 
