@@ -31,10 +31,8 @@ export default function MicroneedlingFactoresCrecimientoPage() {
               </div>
               <div className={`${styles['modality-row']} ${styles.featured}`}>
                 <span>Con PRP autólogo</span>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span className={styles['modality-price']}>250€</span>
-                  <span className={styles['modality-tag']}>Recomendado</span>
-                </div>
+                <span className={styles['modality-price']}>250€</span>
+                <span className={styles['modality-tag']}>Recomendado</span>
               </div>
             </div>
           </div>
