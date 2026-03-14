@@ -9,14 +9,15 @@ export const metadata: Metadata = {
 };
 
 type ServicesPageProps = {
-  searchParams?: {
+  searchParams?: Promise<{
     categoria?: string;
-  };
+  }>;
 };
 
-export default function ServicesPage({ searchParams }: ServicesPageProps) {
+export default async function ServicesPage({ searchParams }: ServicesPageProps) {
+  const params = await searchParams;
   const services = getAllServices();
-  const category = searchParams?.categoria;
+  const category = params?.categoria;
   const categories = getServiceCategories();
   const filteredServices =
     category && categories.includes(category)

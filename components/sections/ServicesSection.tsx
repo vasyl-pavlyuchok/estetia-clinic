@@ -10,14 +10,6 @@ type ServicesSectionProps = {
   basePath?: string;
 };
 
-const CATEGORY_MARKER: Record<string, string> = {
-  'Tratamientos Faciales Avanzados': 'F',
-  'Rejuvenecimiento y Anti-edad': 'R',
-  'Contorno Corporal': 'C',
-  'Medicina Estética Inyectable': 'I',
-  'Tratamientos Capilares': 'K',
-  'Dermatología Estética': 'D',
-};
 
 export default function ServicesSection({
   services,
@@ -68,30 +60,20 @@ export default function ServicesSection({
           <div className="mt-10 flex flex-wrap items-center gap-2.5">
             <Link
               href={basePath}
-              className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.08em] transition-colors duration-300 ${
-                !activeCategory
-                  ? 'border-[#C9A96E]/45 bg-[#C9A96E]/14 text-[#5E4720]'
-                  : 'border-black/12 bg-white text-black/62 hover:border-[#2C5F6F]/30 hover:text-[#2C5F6F]'
+              className={`inline-flex items-center rounded-full border border-[#C9A96E]/70 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-[#5C3D0A] transition-opacity duration-300 ${
+                !activeCategory ? 'bg-[#C9A96E]/25' : 'bg-[#C9A96E]/10 opacity-60 hover:opacity-100'
               }`}
             >
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-current/20 bg-current/10 text-[0.63rem]">
-                T
-              </span>
               Todos
             </Link>
             {categories.map((category) => (
               <Link
                 key={category}
                 href={`${basePath}?categoria=${encodeURIComponent(category)}`}
-                className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.08em] transition-colors duration-300 ${
-                  activeCategory === category
-                    ? 'border-[#C9A96E]/45 bg-[#C9A96E]/14 text-[#5E4720]'
-                    : 'border-black/12 bg-white text-black/62 hover:border-[#2C5F6F]/30 hover:text-[#2C5F6F]'
+                className={`inline-flex items-center rounded-full border border-[#C9A96E]/70 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-[#5C3D0A] transition-opacity duration-300 ${
+                  activeCategory === category ? 'bg-[#C9A96E]/25' : 'bg-[#C9A96E]/10 opacity-60 hover:opacity-100'
                 }`}
               >
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-current/20 bg-current/10 text-[0.63rem]">
-                  {CATEGORY_MARKER[category] ?? '•'}
-                </span>
                 {category}
               </Link>
             ))}
@@ -104,7 +86,7 @@ export default function ServicesSection({
             <ServiceCard
               key={service.id}
               service={service}
-              variant={isPreview && index < 3 ? 'light' : 'dark'}
+              variant="frost"
             />
           ))}
         </div>

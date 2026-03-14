@@ -72,6 +72,7 @@ Sin esto, elementos sin color explícito heredan `color: black` del body y son i
 | `_project/BRIEF.md` | Siempre — define el proyecto completo |
 | `_project/context/project-memory.md` | Siempre — decisiones aprobadas, componentes canónicos |
 | `_project/context/visual-system-v2.md` | Siempre — reglas de composición y neuroestética |
+| `brand_assets/brand_guidelines.md` | Recetas CSS aprobadas de componentes (ServiceCard frost/dark, gold text) |
 | `_project/services.json` | Cualquier trabajo con servicios/cards de tratamiento |
 | `_project/services-detail.md` | Copy detallado de tratamientos |
 | `_project/neuroestetica-ramachandran.md` | Decisiones visuales o de motion avanzadas |
