@@ -2,6 +2,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import TrustIndicatorsSection from '@/components/sections/TrustIndicatorsSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import AIShowcaseSection from '@/components/sections/AIShowcaseSection';
+import AIShowcaseSectionV2 from '@/components/sections/AIShowcaseSectionV2';
 import DreamTeamSection from '@/components/sections/DreamTeamSection';
 import SocialProofSection from '@/components/sections/SocialProofSection';
 import ClinicalProcessSection from '@/components/sections/ClinicalProcessSection';
@@ -21,6 +22,7 @@ export default function Home() {
       <TrustIndicatorsSection />
       <ServicesSection services={serviceList} mode="preview" />
       <AIShowcaseSection />
+      <AIShowcaseSectionV2 />
       <SocialProofSection />
       <ClinicalProcessSection />
       <TechnologySection />
