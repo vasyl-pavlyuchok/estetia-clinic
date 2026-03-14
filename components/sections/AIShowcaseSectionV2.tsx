@@ -97,7 +97,7 @@ export default function AIShowcaseSectionV2() {
     // Try passive mic access — no UI, silent fail if denied
     let audioCtx: AudioContext | null = null;
     let analyser: AnalyserNode | null = null;
-    let dataArray: Uint8Array | null = null;
+    let dataArray: Uint8Array<ArrayBuffer> | null = null;
 
     navigator.mediaDevices?.getUserMedia({ audio: true, video: false })
       .then((stream) => {
@@ -327,7 +327,7 @@ export default function AIShowcaseSectionV2() {
             {/* label */}
             <p className="text-center text-[0.62rem] uppercase tracking-[0.18em] text-white/35">
               <span className="block text-[0.72rem] font-semibold tracking-[0.08em] text-[#7FAFC2] mb-1.5">
-                Agente de voz activo
+                Agente de Voz EstetIA
               </span>
               Escucha · Entiende · Responde
             </p>

@@ -79,7 +79,7 @@ export default function TrustIndicatorsSection() {
   const marqueeItems = [...BRANDS, ...BRANDS];
 
   return (
-    <section className="bg-white" aria-label="Marcas de referencia">
+    <section className="bg-white py-0" aria-label="Marcas de referencia">
       <div className="trust-marquee rounded-none border-x-0">
         <div className="trust-marquee-track" role="presentation">
           {marqueeItems.map((brand, index) => (

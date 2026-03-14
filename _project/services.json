@@ -46,7 +46,7 @@
     ],
     "icon": "droplet",
     "featured": true,
-    "img_url": "https://images.unsplash.com/photo-1556228578-dd6a486812ea?auto=format&fit=crop&w=1800&q=80",
+    "img_url": "/images/services/hydrafacial-md.webp",
     "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
   },
   {
@@ -202,7 +202,7 @@
     ],
     "icon": "grid",
     "featured": true,
-    "img_url": "https://images.unsplash.com/photo-1556228578-dd6a486812ea?auto=format&fit=crop&w=1800&q=80",
+    "img_url": "https://images.unsplash.com/photo-1556228578-dd6a486812ea?auto=format&fit=crop&w=800&q=80",
     "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
   },
   {
@@ -303,7 +303,7 @@
     ],
     "icon": "smile",
     "featured": true,
-    "img_url": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1800&q=80",
+    "img_url": "/images/services/hydrafacial-md.webp",
     "video_url": "https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm"
   },
   {

@@ -100,10 +100,11 @@ export default function ServicesSection({
 
         {/* Cards grid */}
         <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {displayedServices.map((service) => (
+          {displayedServices.map((service, index) => (
             <ServiceCard
               key={service.id}
               service={service}
+              variant={isPreview && index < 3 ? 'light' : 'dark'}
             />
           ))}
         </div>
