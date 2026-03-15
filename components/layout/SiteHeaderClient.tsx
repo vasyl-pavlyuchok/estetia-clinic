@@ -315,7 +315,7 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
   const activeZoneTone = activeZone ? zoneToneMap[activeZone.zoneKey] ?? defaultTone : defaultTone;
   const isTreatmentsActive = isMegaOpen || pathname.startsWith('/servicios');
 
-  const headerPositionClass = isHomePage ? 'fixed inset-x-0 top-0 z-50' : 'sticky top-0 z-50';
+  const headerPositionClass = isHomePage ? 'fixed inset-x-0 top-9 z-50' : 'sticky top-9 z-50';
   const headerVisualClass = useDarkChrome
     ? 'border-b border-white/10 bg-[linear-gradient(145deg,rgba(8,13,16,0.58)_0%,rgba(11,18,23,0.46)_58%,rgba(20,34,43,0.32)_100%)] backdrop-blur-xl shadow-[0_18px_40px_-28px_rgba(0,0,0,0.78)] transition-colors duration-300'
     : 'border-b border-black/8 bg-white/92 backdrop-blur-md transition-colors duration-300';
@@ -463,7 +463,7 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
                   animate="visible"
                   exit="exit"
                   variants={desktopPanelVariants}
-                  className="fixed inset-x-0 top-[5.25rem] z-[60] px-4"
+                  className="fixed inset-x-0 top-[7.5rem] z-[60] px-4"
                   onMouseEnter={openDesktopMegaMenu}
                   id="desktop-treatments-panel"
                 >
