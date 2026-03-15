@@ -5,7 +5,8 @@ import Link from 'next/link';
 
 const HERO_VIDEO_URL =
   'https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm';
-const HERO_POSTER_URL = '';
+const HERO_POSTER_URL =
+  'https://res.cloudinary.com/dipsguims/video/upload/so_0/v1772779158/estetia-header_short_opt_appzko.jpg';
 
 /* ─── Animation variants ─────────────────────────────────────────────────── */
 const fadeUp = {
@@ -14,7 +15,7 @@ const fadeUp = {
 };
 
 const transition = (delay: number) => ({
-  duration: 0.7,
+  duration: 0.45,
   delay,
   ease: [0.25, 0.46, 0.45, 0.94] as const, // easeOutQuart
 });
@@ -54,7 +55,7 @@ export default function HeroSection() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          transition={transition(0.15)}
+          transition={transition(0)}
           className="text-[0.76rem] font-semibold uppercase tracking-[0.34em] text-white sm:text-[0.8rem]"
         >
           <span className="text-white/96">Estetia Clinic</span>
@@ -69,7 +70,7 @@ export default function HeroSection() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            transition={transition(0.3)}
+            transition={transition(0.08)}
             className="font-heading max-w-[12ch] text-[clamp(2.65rem,7vw,5.4rem)] font-bold leading-[1.03] text-white"
           >
             Ciencia estética de lujo, diseñada para parecer inevitable.
@@ -79,7 +80,7 @@ export default function HeroSection() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            transition={transition(0.5)}
+            transition={transition(0.16)}
             className="mt-6 max-w-[47ch] text-[1.06rem] leading-relaxed text-white/95"
           >
             Protocolos clínicos personalizados, equipamiento de última generación y
@@ -89,7 +90,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={transition(0.7)}
+            transition={transition(0.24)}
             className="mt-10 flex flex-col gap-3 sm:flex-row"
           >
             <a
@@ -111,7 +112,7 @@ export default function HeroSection() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.6 }}
+        transition={{ delay: 0.5, duration: 0.4 }}
         className="relative mx-auto mb-10 flex w-full max-w-7xl justify-center"
         aria-hidden="true"
       >
