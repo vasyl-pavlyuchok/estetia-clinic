@@ -88,7 +88,7 @@ export default function PRPCapilarPage() {
     <>
       <div className={styles['hero-wrapper']}>
         <div className={styles['hero-image-col']}>
-          <Image src="/images/services/prp-capilar.webp" alt="PRP Capilar — Estetia" fill style={{ objectFit: 'cover', objectPosition: 'center top' }} priority />
+          <Image src="/images/services/plasma-rico-en-plaquetas-capilar-prp.webp" alt="PRP Capilar — Estetia" fill style={{ objectFit: 'cover', objectPosition: 'center top' }} priority />
           <div className={styles['prp-badge']}>
             <div className={styles['prp-badge-label']}>Densidad a 6 meses</div>
             <div className={styles['prp-stat']}>
