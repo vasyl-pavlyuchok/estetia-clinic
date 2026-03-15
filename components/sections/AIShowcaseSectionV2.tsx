@@ -153,9 +153,15 @@ export default function AIShowcaseSectionV2() {
       },
     ];
 
-    const STEPS = 300;
+    const STEPS = 150;
+    const FRAME_INTERVAL = 1000 / 30; // 30fps cap
+    let lastFrameTime = 0;
 
-    function draw() {
+    function draw(timestamp: number) {
+      animRef.current = requestAnimationFrame(draw);
+      if (timestamp - lastFrameTime < FRAME_INTERVAL) return;
+      lastFrameTime = timestamp;
+
       ctx.clearRect(0, 0, W, H);
       const t = tRef.current;
 
@@ -184,6 +190,8 @@ export default function AIShowcaseSectionV2() {
       ctx.arc(cx, cy, glowR, 0, Math.PI * 2);
       ctx.fill();
 
+      // Single shadowBlur pass — set once for all strands
+      ctx.shadowBlur = 10 + vol * 14;
       strands.forEach(({ baseR, waves, color, lw }) => {
         ctx.beginPath();
         for (let i = 0; i <= STEPS; i++) {
@@ -200,18 +208,16 @@ export default function AIShowcaseSectionV2() {
         }
         ctx.closePath();
         ctx.strokeStyle = color;
-        ctx.lineWidth = lw + vol * 1.2;
-        ctx.shadowBlur = 10 + vol * 14;
         ctx.shadowColor = color;
+        ctx.lineWidth = lw + vol * 1.2;
         ctx.stroke();
-        ctx.shadowBlur = 0;
       });
+      ctx.shadowBlur = 0;
 
       tRef.current += 0.032;
-      animRef.current = requestAnimationFrame(draw);
     }
 
-    draw();
+    animRef.current = requestAnimationFrame(draw);
     return () => {
       cancelAnimationFrame(animRef.current);
       audioCtx?.close();
@@ -320,6 +326,7 @@ export default function AIShowcaseSectionV2() {
                 width={280}
                 height={280}
                 className="relative z-[2]"
+                style={{ willChange: 'transform' }}
                 aria-hidden="true"
               />
             </div>

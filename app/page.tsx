@@ -1,15 +1,17 @@
+import dynamic from 'next/dynamic';
 import HeroSection from '@/components/sections/HeroSection';
 import TrustIndicatorsSection from '@/components/sections/TrustIndicatorsSection';
-import ServicesSection from '@/components/sections/ServicesSection';
-import AIShowcaseSectionV2 from '@/components/sections/AIShowcaseSectionV2';
-import DreamTeamSection from '@/components/sections/DreamTeamSection';
-import SocialProofSection from '@/components/sections/SocialProofSection';
-import ClinicalProcessSection from '@/components/sections/ClinicalProcessSection';
-import TechnologySection from '@/components/sections/TechnologySection';
-import FAQSection from '@/components/sections/FAQSection';
-import ContactSection from '@/components/sections/ContactSection';
-import FooterSection from '@/components/sections/FooterSection';
 import { getAllServices } from '@/lib/services';
+
+const ServicesSection = dynamic(() => import('@/components/sections/ServicesSection'));
+const AIShowcaseSectionV2 = dynamic(() => import('@/components/sections/AIShowcaseSectionV2'));
+const SocialProofSection = dynamic(() => import('@/components/sections/SocialProofSection'));
+const ClinicalProcessSection = dynamic(() => import('@/components/sections/ClinicalProcessSection'));
+const TechnologySection = dynamic(() => import('@/components/sections/TechnologySection'));
+const DreamTeamSection = dynamic(() => import('@/components/sections/DreamTeamSection'));
+const FAQSection = dynamic(() => import('@/components/sections/FAQSection'));
+const ContactSection = dynamic(() => import('@/components/sections/ContactSection'));
+const FooterSection = dynamic(() => import('@/components/sections/FooterSection'));
 
 export default function Home() {
   const serviceList = getAllServices();
