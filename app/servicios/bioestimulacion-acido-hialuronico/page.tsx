@@ -19,7 +19,7 @@ export default function BioestimulacionAcidoHialurónicoPage() {
       <div className={styles['hero-wrapper']}>
 
         <div className={styles['hero-image-col']}>
-          <img src="/images/services/bioestimulacion-con-cido-hialuronico.webp" alt="Bioestimulación con Ácido Hialurónico — Estetia" />
+          <img src="/images/services/bioestimulacion-acido-hialuronico.webp" alt="Bioestimulación con Ácido Hialurónico — Estetia" />
 
           {/* Badge — duración del efecto hidratante */}
           <div className={styles['duration-badge']}>
