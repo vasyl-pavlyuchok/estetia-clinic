@@ -1,24 +1,42 @@
+import Image from 'next/image';
+
 type TeamMember = {
+  index: string;
   name: string;
   role: string;
   focus: string;
+  specialties: string[];
+  credentials: string;
+  photo: string;
 };
 
 const TEAM: TeamMember[] = [
   {
+    index: '01',
     name: 'Dra. Elena Varela',
-    role: 'Direccion Medica',
-    focus: 'Armonizacion facial y bioestimulacion avanzada.',
+    role: 'Dirección Médica',
+    focus: 'Armonización facial y bioestimulación avanzada con criterio conservador.',
+    specialties: ['Toxina botulínica', 'Rellenos dérmicos', 'Bioestimulación'],
+    credentials: 'Medicina Estética · 12 años de práctica clínica',
+    photo: '/images/team/dra-elena-varela.webp',
   },
   {
-    name: 'Dr. Nicolas Ruiz',
-    role: 'Medicina Estetica Inyectable',
-    focus: 'Precision anatomica y resultados naturales de alta definicion.',
+    index: '02',
+    name: 'Dr. Nicolás Ruiz',
+    role: 'Medicina Estética Inyectable',
+    focus: 'Precisión anatómica y resultados naturales de alta definición.',
+    specialties: ['Hilos tensores', 'Toxina', 'Rinomodelación'],
+    credentials: 'Cirugía Plástica · Formación en París y Milán',
+    photo: '/images/team/dr-nicolas-ruiz.webp',
   },
   {
-    name: 'Dra. Sofia Mendez',
-    role: 'Dermatologia Estetica',
-    focus: 'Laseres, regeneracion dermica y protocolos de textura.',
+    index: '03',
+    name: 'Dra. Sofía Méndez',
+    role: 'Dermatología Estética',
+    focus: 'Láseres, regeneración dérmica y protocolos de textura avanzados.',
+    specialties: ['Láser fraccionado', 'Microneedling', 'IPL'],
+    credentials: 'Dermatología Médico-Quirúrgica · Máster en tecnología láser',
+    photo: '/images/team/dra-sofia-mendez.webp',
   },
 ];
 
@@ -30,28 +48,76 @@ export default function DreamTeamSection() {
       aria-label="The Aesthetic Dream Team"
     >
       <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2C5F6F]">
-          The Aesthetic Dream Team
-        </p>
-        <h2 className="font-heading mt-4 max-w-[16ch] text-4xl leading-tight text-black md:text-5xl">
-          Talento medico con mirada editorial y obsesion por la simetria.
-        </h2>
+        <div className="grid gap-7 md:grid-cols-[1.08fr_0.92fr] md:items-end">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2C5F6F]">
+              The Aesthetic Dream Team
+            </p>
+            <h2 className="font-heading mt-4 max-w-[16ch] text-4xl leading-tight text-black md:text-5xl">
+              Talento médico con mirada editorial y obsesión por la simetría.
+            </h2>
+          </div>
+          <p className="max-w-[48ch] text-[0.98rem] leading-relaxed text-black/72 md:justify-self-end">
+            Cada especialista ha sido seleccionado por criterio clínico, experiencia demostrable
+            y capacidad para leer la identidad facial de cada paciente.
+          </p>
+        </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {TEAM.map((member) => (
             <article
               key={member.name}
-              className="rounded-3xl border border-black/12 bg-white p-6 shadow-[0_20px_42px_-36px_rgba(0,0,0,0.35)]"
+              className="flex flex-col overflow-hidden rounded-3xl border border-black/12 bg-white shadow-[0_20px_42px_-36px_rgba(0,0,0,0.35)]"
             >
-              <div className="relative h-56 overflow-hidden rounded-2xl border border-black/10 bg-[linear-gradient(160deg,#FFFFFF_0%,#ECEFF2_100%)]">
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/20 to-transparent" />
-                <div className="absolute left-4 top-4 h-8 w-8 rounded-full border border-[#C9A96E]/55 bg-[#C9A96E]/14" />
+              {/* Photo */}
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src={member.photo}
+                  alt={member.name}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                {/* Index overlay */}
+                <span
+                  className="font-heading absolute bottom-3 right-4 select-none text-[3rem] leading-none text-white/20"
+                  aria-hidden="true"
+                >
+                  {member.index}
+                </span>
+                {/* Role badge */}
+                <span className="absolute left-4 top-4 rounded-full border border-white/30 bg-black/40 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm">
+                  {member.role}
+                </span>
               </div>
-              <p className="mt-5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#2C5F6F]">
-                {member.role}
-              </p>
-              <h3 className="font-heading mt-2 text-2xl text-black">{member.name}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-black/72">{member.focus}</p>
+
+              {/* Content */}
+              <div className="flex flex-1 flex-col p-6">
+                {/* Name */}
+                <h3 className="font-heading text-[1.65rem] leading-tight text-black">
+                  {member.name}
+                </h3>
+
+                {/* Focus */}
+                <p className="mt-3 text-sm leading-relaxed text-black/68">{member.focus}</p>
+
+                {/* Specialties */}
+                <div className="mt-5 flex flex-wrap gap-1.5">
+                  {member.specialties.map((s) => (
+                    <span
+                      key={s}
+                      className="rounded-full border border-[#C9A96E]/40 bg-[#C9A96E]/10 px-2.5 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.1em] text-[#7A5A24]"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Credentials */}
+                <p className="mt-auto border-t border-black/8 pt-5 text-[0.7rem] leading-relaxed text-black/42">
+                  {member.credentials}
+                </p>
+              </div>
             </article>
           ))}
         </div>

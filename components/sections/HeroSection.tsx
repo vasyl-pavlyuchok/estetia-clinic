@@ -3,10 +3,8 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-const HERO_VIDEO_URL =
-  'https://res.cloudinary.com/dipsguims/video/upload/v1772779158/estetia-header_short_opt_appzko.webm';
-const HERO_POSTER_URL =
-  'https://res.cloudinary.com/dipsguims/video/upload/so_0/v1772779158/estetia-header_short_opt_appzko.jpg';
+const HERO_VIDEO_URL = '/videos/estetia-hero.webm';
+const HERO_POSTER_URL = '';
 
 /* ─── Animation variants ─────────────────────────────────────────────────── */
 const fadeUp = {

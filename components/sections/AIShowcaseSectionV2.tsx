@@ -445,8 +445,10 @@ export default function AIShowcaseSectionV2() {
         {PILLARS.map((pillar, i) => (
           <div
             key={pillar.title}
-            className="bg-[#111A1F] px-10 py-11 text-white transition-colors duration-300 hover:bg-[rgba(44,95,111,0.10)]"
-            style={i < PILLARS.length - 1 ? { borderRight: '1px solid rgba(127,175,194,0.15)' } : {}}
+            className={[
+              'bg-[#111A1F] px-6 py-8 text-white transition-colors duration-300 hover:bg-[rgba(44,95,111,0.10)] md:px-10 md:py-11',
+              i < PILLARS.length - 1 ? 'border-b border-[rgba(127,175,194,0.15)] lg:border-b-0 lg:border-r lg:border-r-[rgba(127,175,194,0.15)]' : '',
+            ].join(' ')}
           >
             <p className="text-[0.58rem] font-bold uppercase tracking-[0.42em] text-[#7FAFC2]/70">
               {pillar.eyebrow}

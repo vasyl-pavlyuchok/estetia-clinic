@@ -110,7 +110,7 @@ export default function FAQSection() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {FAQ_CATEGORIES.map((category) => (
             <article
               key={category.title}

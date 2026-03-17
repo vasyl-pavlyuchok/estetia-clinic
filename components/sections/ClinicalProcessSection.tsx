@@ -53,7 +53,7 @@ export default function ClinicalProcessSection() {
           </p>
         </div>
 
-        <ol className="relative mt-11 grid gap-4 lg:grid-cols-5">
+        <ol className="relative mt-11 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {PROCESS_STEPS.map((step, index) => (
             <li key={step.title} className="relative">
               <article className="h-full rounded-3xl border border-black/12 bg-white p-6 shadow-[0_20px_46px_-38px_rgba(0,0,0,0.35)]">
