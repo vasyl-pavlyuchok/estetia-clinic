@@ -7,13 +7,10 @@ import { getAllServices } from '@/lib/services';
 
 const ph = (h: number) => () => <div style={{ minHeight: h }} aria-hidden="true" />;
 
-const SocialProofSection     = dynamic(() => import('@/components/sections/SocialProofSection'),     { loading: ph(600) });
-const ClinicalProcessSection = dynamic(() => import('@/components/sections/ClinicalProcessSection'), { loading: ph(500) });
-const TechnologySection      = dynamic(() => import('@/components/sections/TechnologySection'),      { loading: ph(500) });
-const DreamTeamSection       = dynamic(() => import('@/components/sections/DreamTeamSection'),       { loading: ph(500) });
-const FAQSection             = dynamic(() => import('@/components/sections/FAQSection'),             { loading: ph(400) });
-const ContactSection         = dynamic(() => import('@/components/sections/ContactSection'),         { loading: ph(400) });
-const FooterSection          = dynamic(() => import('@/components/sections/FooterSection'),          { loading: ph(300) });
+const DreamTeamSection = dynamic(() => import('@/components/sections/DreamTeamSection'), { loading: ph(500) });
+const FAQSection       = dynamic(() => import('@/components/sections/FAQSection'),       { loading: ph(400) });
+const ContactSection   = dynamic(() => import('@/components/sections/ContactSection'),   { loading: ph(400) });
+const FooterSection    = dynamic(() => import('@/components/sections/FooterSection'),    { loading: ph(300) });
 
 export default function Home() {
   const serviceList = getAllServices();
@@ -24,11 +21,8 @@ export default function Home() {
       <HeroSection />
       <TrustIndicatorsSection />
       <ServicesSection services={serviceList} mode="preview" />
-      <AIShowcaseSectionV2 />
-      <SocialProofSection />
-      <ClinicalProcessSection />
-      <TechnologySection />
       <DreamTeamSection />
+      <AIShowcaseSectionV2 />
       <FAQSection />
       <ContactSection />
       <FooterSection categories={serviceCategories} />

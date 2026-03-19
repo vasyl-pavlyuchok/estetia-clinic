@@ -109,10 +109,17 @@ Proponer consulta cuando haya incertidumbre sobre dirección de marca, assets vi
 |---|---|---|
 | Hero | `HeroSection.tsx` | ✅ Aprobado |
 | Servicios (preview) | `ServicesSection.tsx` | ✅ Copy actualizado 2026-03-12 |
-| IA Showcase | `AIShowcaseSection.tsx` | ✅ Rediseñado + SVG icons + DM Sans + badge gold 2026-03-12 |
-| Tecnología | `TechnologySection.tsx` | — |
-| Doctora (preview) | `DreamTeamSection.tsx` | — |
-| Social Proof | `SocialProofSection.tsx` | — |
-| FAQ | `FAQSection.tsx` | — |
-| Contacto | `ContactSection.tsx` | — |
-| Footer | `FooterSection.tsx` | — |
+| IA Showcase | `AIShowcaseSectionV2.tsx` | ✅ Rediseñado + SVG icons + DM Sans + badge gold |
+| Proceso clínico | `ClinicalProcessSection.tsx` | ✅ Completa |
+| Tecnología | `TechnologySection.tsx` | ✅ Completa |
+| Doctora (preview) | `DreamTeamSection.tsx` | ✅ Completa — 3 retratos AI (WebP, 49KB total) |
+| Social Proof | `SocialProofSection.tsx` | ✅ Código existe — slider + 2 testimonios, imágenes placeholder |
+| FAQ | `FAQSection.tsx` | ✅ Completa |
+| Contacto | `ContactSection.tsx` | ✅ Completa |
+| Footer | `FooterSection.tsx` | ✅ Completa |
+
+## Pendiente para cerrar la demo
+- [ ] Agente ElevenLabs + widget embebido (PRIORIDAD — clave para venta)
+- [ ] SocialProofSection — imágenes reales (ahora placeholder)
+- [ ] /contact → rediseñar como intake conversacional
+- [x] Estetia en vasylpavlyuchok.com/ai ✅ 2026-03-19

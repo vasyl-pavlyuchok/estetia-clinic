@@ -6,8 +6,8 @@ type FooterSectionProps = {
 
 const FOOTER_LINKS = [
   { href: '/#servicios', label: 'Servicios' },
-  { href: '/#ia-assistant', label: 'Asistente IA' },
-  { href: '/#social-proof', label: 'Resultados' },
+  { href: '/ia', label: 'Inteligencia Artificial' },
+  { href: '/#dream-team', label: 'Equipo Médico' },
   { href: '/#faq', label: 'FAQ' },
   { href: '/#contacto', label: 'Contacto' },
 ];
@@ -15,12 +15,10 @@ const FOOTER_LINKS = [
 export default function FooterSection({ categories }: FooterSectionProps) {
   return (
     <footer className="relative overflow-hidden bg-[#0D1418] text-white" aria-label="Pie de página">
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_16%,rgba(127,175,194,0.16),transparent_42%),radial-gradient(circle_at_82%_84%,rgba(201,169,110,0.12),transparent_44%),linear-gradient(180deg,rgba(9,14,18,0.98)_0%,rgba(13,20,24,1)_100%)]" />
-      </div>
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_14%_16%,rgba(127,175,194,0.14),transparent_42%),radial-gradient(circle_at_82%_84%,rgba(201,169,110,0.10),transparent_44%)]" aria-hidden="true" />
 
-      <div className="relative z-[1] mx-auto w-full max-w-7xl px-6 pb-8 pt-16 md:px-10">
-        <div className="grid gap-10 rounded-[2rem] border border-white/12 bg-[linear-gradient(148deg,rgba(20,32,39,0.9)_0%,rgba(14,23,29,0.94)_46%,rgba(12,19,24,0.97)_100%)] p-7 shadow-[0_24px_58px_-40px_rgba(0,0,0,0.8)] md:p-9 lg:grid-cols-[1.08fr_0.92fr]">
+      <div className="relative mx-auto w-full max-w-7xl px-6 pb-8 pt-16 md:px-10">
+        <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr]">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#7FAFC2]">
               Estetia Clinic
@@ -73,7 +71,8 @@ export default function FooterSection({ categories }: FooterSectionProps) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 px-1 pt-7 text-xs text-white/56 md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 border-t border-white/10" />
+        <div className="flex flex-col gap-3 px-1 pt-6 text-xs text-white/56 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Estetia Clinic. Todos los derechos reservados.</p>
           <div className="flex flex-wrap gap-4">
             <a href="#" className="transition-colors duration-300 hover:text-white/78">

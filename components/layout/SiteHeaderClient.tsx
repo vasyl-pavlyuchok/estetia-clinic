@@ -65,10 +65,7 @@ type PrimaryLink = {
 
 const primaryLinks: PrimaryLink[] = [
   { href: '/metodo', label: 'Metodología' },
-  { href: '/doctora', label: 'Doctora' },
-  { href: '/#tecnologia', label: 'Tecnología', sectionId: 'tecnologia' },
-  { href: '/#social-proof', label: 'Resultados', sectionId: 'social-proof' },
-  { href: '/#faq', label: 'FAQ', sectionId: 'faq' },
+  { href: '/ia', label: 'Inteligencia Artificial' },
 ];
 
 type ZoneTone = {
@@ -206,10 +203,6 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
       setActivePrimaryHref('/metodo');
       return;
     }
-    if (pathname === '/doctora') {
-      setActivePrimaryHref('/doctora');
-      return;
-    }
     if (!isHomePage) {
       setActivePrimaryHref('');
     }
@@ -344,15 +337,15 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
     : 'inline-flex h-9 w-9 items-center justify-center rounded-full border border-black/15 bg-white text-black/80 transition-colors duration-200 hover:bg-black/[0.03] md:hidden';
 
   const megaPanelShellClass =
-    'mx-auto w-full max-w-[76rem] rounded-[2rem] border border-black/12 bg-[linear-gradient(150deg,rgba(255,255,255,0.988)_0%,rgba(250,253,255,0.984)_56%,rgba(246,249,252,0.978)_100%)] p-7 shadow-[0_36px_80px_-48px_rgba(0,0,0,0.52)] backdrop-blur-[34px] backdrop-saturate-140 backdrop-brightness-[0.98] transition-colors duration-300';
+    'mx-auto w-full max-w-[76rem] rounded-[2rem] border border-black/[0.08] bg-[#F4F7F9] p-7 shadow-[0_32px_72px_-40px_rgba(0,0,0,0.28)] transition-colors duration-300';
 
-  const megaDividerClass = 'border-black/10';
+  const megaDividerClass = 'border-black/[0.08]';
   const megaEyebrowClass = 'text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#2C5F6F]';
-  const megaSubcopyClass = 'mt-2 text-sm text-black/72';
+  const megaSubcopyClass = 'mt-2 text-sm text-black/55';
   const megaCatalogClass =
-    'inline-flex shrink-0 items-center rounded-full border border-[#2C5F6F]/25 bg-[#2C5F6F]/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-[#1d4a59] transition-colors duration-200 hover:bg-[#2C5F6F]/14';
+    'inline-flex shrink-0 items-center rounded-full border border-[#2C5F6F]/30 bg-[#2C5F6F]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-[#1F4B5A] transition-colors duration-200 hover:bg-[#2C5F6F]/18';
 
-  const zoneEyebrowClass = 'text-[0.64rem] font-semibold uppercase tracking-[0.18em] text-black/58';
+  const zoneEyebrowClass = 'text-[0.64rem] font-semibold uppercase tracking-[0.18em] text-black/42';
 
   const mobilePanelClass = useDarkChrome
     ? 'overflow-hidden border-t border-white/20 bg-[linear-gradient(150deg,rgba(10,16,20,0.96)_0%,rgba(14,22,28,0.93)_100%)] backdrop-blur-[24px] backdrop-saturate-150 md:hidden'

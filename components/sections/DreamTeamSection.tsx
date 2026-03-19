@@ -44,14 +44,14 @@ export default function DreamTeamSection() {
   return (
     <section
       id="dream-team"
-      className="bg-[#F6F7F8] py-20 md:py-24"
-      aria-label="The Aesthetic Dream Team"
+      className="bg-white py-20 md:py-24"
+      aria-label="Nuestro Equipo Médico"
     >
       <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
         <div className="grid gap-7 md:grid-cols-[1.08fr_0.92fr] md:items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2C5F6F]">
-              The Aesthetic Dream Team
+              Nuestro Equipo Médico
             </p>
             <h2 className="font-heading mt-4 max-w-[16ch] text-4xl leading-tight text-black md:text-5xl">
               Talento médico con mirada editorial y obsesión por la simetría.

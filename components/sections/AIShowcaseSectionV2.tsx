@@ -248,7 +248,7 @@ export default function AIShowcaseSectionV2() {
         <div className="mb-16 flex items-center gap-4">
           <span className="h-px w-9 bg-[#C9A96E]" aria-hidden="true" />
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#C9A96E]">
-            Inteligencia artificial en estética
+            Inteligencia artificial en Estetia
           </p>
           <div className="flex items-center gap-[3px]" aria-hidden="true">
             {[0.4, 0.75, 0.5, 1, 0.35].map((h, i) => (
