@@ -2,100 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
-
-const steps = [
-  {
-    num: '01',
-    tag: 'Fase 01',
-    title: 'Consulta estratégica',
-    primary: 'Escuchamos objetivos, historial y expectativas reales antes de emitir cualquier recomendación.',
-    secondary: 'Mapeamos prioridades estéticas y contexto clínico desde la primera visita. Sin presupuesto, sin lista de servicios. Solo diagnóstico.',
-    full: true,
-  },
-  {
-    num: '02',
-    tag: 'Fase 02',
-    title: 'Diagnóstico de precisión',
-    primary: 'Analizamos estructura, textura y simetría con criterio médico objetivo.',
-    secondary: 'Definimos un punto de partida medible para que cada decisión esté fundamentada en datos, no en intuición.',
-    full: false,
-  },
-  {
-    num: '03',
-    tag: 'Fase 03',
-    title: 'Plan médico personalizado',
-    primary: 'Diseñamos un protocolo por fases, tiempos y objetivos específicos para cada paciente.',
-    secondary: 'Cada tratamiento se ordena para maximizar el resultado y controlar los tiempos de recuperación.',
-    full: false,
-  },
-  {
-    num: '04',
-    tag: 'Fase 04',
-    title: 'Ejecución especializada',
-    primary: 'Aplicación con tecnología certificada y criterio conservador. El mismo médico que diagnostica, ejecuta.',
-    secondary: 'Buscamos mejora visible sin perder identidad facial o corporal. El resultado no es un estándar, es tu versión mejorada.',
-    full: false,
-  },
-  {
-    num: '05',
-    tag: 'Fase 05',
-    title: 'Seguimiento y optimización',
-    primary: 'Controlamos la evolución y afinamos la estrategia con cada revisión planificada.',
-    secondary: 'El resultado final se construye en continuidad. Medimos, ajustamos y documentamos. El proceso es permanente, no puntual.',
-    full: false,
-  },
-];
-
-const commitments = [
-  {
-    title: 'Primera visita',
-    claim: 'Sin coste. Sin compromiso. Sin presupuesto.',
-    body: 'La consulta inicial es una conversación clínica. Escuchamos antes de recomendar. No hay lista de servicios ni propuesta económica en la primera visita.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-    ),
-  },
-  {
-    title: 'Supervisión médica',
-    claim: 'Médico en sala en cada procedimiento.',
-    body: 'Ninguna sesión se delega. El mismo especialista que hace el diagnóstico ejecuta el tratamiento y firma el seguimiento. Sin intermediarios.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
-    ),
-  },
-  {
-    title: 'Resultado primero',
-    claim: 'Hacemos menos si con menos es suficiente.',
-    body: 'No optimizamos sesiones para facturar más. Si el resultado esperado se puede conseguir con menos intervención, eso es lo que recomendamos — y lo documentamos.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><path d="M3 6l9-3 9 3"/><path d="M3 18l9 3 9-3"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
-    ),
-  },
-  {
-    title: 'Asistente IA 24/7',
-    claim: 'Disponible antes, durante y después del tratamiento.',
-    body: 'Nuestro agente de inteligencia artificial resuelve dudas sobre tratamientos, recuperación y seguimiento en cualquier momento. No sustituye al médico — lo complementa.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M7 9H5"/><path d="M7 12H5"/><path d="M7 15H5"/><path d="M17 9h2"/><path d="M17 12h2"/><path d="M17 15h2"/><path d="M9 7V5"/><path d="M12 7V5"/><path d="M15 7V5"/><path d="M9 19v-2"/><path d="M12 19v-2"/><path d="M15 19v-2"/></svg>
-    ),
-  },
-  {
-    title: 'Privacidad total',
-    claim: 'Tu historial clínico no sale de Estetia.',
-    body: 'No compartimos datos médicos con terceros, no hacemos perfiles publicitarios y no usamos tu información para nada ajeno a tu atención. Sin letra pequeña.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-    ),
-  },
-  {
-    title: 'Seguimiento continuo',
-    claim: 'El tratamiento no termina al salir de la clínica.',
-    body: 'Cada protocolo incluye revisiones planificadas. Medimos evolución, ajustamos si es necesario y documentamos resultados. El proceso es continuo, no puntual.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
-    ),
-  },
-];
+import { useTranslations } from 'next-intl';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -111,7 +18,35 @@ const surfaceBorder = 'rgba(0,0,0,0.06)';
 const blueBorder = 'rgba(44,95,111,0.15)';
 const blueDim = 'rgba(44,95,111,0.07)';
 
+const commitmentIcons = [
+  <svg key="c1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
+  <svg key="c2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>,
+  <svg key="c3" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><path d="M3 6l9-3 9 3"/><path d="M3 18l9 3 9-3"/><line x1="3" y1="12" x2="21" y2="12"/></svg>,
+  <svg key="c4" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M7 9H5"/><path d="M7 12H5"/><path d="M7 15H5"/><path d="M17 9h2"/><path d="M17 12h2"/><path d="M17 15h2"/><path d="M9 7V5"/><path d="M12 7V5"/><path d="M15 7V5"/><path d="M9 19v-2"/><path d="M12 19v-2"/><path d="M15 19v-2"/></svg>,
+  <svg key="c5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>,
+  <svg key="c6" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>,
+];
+
 export default function MetodologiaPage() {
+  const t = useTranslations('metodo');
+
+  const steps = [
+    { num: '01', tag: t('step1Tag'), title: t('step1Title'), primary: t('step1Primary'), secondary: t('step1Secondary'), full: true },
+    { num: '02', tag: t('step2Tag'), title: t('step2Title'), primary: t('step2Primary'), secondary: t('step2Secondary'), full: false },
+    { num: '03', tag: t('step3Tag'), title: t('step3Title'), primary: t('step3Primary'), secondary: t('step3Secondary'), full: false },
+    { num: '04', tag: t('step4Tag'), title: t('step4Title'), primary: t('step4Primary'), secondary: t('step4Secondary'), full: false },
+    { num: '05', tag: t('step5Tag'), title: t('step5Title'), primary: t('step5Primary'), secondary: t('step5Secondary'), full: false },
+  ];
+
+  const commitments = [
+    { title: t('c1Title'), claim: t('c1Claim'), body: t('c1Body'), icon: commitmentIcons[0] },
+    { title: t('c2Title'), claim: t('c2Claim'), body: t('c2Body'), icon: commitmentIcons[1] },
+    { title: t('c3Title'), claim: t('c3Claim'), body: t('c3Body'), icon: commitmentIcons[2] },
+    { title: t('c4Title'), claim: t('c4Claim'), body: t('c4Body'), icon: commitmentIcons[3] },
+    { title: t('c5Title'), claim: t('c5Claim'), body: t('c5Body'), icon: commitmentIcons[4] },
+    { title: t('c6Title'), claim: t('c6Claim'), body: t('c6Body'), icon: commitmentIcons[5] },
+  ];
+
   return (
     <main className="bg-white text-[#000000]">
 
@@ -125,15 +60,15 @@ export default function MetodologiaPage() {
         >
           <motion.div variants={fadeUp} className="mb-6 inline-flex items-center gap-3.5 text-[0.62rem] font-semibold uppercase tracking-[0.45em] text-[#2C5F6F]">
             <span className="h-px w-7 bg-[#2C5F6F]/45" />
-            Metodología Clínica
+            {t('heroEyebrow')}
             <span className="h-px w-7 bg-[#2C5F6F]/45" />
           </motion.div>
           <motion.h1 variants={fadeUp} className="font-heading text-[clamp(2.8rem,6vw,4rem)] font-semibold leading-[1.08]">
-            Un proceso diseñado para{' '}
-            <em className="font-normal not-italic text-[#2C5F6F]">eliminar la incertidumbre</em>
+            {t('heroH1Line1')}{' '}
+            <em className="font-normal not-italic text-[#2C5F6F]">{t('heroH1Emphasis')}</em>
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-7 max-w-[540px] text-[1.06rem] leading-[1.78] text-[#3a4147]">
-            Cada fase tiene un objetivo claro, una métrica visible y una decisión médica fundamentada. No improvisamos. No sobreactuamos. Diseñamos el resultado antes de ejecutarlo.
+            {t('heroP')}
           </motion.p>
         </motion.div>
       </section>
@@ -144,14 +79,14 @@ export default function MetodologiaPage() {
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={fadeUp}>
           <div className="mb-4 inline-flex items-center gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.45em] text-[#7FAFC2]">
             <span className="h-px w-[22px] bg-[#7FAFC2]/50" />
-            Clinical Journey
+            {t('journeyEyebrow')}
           </div>
           <h2 className="font-heading mt-1 text-[2.75rem] font-semibold leading-[1.1] text-white">
-            Cinco fases.<br />
-            <em className="font-normal not-italic text-[#7FAFC2]">Cero improvisación.</em>
+            {t('journeyH2Line1')}<br />
+            <em className="font-normal not-italic text-[#7FAFC2]">{t('journeyH2Emphasis')}</em>
           </h2>
           <p className="mt-4 max-w-[560px] text-[0.94rem] leading-[1.7] text-white/50" style={{ marginBottom: '64px' }}>
-            Antes de cualquier tratamiento existe un diagnóstico. Antes de cualquier diagnóstico existe una conversación. Así funciona Estetia.
+            {t('journeyP')}
           </p>
         </motion.div>
 
@@ -200,15 +135,15 @@ export default function MetodologiaPage() {
             <div>
               <motion.div variants={fadeUp} className="mb-4 inline-flex items-center gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.45em] text-[#2C5F6F]">
                 <span className="h-px w-[22px] bg-[#2C5F6F]/50" />
-                Nuestra forma de trabajar
+                {t('commitmentsEyebrow')}
               </motion.div>
               <motion.h2 variants={fadeUp} className="font-heading text-[2.75rem] font-semibold leading-[1.1]">
-                Compromisos que puedes{' '}
-                <em className="font-normal not-italic text-[#2C5F6F]">verificar desde el primer día</em>
+                {t('commitmentsH2Line1')}{' '}
+                <em className="font-normal not-italic text-[#2C5F6F]">{t('commitmentsH2Emphasis')}</em>
               </motion.h2>
             </div>
             <motion.p variants={fadeUp} className="text-[0.94rem] leading-[1.72] text-[#3a4147]">
-              No pedimos confianza a ciegas. Cada punto de esta lista es algo comprobable desde la primera visita — sin esperar resultados ni firmar nada.
+              {t('commitmentsP')}
             </motion.p>
           </motion.div>
 
@@ -254,11 +189,11 @@ export default function MetodologiaPage() {
       >
         <motion.div variants={fadeUp}>
           <h2 className="font-heading mb-3 text-[2.5rem] font-semibold leading-[1.15] text-white">
-            ¿Lista para empezar<br />
-            <em className="font-normal not-italic text-[#7FAFC2]">con la primera consulta?</em>
+            {t('ctaH2Line1')}<br />
+            <em className="font-normal not-italic text-[#7FAFC2]">{t('ctaH2Emphasis')}</em>
           </h2>
           <p className="max-w-[480px] text-[0.88rem] leading-[1.65] text-white/50">
-            Sin coste, sin compromiso. Una conversación clínica para entender tus objetivos y definir si Estetia es el lugar adecuado para ti.
+            {t('ctaP')}
           </p>
         </motion.div>
         <motion.div variants={fadeUp} className="flex flex-col items-end gap-3">
@@ -266,13 +201,13 @@ export default function MetodologiaPage() {
             href="/#contacto"
             className="rounded-full bg-[#2C5F6F] px-9 py-4 text-[0.62rem] font-bold uppercase tracking-[0.25em] text-white transition-all duration-300 hover:bg-[#7FAFC2]"
           >
-            Reservar consulta gratuita
+            {t('ctaPrimary')}
           </Link>
           <Link
             href="/servicios"
             className="rounded-full border border-white/15 px-9 py-4 text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-white/40 transition-all duration-300 hover:border-[#7FAFC2]/50 hover:text-[#7FAFC2]"
           >
-            Ver todos los tratamientos
+            {t('ctaSecondary')}
           </Link>
         </motion.div>
       </motion.div>
