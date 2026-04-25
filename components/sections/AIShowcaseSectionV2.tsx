@@ -1,85 +1,35 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
-/* ─── data ─────────────────────────────────────────────────── */
-
-const CAPABILITIES = [
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-      </svg>
-    ),
-    title: 'Reservar cita',
-    description: 'Disponibilidad en tiempo real, sin formularios ni esperas.',
-    pill: '24/7',
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-      </svg>
-    ),
-    title: 'Resolver dudas',
-    description: 'Precios, recuperación, resultados — entrenado con los protocolos reales de Estetia.',
-    pill: null,
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="12" y1="3" x2="12" y2="21"/><path d="M3 6l9-3 9 3"/><path d="M3 18l9 3 9-3"/><line x1="3" y1="12" x2="21" y2="12"/>
-      </svg>
-    ),
-    title: 'Comparar tratamientos',
-    description: 'Diferencias, indicaciones y resultados con precisión clínica.',
-    pill: null,
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
-      </svg>
-    ),
-    title: 'Conversación natural',
-    description: 'Interrumpe, cambia de tema, reformula. Entiende el contexto y responde con fluidez.',
-    pill: 'Voz',
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/>
-      </svg>
-    ),
-    title: 'Derivar al especialista',
-    description: 'Cuando la consulta requiere criterio médico, conecta con el profesional correcto.',
-    pill: null,
-  },
+const CAP_ICONS = [
+  <svg key="1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>,
+  <svg key="2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>,
+  <svg key="3" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><path d="M3 6l9-3 9 3"/><path d="M3 18l9 3 9-3"/><line x1="3" y1="12" x2="21" y2="12"/></svg>,
+  <svg key="4" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>,
+  <svg key="5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>,
 ];
-
-const PILLARS = [
-  {
-    eyebrow: 'Convicción',
-    title: 'Tecnología sin compromiso.',
-    copy: 'La misma convicción que nos lleva a los tratamientos más avanzados del mundo nos lleva a integrar IA. Sin soluciones genéricas, sin atajos.',
-  },
-  {
-    eyebrow: 'Personalización',
-    title: 'Entrenada para Estetia.',
-    copy: 'No es una IA genérica. Conoce nuestros protocolos, tratamientos y criterios clínicos propios. Responde desde aquí, no desde cualquier lugar.',
-  },
-  {
-    eyebrow: 'Medicina',
-    title: 'El médico, para lo que importa.',
-    copy: 'Cada minuto que la IA gestiona es un minuto que la Dra. Morales dedica al paciente. No reemplazamos al médico — lo liberamos.',
-  },
-];
-
 
 /* ─── component ───────────────────────────────────────────── */
 export default function AIShowcaseSectionV2() {
+  const t = useTranslations('aiShowcase');
   const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  const CAPABILITIES = [
+    { icon: CAP_ICONS[0], title: t('cap1Title'), description: t('cap1Desc'), pill: t('cap1Pill') },
+    { icon: CAP_ICONS[1], title: t('cap2Title'), description: t('cap2Desc'), pill: null },
+    { icon: CAP_ICONS[2], title: t('cap3Title'), description: t('cap3Desc'), pill: null },
+    { icon: CAP_ICONS[3], title: t('cap4Title'), description: t('cap4Desc'), pill: t('cap4Pill') },
+    { icon: CAP_ICONS[4], title: t('cap5Title'), description: t('cap5Desc'), pill: null },
+  ];
+
+  const PILLARS = [
+    { eyebrow: t('pillar1Eyebrow'), title: t('pillar1Title'), copy: t('pillar1Copy') },
+    { eyebrow: t('pillar2Eyebrow'), title: t('pillar2Title'), copy: t('pillar2Copy') },
+    { eyebrow: t('pillar3Eyebrow'), title: t('pillar3Title'), copy: t('pillar3Copy') },
+  ];
   const animRef = useRef<number>(0);
   const tRef = useRef(0);
   const micVolumeRef = useRef(0);
@@ -232,7 +182,7 @@ export default function AIShowcaseSectionV2() {
         borderTop: '1px solid rgba(127,175,194,0.18)',
         borderBottom: '1px solid rgba(127,175,194,0.18)',
       }}
-      aria-label="Inteligencia artificial clínica"
+      aria-label={t('eyebrow')}
     >
       {/* ambient glows */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
@@ -248,7 +198,7 @@ export default function AIShowcaseSectionV2() {
         <div className="mb-16 flex items-center gap-4">
           <span className="h-px w-9 bg-[#C9A96E]" aria-hidden="true" />
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#C9A96E]">
-            Inteligencia artificial en Estetia
+            {t('eyebrow')}
           </p>
           <div className="flex items-center gap-[3px]" aria-hidden="true">
             {[0.4, 0.75, 0.5, 1, 0.35].map((h, i) => (
@@ -271,24 +221,21 @@ export default function AIShowcaseSectionV2() {
           {/* LEFT: text */}
           <div>
             <h2 className="font-heading text-[clamp(2.2rem,4.5vw,3.4rem)] leading-[1.08] text-white">
-              La tecnología que adoptamos{' '}
+              {t('h2Line1')}{' '}
               <br className="hidden md:block" />
-              en medicina,{' '}
+              {t('h2Line2')}{' '}
               <em className="font-normal not-italic" style={{ color: '#D5B884' }}>
-                la adoptamos en todo.
+                {t('h2Emphasis')}
               </em>
             </h2>
 
             <p className="mt-6 max-w-[48ch] text-[0.98rem] leading-relaxed text-white/72">
-              En Estetia apostamos por la innovación donde transforma de verdad. Lo hacemos con la
-              tecnología estética más avanzada del mundo — y lo hacemos también con la inteligencia
-              artificial.
+              {t('p1')}
             </p>
             <p className="mt-4 max-w-[48ch] text-[0.98rem] leading-relaxed text-white/72">
-              No porque esté de moda. Porque la IA mejora una parte concreta de nuestro trabajo:
-              la atención, la disponibilidad, la respuesta inmediata.{' '}
+              {t('p2')}{' '}
               <strong className="font-semibold text-white">
-                Y eso libera a nuestros médicos para lo que ninguna máquina puede hacer.
+                {t('p2Strong')}
               </strong>
             </p>
 
@@ -299,9 +246,8 @@ export default function AIShowcaseSectionV2() {
                 background: 'linear-gradient(135deg,rgba(201,169,110,0.10) 0%,rgba(201,169,110,0.03) 100%)',
               }}
             >
-              <p className="font-heading text-[1.12rem] italic leading-snug" style={{ color: '#D5B884' }}>
-                "La tecnología no reemplaza al especialista.
-                <br />Lo hace posible donde antes no llegaba."
+              <p className="font-heading text-[1.12rem] italic leading-snug" style={{ color: '#D5B884', whiteSpace: 'pre-line' }}>
+                {t('quote')}
               </p>
             </blockquote>
 
@@ -311,7 +257,7 @@ export default function AIShowcaseSectionV2() {
                 className="inline-block rounded-full px-7 py-3.5 text-sm font-semibold text-[#0D1418] transition-all duration-300 hover:brightness-110"
                 style={{ background: '#C9A96E' }}
               >
-                Conoce nuestro enfoque completo
+                {t('cta')}
               </Link>
             </div>
           </div>
@@ -334,9 +280,9 @@ export default function AIShowcaseSectionV2() {
             {/* label */}
             <p className="text-center text-[0.62rem] uppercase tracking-[0.18em] text-white/35">
               <span className="block text-[0.72rem] font-semibold tracking-[0.08em] text-[#7FAFC2] mb-1.5">
-                Agente de Voz EstetIA
+                {t('agentLabel')}
               </span>
-              Escucha · Entiende · Responde
+              {t('agentSubLabel')}
             </p>
 
             {/* ElevenLabs block */}
@@ -354,13 +300,11 @@ export default function AIShowcaseSectionV2() {
                   aria-hidden="true"
                 />
                 <p className="text-[0.6rem] font-bold uppercase tracking-[0.22em] text-[#C9A96E]">
-                  Desarrollado con Eleven Labs
+                  {t('elevenLabsLabel')}
                 </p>
               </div>
               <p className="text-[0.78rem] leading-relaxed text-white/60">
-                Nuestro agente de voz está construido sobre Eleven Labs, la plataforma de síntesis
-                y comprensión vocal más avanzada del mundo. Conversacional, natural, disponible
-                las 24 horas.
+                {t('elevenLabsBody')}
               </p>
 
               {/* divider */}
@@ -371,11 +315,10 @@ export default function AIShowcaseSectionV2() {
                 <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7FAFC2]/50" aria-hidden="true" />
                 <div>
                   <p className="text-[0.6rem] font-bold uppercase tracking-[0.22em] text-[#7FAFC2] mb-1.5">
-                    Límite clínico — AI Act europeo
+                    {t('limitLabel')}
                   </p>
                   <p className="text-[0.74rem] leading-relaxed text-white/60">
-                    El asistente orienta e informa. No emite diagnósticos ni recomendaciones de
-                    tratamiento. Toda decisión clínica es exclusiva del equipo médico de Estetia.
+                    {t('limitBody')}
                   </p>
                 </div>
               </div>
@@ -388,7 +331,7 @@ export default function AIShowcaseSectionV2() {
         <div>
           <div className="flex items-center gap-4 mb-6">
             <span className="text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-white/38">
-              Capacidades del agente
+              {t('capabilitiesLabel')}
             </span>
             <span className="flex-1 h-px bg-white/8" />
           </div>

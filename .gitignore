@@ -25,3 +25,6 @@ Thumbs.db
 # --- CONFIGURACIÓN DE IDX ---
 # Mantenemos .idx/ porque contiene dev.nix, que es seguro compartir [cite: 282]
 .idx/backup
+
+# --- TYPESCRIPT BUILD INFO ---
+*.tsbuildinfo

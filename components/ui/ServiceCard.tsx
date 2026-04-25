@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import type { Service } from '@/lib/services';
 
 type ServiceCardProps = {
@@ -7,6 +8,7 @@ type ServiceCardProps = {
 };
 
 export default function ServiceCard({ service, variant = 'dark' }: ServiceCardProps) {
+  const t = useTranslations('services');
   if (variant === 'frost') {
     return (
       <article className="group relative h-[480px] overflow-hidden rounded-3xl border border-black/[0.06] shadow-[0_4px_40px_-10px_rgba(0,0,0,0.10)] transition-shadow duration-300 hover:shadow-[0_8px_56px_-12px_rgba(0,0,0,0.16)]">
@@ -37,7 +39,7 @@ export default function ServiceCard({ service, variant = 'dark' }: ServiceCardPr
               href={`/servicios/${service.slug}`}
               className="inline-flex items-center gap-1.5 text-[0.66rem] font-bold uppercase tracking-[0.14em] text-[#2C5F6F] transition-colors duration-300 hover:text-[#1F4B5A]"
             >
-              Explorar
+              {t('ctaView')}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-3.5 w-3.5">
                 <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -83,7 +85,7 @@ export default function ServiceCard({ service, variant = 'dark' }: ServiceCardPr
               href={`/servicios/${service.slug}`}
               className="inline-flex items-center gap-1.5 text-[0.66rem] font-bold uppercase tracking-[0.14em] text-[#2C5F6F] transition-colors duration-300 hover:text-[#1F4B5A]"
             >
-              Explorar
+              {t('ctaView')}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-3.5 w-3.5">
                 <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

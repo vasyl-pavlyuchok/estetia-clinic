@@ -3,7 +3,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import TrustIndicatorsSection from '@/components/sections/TrustIndicatorsSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import AIShowcaseSectionV2 from '@/components/sections/AIShowcaseSectionV2';
-import { getAllServices } from '@/lib/services';
+import { getAllServices, getServiceCategories } from '@/lib/services';
 
 const ph = (h: number) => () => <div style={{ minHeight: h }} aria-hidden="true" />;
 
@@ -16,7 +16,7 @@ const FooterSection    = dynamic(() => import('@/components/sections/FooterSecti
 
 export default function Home() {
   const serviceList = getAllServices();
-  const serviceCategories = Array.from(new Set(serviceList.map((service) => service.categoryLabel)));
+  const serviceCategories = getServiceCategories();
 
   return (
     <main className="overflow-x-hidden">

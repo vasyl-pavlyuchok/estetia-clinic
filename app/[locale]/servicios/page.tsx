@@ -23,9 +23,10 @@ export default async function ServicesPage({ params, searchParams }: ServicesPag
   const services = getAllServices();
   const category = sp?.categoria;
   const categories = getServiceCategories();
+  const categoryIds = categories.map((c) => c.id);
   const filteredServices =
-    category && categories.includes(category)
-      ? services.filter((service) => service.categoryLabel === category)
+    category && categoryIds.includes(category)
+      ? services.filter((service) => service.category === category)
       : services;
 
   return (
@@ -33,7 +34,7 @@ export default async function ServicesPage({ params, searchParams }: ServicesPag
       <ServicesSection
         services={filteredServices}
         mode="full"
-        activeCategory={category && categories.includes(category) ? category : undefined}
+        activeCategory={category && categoryIds.includes(category) ? category : undefined}
         allCategories={categories}
         basePath="/servicios"
       />

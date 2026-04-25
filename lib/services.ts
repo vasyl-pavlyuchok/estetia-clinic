@@ -117,8 +117,16 @@ export function getServiceBySlug(slug: string): Service | undefined {
   return services.find((service) => service.slug === slug);
 }
 
-export function getServiceCategories(): string[] {
-  return Array.from(new Set(services.map((service) => service.categoryLabel)));
+export function getServiceCategories(): { id: string; label: string }[] {
+  const seen = new Set<string>();
+  const result: { id: string; label: string }[] = [];
+  services.forEach(({ category, categoryLabel }) => {
+    if (!seen.has(category)) {
+      seen.add(category);
+      result.push({ id: category, label: categoryLabel });
+    }
+  });
+  return result;
 }
 
 export function getHeaderTreatmentCategories(): HeaderTreatmentCategory[] {

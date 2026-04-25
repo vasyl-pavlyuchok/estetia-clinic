@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Plus_Jakarta_Sans, DM_Sans } from 'next/font/google';
-import SiteHeader from '@/components/layout/SiteHeader';
 import './globals.css';
 
 const playfair = Playfair_Display({
@@ -36,23 +35,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${playfair.variable} ${jakarta.variable} ${dmSans.variable}`}>
-      <body className="font-body bg-background text-foreground antialiased pt-9">
-        <div className="fixed inset-x-0 top-0 z-[300] flex h-9 items-center justify-center gap-3 bg-[#0D1418] px-4">
-          <span className="text-[0.6rem] font-semibold uppercase tracking-[0.3em] text-white/40">Demo Concept</span>
-          <span className="text-white/20">·</span>
-          <span className="text-[0.6rem] font-semibold uppercase tracking-[0.3em] text-[#D5B884]">100% AI-Generated</span>
-          <span className="text-white/20">·</span>
-          <a
-            href="https://vasylpavlyuchok.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[0.6rem] font-semibold uppercase tracking-[0.3em] text-white/50 transition-colors hover:text-[#7FAFC2]"
-          >
-            Designed by Vasyl Pavlyuchok →
-          </a>
-        </div>
-        <SiteHeader />
+    <html
+      suppressHydrationWarning
+      className={`${playfair.variable} ${jakarta.variable} ${dmSans.variable}`}
+    >
+      <body className="font-body bg-background text-foreground antialiased">
         {children}
       </body>
     </html>
