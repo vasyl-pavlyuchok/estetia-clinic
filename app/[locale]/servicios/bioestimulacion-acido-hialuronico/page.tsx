@@ -62,7 +62,7 @@ export default function BioestimulacionAcidoHialurónicoPage() {
             <div className={styles['badge-title']}>{tC('timelineTitle')}</div>
             <div className={styles['badge-stat']}>
               <span className={styles['badge-stat-num']}>6</span>
-              <span className={styles['badge-stat-unit']}>meses</span>
+              <span className={styles['badge-stat-unit']}>{t('badgeUnit')}</span>
             </div>
             <div className={styles['badge-stat-label']}>{t('indication1')}</div>
             <div className={styles['key-diff']}>

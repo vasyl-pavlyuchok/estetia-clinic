@@ -1038,7 +1038,8 @@
     "contra2": "Active infection in treatment area",
     "contra3": "Pregnancy and breastfeeding",
     "contra4": "Anticoagulant therapy",
-    "contra5": "Active herpes in perioral area"
+    "contra5": "Active herpes in perioral area",
+    "badgeUnit": "months"
   },
   "mesoterapiaCapilar": {
     "heroEyebrow": "Hair treatment",

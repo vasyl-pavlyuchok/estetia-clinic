@@ -1038,7 +1038,8 @@
     "contra2": "Infección activa en zona de tratamiento",
     "contra3": "Embarazo y lactancia",
     "contra4": "Tratamiento anticoagulante",
-    "contra5": "Herpes activo en zona perioral"
+    "contra5": "Herpes activo en zona perioral",
+    "badgeUnit": "meses"
   },
   "mesoterapiaCapilar": {
     "heroEyebrow": "Tratamiento capilar",

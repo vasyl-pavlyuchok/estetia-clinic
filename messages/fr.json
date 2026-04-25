@@ -1038,7 +1038,8 @@
     "contra2": "Infection active dans la zone de traitement",
     "contra3": "Grossesse et allaitement",
     "contra4": "Traitement anticoagulant",
-    "contra5": "Herpès actif en zone péri-orale"
+    "contra5": "Herpès actif en zone péri-orale",
+    "badgeUnit": "mois"
   },
   "mesoterapiaCapilar": {
     "heroEyebrow": "Soin capillaire",
