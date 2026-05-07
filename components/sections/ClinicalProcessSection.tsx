@@ -1,37 +1,23 @@
-const PROCESS_STEPS = [
-  {
-    title: 'Consulta estratégica',
-    summary: 'Escuchamos objetivos, historial y expectativas reales.',
-    detail: 'Mapeamos prioridades estéticas y contexto clínico desde la primera visita.',
-  },
-  {
-    title: 'Diagnóstico de precisión',
-    summary: 'Analizamos estructura, textura y simetría.',
-    detail: 'Definimos un punto de partida medible para evitar decisiones por intuición.',
-  },
-  {
-    title: 'Plan médico personalizado',
-    summary: 'Diseñamos un protocolo por fases y tiempos.',
-    detail: 'Cada tratamiento se ordena para maximizar resultado y controlar recuperación.',
-  },
-  {
-    title: 'Ejecución especializada',
-    summary: 'Aplicación con tecnología certificada y criterio conservador.',
-    detail: 'Buscamos mejora visible sin perder identidad facial o corporal.',
-  },
-  {
-    title: 'Seguimiento y optimización',
-    summary: 'Controlamos evolución y afinamos la estrategia.',
-    detail: 'El resultado final se construye en continuidad, no en una sola sesión.',
-  },
-];
+'use client';
+
+import { useTranslations } from 'next-intl';
 
 export default function ClinicalProcessSection() {
+  const t = useTranslations('clinicalProcess');
+
+  const PROCESS_STEPS = [
+    { title: t('step1Title'), summary: t('step1Summary'), detail: t('step1Detail') },
+    { title: t('step2Title'), summary: t('step2Summary'), detail: t('step2Detail') },
+    { title: t('step3Title'), summary: t('step3Summary'), detail: t('step3Detail') },
+    { title: t('step4Title'), summary: t('step4Summary'), detail: t('step4Detail') },
+    { title: t('step5Title'), summary: t('step5Summary'), detail: t('step5Detail') },
+  ];
+
   return (
     <section
       id="proceso"
       className="relative overflow-hidden bg-[#F6F7F8] py-20 md:py-24"
-      aria-label="Proceso clínico Estetia"
+      aria-label={t('h2')}
     >
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_14%,rgba(127,175,194,0.2),transparent_45%),radial-gradient(circle_at_88%_82%,rgba(201,169,110,0.15),transparent_42%)]" />
@@ -41,15 +27,14 @@ export default function ClinicalProcessSection() {
         <div className="grid gap-7 md:grid-cols-[1.08fr_0.92fr] md:items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2C5F6F]">
-              Clinical Journey
+              {t('eyebrow')}
             </p>
             <h2 className="font-heading mt-4 max-w-[16ch] text-4xl leading-tight text-black md:text-5xl">
-              Un proceso diseñado para reducir incertidumbre y elevar confianza.
+              {t('h2')}
             </h2>
           </div>
           <p className="max-w-[48ch] text-[0.98rem] leading-relaxed text-black/72 md:justify-self-end">
-            Cada fase tiene un objetivo claro, una métrica visible y una decisión médica
-            fundamentada. Sin improvisación, sin sobretratamientos.
+            {t('sub')}
           </p>
         </div>
 

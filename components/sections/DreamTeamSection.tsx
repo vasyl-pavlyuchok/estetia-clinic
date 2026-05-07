@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 type TeamMember = {
   index: string;
@@ -41,25 +44,26 @@ const TEAM: TeamMember[] = [
 ];
 
 export default function DreamTeamSection() {
+  const t = useTranslations('dreamTeam');
+
   return (
     <section
       id="dream-team"
       className="bg-white py-20 md:py-24"
-      aria-label="Nuestro Equipo Médico"
+      aria-label={t('eyebrow')}
     >
       <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
         <div className="grid gap-7 md:grid-cols-[1.08fr_0.92fr] md:items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2C5F6F]">
-              Nuestro Equipo Médico
+              {t('eyebrow')}
             </p>
             <h2 className="font-heading mt-4 max-w-[16ch] text-4xl leading-tight text-black md:text-5xl">
-              Talento médico con mirada editorial y obsesión por la simetría.
+              {t('h2')}
             </h2>
           </div>
           <p className="max-w-[48ch] text-[0.98rem] leading-relaxed text-black/72 md:justify-self-end">
-            Cada especialista ha sido seleccionado por criterio clínico, experiencia demostrable
-            y capacidad para leer la identidad facial de cada paciente.
+            {t('sub')}
           </p>
         </div>
 
@@ -69,7 +73,6 @@ export default function DreamTeamSection() {
               key={member.name}
               className="flex flex-col overflow-hidden rounded-3xl border border-black/12 bg-white shadow-[0_20px_42px_-36px_rgba(0,0,0,0.35)]"
             >
-              {/* Photo */}
               <div className="relative h-64 overflow-hidden">
                 <Image
                   src={member.photo}
@@ -78,30 +81,22 @@ export default function DreamTeamSection() {
                   className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                {/* Index overlay */}
                 <span
                   className="font-heading absolute bottom-3 right-4 select-none text-[3rem] leading-none text-white/20"
                   aria-hidden="true"
                 >
                   {member.index}
                 </span>
-                {/* Role badge */}
                 <span className="absolute left-4 top-4 rounded-full border border-white/30 bg-black/40 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm">
                   {member.role}
                 </span>
               </div>
 
-              {/* Content */}
               <div className="flex flex-1 flex-col p-6">
-                {/* Name */}
                 <h3 className="font-heading text-[1.65rem] leading-tight text-black">
                   {member.name}
                 </h3>
-
-                {/* Focus */}
                 <p className="mt-3 text-sm leading-relaxed text-black/68">{member.focus}</p>
-
-                {/* Specialties */}
                 <div className="mt-5 flex flex-wrap gap-1.5">
                   {member.specialties.map((s) => (
                     <span
@@ -112,8 +107,6 @@ export default function DreamTeamSection() {
                     </span>
                   ))}
                 </div>
-
-                {/* Credentials */}
                 <p className="mt-auto border-t border-black/8 pt-5 text-[0.7rem] leading-relaxed text-black/42">
                   {member.credentials}
                 </p>

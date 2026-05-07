@@ -14,6 +14,7 @@ auth.json
 !package.json
 !package-lock.json
 !_project/services.json
+!messages/*.json
 
 # --- ARCHIVOS DE SISTEMA Y NODES ---
 node_modules/

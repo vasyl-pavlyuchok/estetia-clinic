@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useTranslations, useLocale } from 'next-intl';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import type { HeaderTreatmentZone, TreatmentZoneKey } from '@/lib/services';
 
 type SiteHeaderClientProps = {
@@ -62,11 +62,6 @@ type PrimaryLink = {
   label: string;
   sectionId?: string;
 };
-
-const primaryLinks: PrimaryLink[] = [
-  { href: '/metodo', label: 'Metodología' },
-  { href: '/ia', label: 'Inteligencia Artificial' },
-];
 
 type ZoneTone = {
   tabActive: string;
@@ -134,9 +129,26 @@ const zoneTonesDark: Record<TreatmentZoneKey, ZoneTone> = {
   'estetica-integral': unifiedZoneToneDark,
 };
 
+const LOCALES = ['es', 'en', 'it', 'fr'] as const;
+type Locale = (typeof LOCALES)[number];
+
+const LOCALE_LABELS: Record<Locale, string> = {
+  es: 'ES',
+  en: 'EN',
+  it: 'IT',
+  fr: 'FR',
+};
+
 export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
+  const t = useTranslations('nav');
+  const locale = useLocale() as Locale;
+  const router = useRouter();
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const primaryLinks: PrimaryLink[] = [
+    { href: '/metodo', label: t('metodo') },
+    { href: '/ia', label: t('ia') },
+  ];
   const [isMegaOpen, setIsMegaOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileTreatmentsOpen, setIsMobileTreatmentsOpen] = useState(false);
@@ -329,8 +341,8 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
   }`;
 
   const reserveButtonClass = useDarkChrome
-    ? 'rounded-full border border-white/26 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-white transition-colors duration-200 hover:bg-white/16'
-    : 'rounded-full border border-[#C9A96E]/45 bg-[#C9A96E]/14 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-[#5E4720]';
+    ? 'inline-flex w-[6.25rem] items-center justify-center rounded-full border border-white/26 bg-white/10 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-white transition-colors duration-200 hover:bg-white/16'
+    : 'inline-flex w-[6.25rem] items-center justify-center rounded-full border border-[#C9A96E]/45 bg-[#C9A96E]/14 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-[#5E4720]';
 
   const mobileToggleClass = useDarkChrome
     ? 'inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors duration-200 hover:bg-white/16 md:hidden'
@@ -430,7 +442,7 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
               aria-haspopup="menu"
               aria-controls="desktop-treatments-panel"
             >
-              Tratamientos
+              {t('tratamientos')}
               <svg
                 aria-hidden="true"
                 viewBox="0 0 12 12"
@@ -464,10 +476,10 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
                     <div className={`flex items-end justify-between gap-6 border-b pb-5 ${megaDividerClass}`}>
                       <div>
                         <p className={megaEyebrowClass}>
-                          Navegación neuroestética
+                          {t('navEyebrow')}
                         </p>
                         <p className={megaSubcopyClass}>
-                          Aisla la zona de aplicación y explora los tratamientos con máxima claridad.
+                          {t('navSubcopy')}
                         </p>
                       </div>
                       <Link
@@ -475,14 +487,14 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
                         className={megaCatalogClass}
                         onClick={closeDesktopMegaMenu}
                       >
-                        Ver catálogo completo
+                        {t('verCatalogo')}
                       </Link>
                     </div>
 
                     <div className="mt-6 grid gap-5 lg:grid-cols-[15.5rem_minmax(0,1fr)]">
                       <div>
                         <p className={zoneEyebrowClass}>
-                          Zona de aplicación
+                          {t('zonaAplicacion')}
                         </p>
                         <div role="tablist" aria-label="Selector de zonas de tratamiento" className="mt-2 space-y-2">
                           {zones.map((zone) => {
@@ -540,7 +552,7 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
                               <p
                                 className={`text-[0.64rem] font-semibold uppercase tracking-[0.18em] ${activeZoneTone.panelEyebrow}`}
                               >
-                                Aplicación prioritaria
+                                {t('aplicacionPrioritaria')}
                               </p>
                               <h3 className={`mt-2 font-heading text-2xl leading-tight ${activeZoneTone.panelTitle}`}>
                                 {activeZone.zoneLabel}
@@ -608,6 +620,28 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
         </nav>
 
         <div className="flex items-center gap-2">
+          <div className="relative hidden items-center rounded-full border border-white/20 bg-white/8 p-0.5 md:flex" role="group" aria-label="Idioma">
+            {LOCALES.map((l) => (
+              <button
+                key={l}
+                type="button"
+                onClick={() => router.replace(pathname, { locale: l })}
+                className="relative w-8 py-1 text-center text-[0.6rem] font-semibold uppercase tracking-[0.1em] transition-colors duration-200"
+                style={{ color: locale === l ? '#0D1418' : 'rgba(255,255,255,0.52)' }}
+                aria-pressed={locale === l}
+              >
+                {locale === l && (
+                  <motion.div
+                    layoutId="locale-pill-desktop"
+                    className="absolute inset-0 rounded-full bg-[#C9A96E]"
+                    transition={{ type: 'spring', stiffness: 480, damping: 34 }}
+                  />
+                )}
+                <span className="relative z-10">{LOCALE_LABELS[l]}</span>
+              </button>
+            ))}
+          </div>
+
           <button
             type="button"
             onClick={toggleMobileMenu}
@@ -615,7 +649,7 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-site-menu"
           >
-            <span className="sr-only">{isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}</span>
+            <span className="sr-only">{isMobileMenuOpen ? t('cerrarMenu') : t('abrirMenu')}</span>
             <svg aria-hidden="true" viewBox="0 0 20 20" className="h-4 w-4">
               {isMobileMenuOpen ? (
                 <path
@@ -642,7 +676,7 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
             className={reserveButtonClass}
             onClick={handleNavigate}
           >
-            Reservar
+            {t('reservar')}
           </Link>
         </div>
       </div>
@@ -680,7 +714,7 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
                 className={mobileTreatmentsButtonClass}
                 aria-expanded={isMobileTreatmentsOpen}
               >
-                Tratamientos
+                {t('tratamientos')}
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 12 12"
@@ -797,11 +831,35 @@ export default function SiteHeaderClient({ zones }: SiteHeaderClientProps) {
                       className={mobileCatalogClass}
                       onClick={handleNavigate}
                     >
-                      Ver catálogo completo
+                      {t('verCatalogo')}
                     </Link>
                   </motion.div>
                 ) : null}
               </AnimatePresence>
+              <div className="mt-4 inline-flex items-center self-start rounded-full border border-white/20 bg-white/8 p-0.5 border-t-0" role="group" aria-label="Idioma">
+                {LOCALES.map((l) => (
+                  <button
+                    key={l}
+                    type="button"
+                    onClick={() => {
+                      router.replace(pathname, { locale: l });
+                      handleNavigate();
+                    }}
+                    className="relative w-8 py-1 text-center text-[0.6rem] font-semibold uppercase tracking-[0.1em] transition-colors duration-200"
+                    style={{ color: locale === l ? '#0D1418' : 'rgba(255,255,255,0.52)' }}
+                    aria-pressed={locale === l}
+                  >
+                    {locale === l && (
+                      <motion.div
+                        layoutId="locale-pill-mobile"
+                        className="absolute inset-0 rounded-full bg-[#C9A96E]"
+                        transition={{ type: 'spring', stiffness: 480, damping: 34 }}
+                      />
+                    )}
+                    <span className="relative z-10">{LOCALE_LABELS[l]}</span>
+                  </button>
+                ))}
+              </div>
             </nav>
           </motion.div>
         ) : null}

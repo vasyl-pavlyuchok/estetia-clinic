@@ -1,12 +1,12 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 const HERO_VIDEO_URL = '/videos/estetia-hero.webm';
 const HERO_POSTER_URL = '';
 
-/* ─── Animation variants ─────────────────────────────────────────────────── */
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
   visible: { opacity: 1, y: 0 },
@@ -15,11 +15,11 @@ const fadeUp = {
 const transition = (delay: number) => ({
   duration: 0.45,
   delay,
-  ease: [0.25, 0.46, 0.45, 0.94] as const, // easeOutQuart
+  ease: [0.25, 0.46, 0.45, 0.94] as const,
 });
 
-/* ─── Component ──────────────────────────────────────────────────────────── */
 export default function HeroSection() {
+  const t = useTranslations('hero');
   const hasVideo = Boolean(HERO_VIDEO_URL);
 
   return (
@@ -56,10 +56,10 @@ export default function HeroSection() {
           transition={transition(0)}
           className="text-[0.76rem] font-semibold uppercase tracking-[0.34em] text-white sm:text-[0.8rem]"
         >
-          <span className="text-white/96">Estetia Clinic</span>
+          <span className="text-white/96">{t('clinic')}</span>
           <span className="mx-2 text-white/65">·</span>
           <span className="bg-gradient-to-r from-[#b8dcf1] via-[#f8fcff] to-[#e3c282] bg-clip-text text-transparent">
-            Precisión Biomédica y Belleza Inteligente
+            {t('tagline')}
           </span>
         </motion.span>
 
@@ -71,7 +71,7 @@ export default function HeroSection() {
             transition={transition(0.08)}
             className="font-heading max-w-[12ch] text-[clamp(2.65rem,7vw,5.4rem)] font-bold leading-[1.03] text-white"
           >
-            Ciencia estética de lujo, diseñada para parecer inevitable.
+            {t('h1')}
           </motion.h1>
 
           <motion.p
@@ -81,8 +81,7 @@ export default function HeroSection() {
             transition={transition(0.16)}
             className="mt-6 max-w-[47ch] text-[1.06rem] leading-relaxed text-white/95"
           >
-            Protocolos clínicos personalizados, equipamiento de última generación y
-            asistencia IA para una experiencia serena, precisa y profundamente humana.
+            {t('p')}
           </motion.p>
 
           <motion.div
@@ -95,13 +94,13 @@ export default function HeroSection() {
               href="#ia-assistant"
               className="rounded-full border border-white/20 bg-[linear-gradient(145deg,rgba(8,13,16,0.58)_0%,rgba(11,18,23,0.46)_58%,rgba(20,34,43,0.32)_100%)] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:bg-[linear-gradient(145deg,rgba(8,13,16,0.72)_0%,rgba(11,18,23,0.60)_58%,rgba(20,34,43,0.46)_100%)]"
             >
-              Habla con nuestro asistente
+              {t('ctaAssistant')}
             </a>
             <Link
               href="/servicios"
               className="rounded-full border border-white/[0.22] bg-[linear-gradient(150deg,rgba(255,255,255,0.18)_0%,rgba(250,253,255,0.12)_56%,rgba(246,249,252,0.08)_100%)] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-[34px] backdrop-saturate-[1.4] backdrop-brightness-[0.98] transition-all duration-300 hover:bg-[linear-gradient(150deg,rgba(255,255,255,0.26)_0%,rgba(250,253,255,0.18)_56%,rgba(246,249,252,0.13)_100%)]"
             >
-              Explorar tratamientos
+              {t('ctaServices')}
             </Link>
           </motion.div>
         </div>

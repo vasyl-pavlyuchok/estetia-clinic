@@ -1,0 +1,30 @@
+wing: estetia
+rooms:
+- name: app
+  description: Files from app/
+  keywords:
+  - app
+  - app
+- name: brand_assets
+  description: Files from brand_assets/
+  keywords:
+  - brand_assets
+  - brand_assets
+- name: public
+  description: Files from public/
+  keywords:
+  - public
+  - public
+- name: lib
+  description: Files from lib/
+  keywords:
+  - lib
+  - lib
+- name: frontend
+  description: Files from components/
+  keywords:
+  - frontend
+  - components
+- name: general
+  description: Files that don't fit other rooms
+  keywords: []
